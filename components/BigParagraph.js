@@ -48,7 +48,7 @@ const BigParagraphImg = ({ ImgSrc }) => {
       {ImgSrc && (
         <div className="BigParagraphImgWrapper">
           <Image
-            src={`/../public/assets/img/${ImgSrc}`}
+            src={`/public/assets/img/${ImgSrc}`}
             width={"10px"}
             height={"2px"}
             layout="responsive"
