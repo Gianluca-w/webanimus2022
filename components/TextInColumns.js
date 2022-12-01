@@ -1,7 +1,7 @@
 const TextInColumns = ({ TitleColumn, ColumnContents, ColumnSize = 3, RowSize = 1, MainStyle = "White" }) => (
     <div className={`ColumnTextWrapper MainStyle${MainStyle}`}>
         <TextInColumnsTitleText Content={TitleColumn} />
-        
+        <ColumnContentText Content={ColumnContents} Columns={ColumnSize} Rows={RowSize}></ColumnContentText>        
     </div>
 );
 const TextInColumnsTitleText = ({ Content }) => {
@@ -10,8 +10,8 @@ const TextInColumnsTitleText = ({ Content }) => {
 
     </div>
 }
-/*
-<ColumnContentText Content={ColumnContents} Columns={ColumnSize} Rows={RowSize}></ColumnContentText>
+
+
 const ColumnContentText = ({ Content, Columns, Rows }) => {
     return <div className={`ColumnContentGrid ColumnSize${Columns} RowSize${Rows}`}>
         {Content && Content.map((Text) => (
@@ -24,5 +24,5 @@ const ColumnContentText = ({ Content, Columns, Rows }) => {
         ))
         }
     </div>
-}*/
+}
 export default TextInColumns
