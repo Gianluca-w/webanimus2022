@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+//Grid Templating
+.FooterGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    border-bottom: 1px $white solid;
+
+}
+
+//grid placements   
+.FooterTitle {
+    grid-column: 1;
+}
+
+.ContactWrapper {
+    grid-column: 2;
+}
+
+.ContactDirection {
+    grid-row: 2;
+}
+
+.ContactMail {
+    grid-row: 1;
+}
+
+.ContactSocials {
+    grid-row: 3;
+}
+
+// SCSS styles
+.FooterTitle {
+    min-width: 0.00000001vw;
+    font-size: $FontSizeTop80;
+}
+
+.FooterContactGrid {
+    .ContactDirection {
+        min-width: 0.00000001vw;
+        padding-bottom: 60px;
+        font-size: $FontSizeTop18;
+        width: 100%;
+    }
+
+    .ContactMail {
+        padding-bottom: 40px;
+        font-size: $FontSizeTop24;
+        min-width: 0.00000001vw;
+        width: 100%;
+    }
+
+    .ContactSocials {
+        padding-bottom: 80px;
+        min-width: 0.00000001vw;
+        font-size: $FontSizeTop24;
+        text-align: justify;
+        text-justify: inter-word;
+        width: 100%;
+
+        a {
+            text-decoration: none;
+            padding-right: 24px;
+        }
+    }
+
+}
+
+.FooterLink {
+    .LinkWrapper {
+        display: flex;
+        min-width: 0.00000001vw;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: $FontSizeTop18;
+        text-decoration: none;
+   
+        cursor: pointer;
+        width: fit-content;
+
+        .whitearrow {
+            min-width: 0.00000001vw;
+            height: $FontSizeTop18;
+            width: $FontSizeTop18;
+
+        }
+    }
+
+}
+
+.FooterWrapper {
+    background-color: $secondaryColor;
+    color: $white;
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    padding-top: $GeneralSeparator50;
+    padding-bottom: $GeneralSeparator50;
+
+
+}
+
+.ContactFlexWrapper {
+    float: right;
+}
+.FooterArrowWrapper{
+
+    width: $FontSizeTop16;
+    height: $FontSizeTop16;
+    margin-left: 10px;
+    border: 1px solid $white;
+    border-radius: 100%;
+    padding: 2px 2px 2px 2px;
+}
+
+
+//Mobile Scss
+
+@media (max-width: #{$screen-md-min}) {
+    .ContactFlexWrapper {
+        float: none;
+    }
+
+    .FooterGrid {
+        display: block;
+
+        .FooterContactGrid {
+            height: 100%;
+
+            .ContactDirection {
+                padding-bottom: 16px;
+            }
+
+            .ContactMail {
+                padding-bottom: 16px;
+            }
+
+            .ContactSocials {
+                padding-bottom: 16px;
+            }
+
+        }
+    }
+}

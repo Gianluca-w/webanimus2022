@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+//Mobile Breakpoints
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+//End of mobile Breakpoints
+
+
+//General Font Sizes
+$FontSizeTop90: clamp(2rem, 6vw, 90px);   
+$FontSizeTop80: clamp(2rem, 6vw, 80px);                                             //6
+$FontSizeTop70: clamp(2rem, 6vw, 70px);
+$FontSizeTop60: clamp(2rem, 6vw, 60px);
+$FontSizeTop50: clamp(2rem, 6vw, 50px);
+$FontSizeTop36: clamp(1rem, 3vw, 36px);
+$FontSizeTop35: clamp(1rem, 3vw, 35px);
+$FontSizeTop34: clamp(1rem, 3vw, 34px);
+$FontSizeTop32: clamp(1rem, 3vw, 32px);
+$FontSizeTop30: clamp(1rem, 3vw, 30px);
+$FontSizeTop28: clamp(0.7rem, 2vw, 28px);
+$FontSizeTop24: clamp(0.7rem, 2vw, 24px);
+$FontSizeTop20: clamp(0.7rem, 2vw, 20px);
+$FontSizeTop18: clamp(0.7rem, 2vw, 18px);
+$FontSizeTop16: clamp(0.5rem, 1vw, 16px);
+$FontSizeTop14: clamp(0.5rem, 1vw, 14px);                                          
+//General Spacings
+$paddingLeft:clamp(16px, 8.5vw, 160px);
+$paddingRight:clamp(16px, 8.5vw, 160px);
+$GeneralSeparator300:clamp(16px, 10vw, 300px);
+$GeneralSeparator160:clamp(16px, 8.5vw, 160px);
+$GeneralSeparator100:clamp(16px, 7.5vw, 100px);
+$GeneralSeparator80:clamp(16px, 6vw, 80px);
+$GeneralSeparator50:clamp(16px, 5vw, 50px);
+//GeneralistClassStyling
+.ThinH1 { font-size: $FontSizeTop80; font-weight: 100; line-height: 138%;}
+.LightH2{ font-size: $FontSizeTop70; font-weight: 300; line-height: 114%;}
+.LightH3{ font-size: $FontSizeTop50; font-weight: 300; line-height: 160%;}
+.SemiH1 { font-size: $FontSizeTop80; font-weight: 600; line-height: auto;}
+.SemiH3 { font-size: $FontSizeTop50; font-weight: 600; line-height: auto;}
+.BoldH1 { font-size: $FontSizeTop80; font-weight: 700; line-height: 112%;}
+.BoldH4 { font-size: $FontSizeTop30; font-weight: 700; line-height: 200%;}
+.BoldH5 { font-size: $FontSizeTop28; font-weight: 700; line-height: 143%;}
+.RegH4  { font-size: $FontSizeTop34; font-weight: 400; line-height: 176%;}
+.RegH5  { font-size: $FontSizeTop28; font-weight: 400; line-height: 179%;}
+.RegH6  { font-size: $FontSizeTop24; font-weight: 400; line-height: 188%;}
+.RegP   { font-size: $FontSizeTop18; font-weight: 500; line-height: 194%;}
+
+
+
+
+//Color Declaring
+$primaryColor: #D91F30;
+$secondaryColor:  #0B0A0B;
+$white: #FFFFFF;
+$accentColor: #3C8BEA;
+
+$primaryFont: 'Montserrat', sans-serif;
+
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    color: $white;
+    
+}
+a{
+    color: $white;
+    font-family: inherit;
+    text-decoration: underline;
+    text-decoration-color: $white;
+}
+a:hover{
+    color:#3C8BEA;
+}
+
+.arrow{
+    display: block;
+}
+.whitearrow{
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    border: 1px solid $white;
+    border-radius: 100%;
+    width: 12px;
+    height:12px;
+    margin-left: 10px;
+}
+
+.indexContentWrapper {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+@import './components/HeroSection.scss';
+@import './components/Footer.scss';
+@import './components/Rest.scss';
+@import './components/Grid.scss';
+@import './components/PhraseAndItems.scss';
+@import './components/TitleAndSubtitle.scss';
+@import './components/BigParagraph.scss';
+@import './components/ImageSection.scss';
+@import './components/TextInColumns.scss';
+@import './components/ContactForm.scss';
+@import './components/LinksComponent.scss';
+@import './components/AboutInfoCard.scss';
+@import './components/AboutSmallCard.scss';
+@import './components/AboutImage.scss';
+@import './components/SmallParagraph.scss';
+.AltHoverableLink:hover{
+    color: #3C8BEA;
+}

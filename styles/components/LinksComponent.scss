@@ -1,0 +1,32 @@
+.LinksComponentWrapper{
+    background-color: $secondaryColor;
+    color: $white;
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    padding-top: $GeneralSeparator50;
+    padding-bottom: $GeneralSeparator100;
+    text-align: center;
+}
+.LinksComponentLinkwrapper{
+    padding-bottom: 24px;
+    padding-top: 0px;
+}
+
+.LinksComponentInliner{
+    display:flex;
+}
+.LinksComponentColumn{
+    width: 100%;
+    font-size: $FontSizeTop18;
+    line-height: 22px;
+    text-align: left;
+    a{
+        color: $white;
+        font-family: inherit;
+        text-decoration: underline;
+        text-decoration-color: $white;
+    }
+    a:hover{
+        color:#3C8BEA;
+    }
+}

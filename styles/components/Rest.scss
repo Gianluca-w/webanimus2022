@@ -1,0 +1,37 @@
+//Grid templating
+.restGrid {
+    color: $white;
+}
+
+
+// Common Css Styles
+.restWrapper {
+    padding-top: $GeneralSeparator300;
+    padding-bottom: $GeneralSeparator300;
+    padding-left: $GeneralSeparator160;
+    padding-right: $GeneralSeparator160;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../public/assets/img/RestComponentBackground.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.restTittle {
+    font-size: 18px;
+    min-width: 0.00000001vw;
+
+}
+
+.restContent {
+    min-width: 0.00000001vw;
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    width: 60%;
+    height: auto;
+}
+@media (max-width: #{$screen-sm-min}) {
+.restContent{
+    width: auto;
+}
+}

@@ -1,0 +1,32 @@
+.AboutSmallCardWrapper{
+    background-color: #19181A;
+    color: $white;
+    min-width: 0.00000001vw;
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    padding-top: $GeneralSeparator100;
+    padding-bottom: $GeneralSeparator100;
+}
+.AboutSmallCardTitle{
+    font-size: $FontSizeTop50;
+    padding-bottom: 30px;
+}
+.AboutSmallCardContent{
+    font-size: $FontSizeTop20;
+    font-weight: 500;
+    line-height: 40px;
+    width: 50%;
+    p{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+.AboutSmallCardImg{
+    padding-top: $GeneralSeparator50 ;
+
+}
+@media (max-width: #{$screen-md-min}) {
+    .AboutSmallCardContent{
+        width: 100%;
+    }
+}

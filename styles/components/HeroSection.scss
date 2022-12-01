@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+//Grid templating
+
+
+
+.navContentWrapperGrid {
+display: flex;
+}
+
+//Grid positionings
+
+.nav {
+    .NavIcon{
+        min-height: 25px;
+        display: block;
+
+    }
+    .NavMenuLink{
+        padding-left: 40px;
+        float: right;
+    }
+
+}
+
+
+
+//Usual Scss classes and styles, work here to change styles and such
+.heroWrapper {
+    height: 100vh;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+.BaseHero{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../public/assets/img/heroSectionBackground.jpg');
+    color: $white;
+        h1{
+            font-weight: 100;
+        }
+}
+.BaseAboutUs{
+    background:url('../../public/assets/img/AboutUsBackground.jpg');
+    color: $secondaryColor;
+    .PointerCursor{
+        filter: brightness(0);
+    }
+}
+.BaseContactUs{
+    background: $secondaryColor;
+    color: $white;
+    font-weight: 700;
+    .AsteriskSvg{
+        filter: brightness(100);
+    }
+
+}
+.heroSlogan h1 {
+    min-width: 0.00000001vw;
+    font-size: $FontSizeTop80;
+    padding-left: $GeneralSeparator300;
+    padding-right: $GeneralSeparator300;
+    width: 50%  ;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-bottom: $GeneralSeparator160;
+
+}
+.heroSloganAlt h1 {
+    min-width: 0.00000001vw;
+    font-size: $FontSizeTop80;
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    width: 60%;
+    padding-bottom: $GeneralSeparator160;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+.NavMenuLink a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav {
+    padding-top: 1vh;
+
+    .navContentWrapperGrid {
+        padding-left: $paddingLeft;
+        padding-right: $paddingRight;
+        padding-bottom: $GeneralSeparator160;
+
+        .navIcon {
+            padding-left: 16px;
+            min-width: 75px;
+            min-height: 75px;
+        }
+
+        .navContact {
+            text-align: center;
+            font-family: 'Open Sans', 'Montserrat', sans-serif;
+        }
+    }
+}
+
+.Linkr {
+    padding-left: $paddingLeft;
+
+
+}
+
+.AsteriskWrapper {
+    max-width: 74px;
+    max-height: 74px;
+    width: 10vw;
+    height: 10vw;
+    padding-left: $paddingLeft
+}
+.NavMenuLink{
+    font-size: $FontSizeTop18;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.NavMenuSeparator{
+    width: 100%;
+}
+.PointerCursor{
+    cursor: pointer;
+}
+.ALternativeTitleWrapper{
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+
+}
+.ALternativeTitleContent{
+    font-size: $FontSizeTop34;
+    line-height: 60px;
+}
+.HeroSectionWrapper{
+    padding-bottom: $GeneralSeparator300;
+}
+.NavMenuLink{
+    button{
+        color: inherit;
+        border: none;
+        background: none;
+        font-size: inherit;
+        font-family: inherit;
+    }
+    button:hover{
+        cursor: pointer;
+        color: $accentColor;
+    }
+}
+
+//Mobile Scss
+@media (max-width: #{$screen-sm-min}) {
+
+}
+
+@media (max-width: #{$screen-md-min}) {
+    .heroGrid {
+        display: block;
+    }
+
+    .heroSlogan {
+
+
+        h1 {
+            text-align: center;
+        }
+    }
+    .AsteriskWrapper {
+        padding-left: $paddingLeft;
+        padding-right: $paddingRight;
+        padding-bottom: $GeneralSeparator50;
+    }
+    .heroSlogan h1 {
+        width: auto ;
+    }
+    .heroSloganAlt h1 {
+        width: auto;
+    
+    }
+}
+
+@media (max-width: #{$screen-lg-min}) {}
+
+@media (max-width: #{$screen-xl-min}) {}
+
+/*
+Para la imagen
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(marita-kavelashvili-ugnrXk1129g-unsplash.jpg);
+
+//Inside auto layout 
+
+flex: none;
+order: 0;
+flex-grow: 0;*/

@@ -1,0 +1,35 @@
+.SmallParagraphWrapper{
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    padding-top: $GeneralSeparator100;
+    padding-bottom: $GeneralSeparator100;
+    color: $secondaryColor;
+    overflow: auto;
+}
+.SmallParagraphTitle{
+    display: block;
+    width: fit-content;
+}
+.SmallParagraphContentText{
+    display: block;
+    font-weight: 300;
+    font-size: $FontSizeTop50;
+    line-height: 160%;
+    a{
+        text-decoration: underline;
+        text-decoration-color: $accentColor;
+        font-size: inherit;
+        color: inherit;
+    }
+
+}
+.SmallParagraphContentWrapper{
+    width: 50%;
+    float: right;
+}
+@media (max-width: #{$screen-lg-min}) {
+    .SmallParagraphContentWrapper{
+        width: auto;
+        float: left;
+    }
+    }

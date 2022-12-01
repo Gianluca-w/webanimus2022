@@ -1,0 +1,38 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+
+//Usual Scss Styles
+.TitleAndSubtitleParentWrapper {
+    background: $secondaryColor;
+    min-width: 0.00000001vw;
+    padding-top: $GeneralSeparator100;
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    padding-bottom: 30px;
+    font-weight: 600;
+}
+
+.TitleWrapper {
+    min-width: 0.00000001vw;
+    font-size: $FontSizeTop80;
+    padding-bottom: 30px;
+    width: 60%;
+    line-height: 98px;
+}
+
+.SubTitleContentWrapper {
+    width: 50%;
+    min-width: 0.00000001vw;
+    font-size: $FontSizeTop28;
+    line-height: 50px;
+}
+
+@media (max-width: #{$screen-md-min}) {
+    .TitleWrapper {
+        width: 100%;
+    }
+    .SubTitleContentWrapper {
+        width: 100%;
+    }
+}

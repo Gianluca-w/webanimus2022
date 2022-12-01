@@ -1,0 +1,26 @@
+
+.ImageSectionWrapper{
+    background-color: $white;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    display: block;
+    width: 70vw;
+    min-width: 0.00000001vw;
+    height: clamp(320px,60vh,750px);
+    .ImageSectionImgWrapper{
+        display: block;
+        background-position: center; 
+        background-size: cover;
+        height: 100%;
+        min-height: 320px;
+    }
+}
+
+@media (max-width: #{$screen-md-min}) {
+    .ImageSectionWrapper {
+    width: 100%;
+    }
+    .ImageSectionEmptyMargin{
+        display: none;
+    }
+}

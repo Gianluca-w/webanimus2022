@@ -1,0 +1,45 @@
+.AboutImageWrapper {
+    min-width: 0.00000001vw;
+    background-color: #19181A;
+    color: $white;
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.AboutImageStandalone {
+    display: inline-block;
+    height: 0;
+    padding-bottom: 50%;
+    width: 100%;
+    overflow: hidden;
+    background-size: contain;
+}
+
+.AboutImageContainer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.AboutImageSecond {
+    margin-left: 20px;
+    margin-top: 237px;
+}
+
+.AboutImageInliner {
+    display: flex;
+    width: 100%;
+}
+
+@media (max-width: #{$screen-md-min}) {
+    .AboutImageStandalone {
+        padding-bottom: 100%;
+    }
+
+    .AboutImageSecond {
+        display: none;
+    }
+}

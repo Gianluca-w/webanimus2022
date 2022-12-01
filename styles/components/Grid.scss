@@ -1,0 +1,140 @@
+//Grid templating
+.GridSquared {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 0px;
+    column-gap: 0px;
+    margin-left: $paddingLeft;
+    margin-right:$paddingRight;
+}
+
+//Grid placements
+.GridElement1 {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.GridElement2 {
+    grid-row: 1;
+    grid-column: 2;
+
+}
+
+.GridElement3 {
+    grid-row: 1;
+    grid-column: 3;
+
+}
+
+.GridElement4 {
+    grid-row: 2;
+    grid-column: 1;
+
+
+}
+
+.GridElement5 {
+    grid-row: 2;
+    grid-column: 2;
+
+}
+
+.GridElement6 {
+    grid-row: 2;
+    grid-column: 3;
+
+}
+//Normal Scss styles
+.GridParentWrapper {
+    min-width: 0.00000001vw;
+    background: $secondaryColor;
+    padding-top: $GeneralSeparator100;
+    padding-bottom: $GeneralSeparator160;
+
+}
+
+.GridElement {
+    border: 1px solid $white;
+    display: inline-block;
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
+    overflow: hidden;
+    //background-image: url('../../public/assets/img/GridBackgroundTexture.svg');
+    //background-repeat: space ;
+
+    .GridTitle {
+        min-width: 0.00000001vw;
+        font-size: $FontSizeTop32;
+        margin-left: 16px;
+
+        background: $secondaryColor;
+
+    }
+
+    .GridContent {
+        background: $secondaryColor;
+        min-width: 0.00000001vw;
+        font-size: $FontSizeTop18;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.GridElement2 {
+
+    border-left: 0px;
+    border-right: 0px;
+
+}
+
+.GridElement4 {
+
+    border-top: 0px;
+
+}
+
+.GridElement5 {
+
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+
+}
+
+.GridElement6 {
+
+    border-top: 0px;
+
+}
+.TexturedBackground{
+    background-image: url('../../public/assets/img/GridBackgroundTexture.svg');
+    background-repeat: space ;
+
+}
+
+//Mobile Breakpoints
+
+@media (max-width: #{$screen-md-min}) {
+    .GridSquared {
+        display: block;
+        row-gap: 0px;
+
+        .GridElement {
+            width: 100%;
+            border: 1px solid $white;
+            border-top: 0px;
+            border-right: 0px;
+            border-left: 0px;
+    
+            height: auto;
+            padding-bottom: 0px;
+            background: $secondaryColor;
+        }
+        .TexturedBackground{
+            display: none;
+        }
+    }
+
+}

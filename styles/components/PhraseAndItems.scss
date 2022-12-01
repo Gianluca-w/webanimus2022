@@ -1,0 +1,116 @@
+//Imports  ¯\_(ツ)_/¯
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+//Grid Layouts
+.PraseGrid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 10px;
+
+}
+
+.PhraseContentsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+//Grid positioning
+//Normal Css styles
+.PhraseWrapper {
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    background: $secondaryColor;
+    padding-top: $GeneralSeparator100;
+    padding-bottom: 20px;
+
+    .PhraseTitle h1 {
+        min-width: 0.00000001vw;
+        font-weight: 600;
+        grid-column: 1;
+        font-size: $FontSizeTop50;
+    }
+
+    .PhraseContentsGrid {
+        .PhraseContents {
+            min-width: 0.00000001vw;
+            padding-bottom: 80px;
+            padding-left: clamp(18px, 4vw, 50px);
+            font-size: $FontSizeTop18;
+            line-height: 35px;
+        }
+
+        .PhraseContents1 {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .PhraseContents2 {
+            grid-row: 1;
+            grid-column: 2;
+        }
+
+        .PhraseContents3 {
+            grid-row: 1;
+            grid-column: 3;
+        }
+
+        .PhraseContents4 {
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        .PhraseContents5 {
+            grid-row: 2;
+            grid-column: 2;
+        }
+
+        .PhraseContents6 {
+            grid-row: 2;
+            grid-column: 3;
+        }
+
+        .PhraseContents7 {
+            grid-row: 3;
+            grid-column: 1;
+        }
+
+        .PhraseContents8 {
+            grid-row: 3;
+            grid-column: 2;
+        }
+
+        .PhraseContents9 {
+            grid-row: 3;
+            grid-column: 3;
+        }
+
+
+    }
+
+}
+.AsteriscWrapper{
+    padding-bottom: 8px;
+}
+//mobile breakpoints
+@media (max-width: #{$screen-md-min}) {
+    .PhraseWrapper {
+        .PraseGrid {
+            display: block;
+            .PhraseTitle h1{
+                font-size: 32px;    
+            }
+        }
+        .PhraseContentsGrid {
+            display: block;
+            min-width: 0.00000001vw;
+            padding-right: $paddingRight;
+
+            .PhraseContents {
+                width: 100%;
+                border-bottom: 1px rgba($color: $white, $alpha: 0.3) solid;
+                font-size: 18px;
+            }
+        }
+    }
+}
