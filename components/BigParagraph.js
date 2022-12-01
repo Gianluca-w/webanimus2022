@@ -11,7 +11,6 @@ const BigParagraph = ({
     <BigParagraphTitle Content={title}></BigParagraphTitle>
     <BigParagraphSubTitle Content={body}></BigParagraphSubTitle>
     <BigParagraphImg ImgSrc={OptionalImage}></BigParagraphImg>
-    
     <BigParagraphLink Title={LinkTitle} Href={LinkHref}></BigParagraphLink>
   </BigParagraphParent>
 );

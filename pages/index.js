@@ -36,7 +36,7 @@ export default function Home(props) {
         {t('example', { changeTo })}
       </button>
       <HeroSection slogan={t('slogan')} AsteriskVisibility={'hide'} BackgroundImageSrc={'heroSectionBackground.jpg'}/>
-      <BigParagraph title={t('BigParagraphTitle1')} Tags={t('BigParagraphTags1', { returnObjects: true })} OptionalImage={'TechLogos.png'} />
+      <BigParagraph title={t('BigParagraphTitle1')} OptionalImage={'TechLogos.png'} />
       <ImageSection FillingImg={'ImageSection.jpeg'}></ImageSection>
       <SmallParagraph SmallTitle={t('SmallParagraphTitle')} Content={t('SmallParagraphContent')} UnderlinedLinkTitle={t('SmallParagraphLink')}></SmallParagraph>
       <Rest TitleText={t('RestSectionTitle')} Body={t('RestSectionBody')} />
