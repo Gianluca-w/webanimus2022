@@ -11,13 +11,15 @@ const BigParagraph = ({
     <BigParagraphTitle Content={title}></BigParagraphTitle>
     <BigParagraphSubTitle Content={body}></BigParagraphSubTitle>
     <BigParagraphImg ImgSrc={OptionalImage}></BigParagraphImg>
-    <BigParagraphTags Content={Tags} />
+    
     <BigParagraphLink Title={LinkTitle} Href={LinkHref}></BigParagraphLink>
   </BigParagraphParent>
 );
 const BigParagraphTitle = ({ Content }) => {
   return <div className="BigParagraphTitleWrapper">{Content}</div>;
 };
+/*
+<BigParagraphTags Content={Tags} />
 const BigParagraphTags = ({ Content }) => {
   return (
     <div className="BigParagraphTagsWrapper">
@@ -30,6 +32,7 @@ const BigParagraphTags = ({ Content }) => {
     </div>
   );
 };
+*/
 const BigParagraphSubTitle = ({ Content }) => {
   return <div className="BigParagraphBodyWrapper">{Content}</div>;
 };
