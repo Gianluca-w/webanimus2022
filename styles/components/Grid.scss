@@ -121,6 +121,9 @@
     background-image: url('/assets/img/FillerPines.jpg');
     background-size: cover;
 }
+.GridImageWrapperCenter{
+    margin: $GeneralSeparator160 $GeneralSeparator160 $GeneralSeparator160 $GeneralSeparator160;
+}
 
 
 //Mobile Breakpoints
@@ -146,6 +149,15 @@
         }
     }
     .FillerGridItem{
+        display: none;
+    }
+    .FillerGridImage1{
+        display: none;
+    }
+    .FillerGridImage2{
+        display: none;
+    }
+    .GridImageWrapper{
         display: none;
     }
 
