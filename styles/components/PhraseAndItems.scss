@@ -28,7 +28,7 @@
         min-width: 0.00000001vw;
         font-weight: 600;
         grid-column: 1;
-        font-size: $FontSizeTop50;
+        font-size: $FontSizeTop42;
     }
 
     .PhraseContentsGrid {
@@ -37,7 +37,7 @@
             padding-bottom: 80px;
             padding-left: clamp(18px, 4vw, 50px);
             font-size: $FontSizeTop18;
-            line-height: 35px;
+            line-height: 32px;
         }
 
         .PhraseContents1 {

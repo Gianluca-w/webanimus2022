@@ -15,17 +15,18 @@
 
 .TitleWrapper {
     min-width: 0.00000001vw;
-    font-size: $FontSizeTop80;
+    font-size: $FontSizeTop50;
     padding-bottom: 30px;
-    width: 60%;
-    line-height: 98px;
+    width: 50%;
+    line-height: 60px;
 }
 
 .SubTitleContentWrapper {
     width: 50%;
     min-width: 0.00000001vw;
-    font-size: $FontSizeTop28;
-    line-height: 50px;
+    font-size: $FontSizeTop24;
+    line-height: 42px;
+    font-weight: 400;
 }
 
 @media (max-width: #{$screen-md-min}) {

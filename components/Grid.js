@@ -27,7 +27,7 @@ const GridContent = ({ Props }) => (
                     <p className="GridContent">
                         {content.GridBody}
                     </p>
-                    <div className="GridElement TexturedBackground"></div>
+                    <div className=" TexturedBackground"></div>
                 </div>
             )
         })}

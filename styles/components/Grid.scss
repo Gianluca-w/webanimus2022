@@ -109,9 +109,9 @@
 
 }
 .TexturedBackground{
-    background-image: url('../../public/assets/img/GridBackgroundTexture.svg');
-    background-repeat: space ;
-
+   // background-image: url('../../public/assets/img/GridBackgroundTexture.svg');
+   // background-repeat: space ;
+    border-top: 1px solid $white;
 }
 
 //Mobile Breakpoints

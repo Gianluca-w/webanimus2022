@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SecondImage from "../public/assets/img/mountain.png"
-import FirstImage from "../public/assets/img/ImageSection.jpeg"
+import FirstImage from "../public/assets/img/AboutUsShowImg.png"
 const AboutImage = ({ }) => (
     <div className="AboutImageWrapper">
         <div className="AboutImageInliner">
