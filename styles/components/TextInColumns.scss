@@ -115,5 +115,9 @@
 @media (max-width: #{$screen-md-min}) {
     .ColumnContentGrid {
         display: block;
+       
+    }
+    .ColumnContentText{
+        border-bottom: 1px solid $secondaryColor;
     }
 }

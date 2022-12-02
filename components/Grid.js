@@ -20,14 +20,13 @@ const GridContent = ({ Props }) => (
         {Props && Props.map((content) => {
             //  !content.filler &&  When filling system is online, create the logic to make it work properly
             return (
-                <div className={`GridElement${content.GridPosition} GridElement`} key={content.GridPosition}>
+                <div className={`GridElement${content.GridPosition} GridElement ${content.Filler}`} key={content.GridPosition}>
                     <h1 className="GridTitle">
                         {content.GridTitle}
                     </h1>
                     <p className="GridContent">
                         {content.GridBody}
                     </p>
-                    <div className=" TexturedBackground"></div>
                 </div>
             )
         })}

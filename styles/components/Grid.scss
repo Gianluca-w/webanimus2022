@@ -61,8 +61,7 @@
     padding-bottom: 100%;
     width: 100%;
     overflow: hidden;
-    //background-image: url('../../public/assets/img/GridBackgroundTexture.svg');
-    //background-repeat: space ;
+    
 
     .GridTitle {
         min-width: 0.00000001vw;
@@ -108,11 +107,21 @@
     border-top: 0px;
 
 }
-.TexturedBackground{
+.FillerGridItem{
    // background-image: url('../../public/assets/img/GridBackgroundTexture.svg');
    // background-repeat: space ;
-    border-top: 1px solid $white;
+    background-image: url('/assets/img/GridBackground.png');
+    background-size: cover;
 }
+.FillerGridImage1{
+    background-image: url('/assets/img/FillerPicture.jpg');
+    background-size: cover;
+}
+.FillerGridImage2{
+    background-image: url('/assets/img/FillerPines.jpg');
+    background-size: cover;
+}
+
 
 //Mobile Breakpoints
 

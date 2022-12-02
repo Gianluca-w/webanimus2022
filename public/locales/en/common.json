@@ -79,6 +79,7 @@
 			{
 				"body": "Working3",
 				"GridPosition": "3"
+				
 			},
 			{
 				"body": "Working4",
@@ -137,6 +138,7 @@
 				"GridTitle": "Un pie en la comunidad",
 				"GridBody": "Somos parte del lugar al que pertenecemos y buscamos hacer nuestro aporte desde la tecnología.",
 				"GridPosition": "6"
+				
 			}
 		],
 		"BuddiesTitle": "Coop Buddies",
