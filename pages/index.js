@@ -44,7 +44,7 @@ export default function Home(props) {
       <TextInColumns TitleColumn={t('MetodologyTitle')} ColumnContents={t('MetodologyContent', { returnObjects: true })} ColumnSize={2} MainStyle={"White"} />
       <TitleAndSubtitle title={t('TitleAndSubtitleTitle1')} Subtitle={t('TitleAndSubtitleBody1')} />
       <PhraseAndItems Content={t('WhyHireUs', { returnObjects: true })} />
-      {/*Still hardcoded */}<Grid Content={[{ Filler:"FillerGridImage2", GridPosition: "1" }, { Image:"FIllerA.svg", GridPosition: "6" }, {GridPosition: "3" ,Filler:"FillerGridItem"}, { GridTitle: "Working!", GridPosition: "4" }, {GridPosition: "5",Filler:"FillerGridImage1" }, { GridTitle: "Working EARLY!", GridPosition: "2" }]} />
+      {/*Still hardcoded */}<Grid Content={[{ Filler:"FillerGridImage2", GridPosition: "1" }, { Image:"FIllerA.svg", Filler:"FillerGridImageCenter", GridPosition: "6" }, {GridPosition: "3" ,Filler:"FillerGridItem"}, { GridTitle: "Working!", GridPosition: "4" }, {GridPosition: "5",Filler:"FillerGridImage1" }, { GridTitle: "Working EARLY!", GridPosition: "2" }]} />
       <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')} />
       <LinksComponent />
     </div>
