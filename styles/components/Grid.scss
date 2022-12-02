@@ -129,12 +129,15 @@
             border-left: 0px;
     
             height: auto;
-            padding-bottom: 0px;
+            padding-bottom: 0px;    
             background: $secondaryColor;
         }
         .TexturedBackground{
             display: none;
         }
+    }
+    .FillerGridItem{
+        display: none;
     }
 
 }

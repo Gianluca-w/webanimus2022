@@ -22,7 +22,7 @@ const AboutSmallCardImg = ({ ImageSrc, MaxWidth }) => (
         {ImageSrc &&
             <div className="AboutSmallCardImg" style={{ maxWidth: `${MaxWidth}` }}>
                 <Image
-                    src={`/../public/assets/img/${ImageSrc}`}
+                    src={`/assets/img/${ImageSrc}`}
                     width={'1px'}
                     height={'1px'}
                     layout='responsive'

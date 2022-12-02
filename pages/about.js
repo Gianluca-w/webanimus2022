@@ -33,7 +33,7 @@ export default function Home(props) {
       <TextInColumns ColumnContents={t('TextInColumns', { returnObjects: true })} ColumnSize={3} MainStyle={"white"}></TextInColumns>
       <AboutSmallCard Title={t('AboutUs.BuddiesTitle')} Body={t('AboutUs.BuddiesBody')} />
       <AboutImage />
-      <AboutSmallCard Title={t('AboutUs.NetworkTitle')} Body={t('AboutUs.NetworkBody')}  OptionalImage={'FACTICCLogo.png'} OptionalImageWdt='264px'/>
+      <AboutSmallCard Title={t('AboutUs.NetworkTitle')} Body={t('AboutUs.NetworkBody')}  OptionalImage={`FACTICCLogo.png`} OptionalImageWdt='264px'/>
       <AboutInfoCard Title={t('AboutUs.SchoolLabsTitle')} SubTitle={t('AboutUs.SchoolLabsSubTitle')} Body={t('AboutUs.SchoolLabsBody')} />
       <AboutInfoCard Title={t('AboutUs.HackaCoopTitle')} SubTitle={t('AboutUs.HackaCoopSubTitle')} Body={t('AboutUs.HackaCoopBody')} />
       <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')} />

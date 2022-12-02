@@ -5,7 +5,7 @@ const SmallParagraph = ({ SmallTitle,UnderlinedLinkTitle, Content }) => (
                 {SmallTitle}
             </div>
             <div className="SmallParagraphContentText">
-            <a href='https://facttic.org.ar/' target='self'>{UnderlinedLinkTitle}</a>
+            <a>{UnderlinedLinkTitle}</a>
                 {Content}
             </div>
         </div>
