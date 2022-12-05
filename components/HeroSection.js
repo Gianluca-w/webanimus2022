@@ -5,12 +5,12 @@ import asterisk from '../public/assets/icons/asterisc.svg'
 import animus from '../public/assets/icons/logoanimus-w.svg'
 
 
-const Asterisk = ({ hide }) => (
+const Asterisk = ({ hide , Size }) => (
     <>
-        {!hide && <div className='AsteriskWrapper'><Image className='AsteriskSvg'
+        {!hide && <div className='AsteriskWrapper' style={{width:`${Size}`,height:`${Size}`}}><Image className='AsteriskSvg'
             src={asterisk.src}
-            width={'74px'}
-            height={'74px'}
+            width={Size}
+            height={Size}
             layout='responsive'
             alt='*' /></div>
         }
@@ -48,7 +48,7 @@ const AlternativeTitle = ({ Content }) => (
         }
     </div>
 );
-const HeroSection = ({ slogan, AsteriskVisibility, MaxWidth, AlternativeTitleContent,BackgroundImageSrc, BasicBackgroundStyle="BaseHero"}) => (
+const HeroSection = ({ slogan, AsteriskVisibility, MaxWidth, AlternativeTitleContent,BackgroundImageSrc, BasicBackgroundStyle="BaseHero",AsteriskSize ='74px'}) => (
     <HeroSectionParent backgroundImageToUse={`/assets/img/${BackgroundImageSrc}`} AltBackgroundStyle={BasicBackgroundStyle}>
         <div className='HeroSectionWrapper'>
         <div className="nav">
@@ -62,7 +62,7 @@ const HeroSection = ({ slogan, AsteriskVisibility, MaxWidth, AlternativeTitleCon
                 {slogan}
             </h1>
         </div>
-        <Asterisk hide={AsteriskVisibility} />
+        <Asterisk hide={AsteriskVisibility} Size={AsteriskSize} />
         </div>
     </HeroSectionParent>
 );

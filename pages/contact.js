@@ -25,7 +25,7 @@ export default function Home(props) {
         <button onClick={() => onToggleLanguageClick(changeTo)}>
           {t('example', { changeTo })}
         </button>
-        <HeroSection slogan={t('slogan')} BasicBackgroundStyle={'BaseContactUs'}/>
+        <HeroSection slogan={t('slogan')} BasicBackgroundStyle={'BaseContactUs'} AsteriskSize='45px'/>
         <ContactForm/>
         <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')}/>
     </div>

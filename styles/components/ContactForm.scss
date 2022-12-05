@@ -7,10 +7,12 @@
     padding-right: $paddingRight;
     padding-top: $GeneralSeparator100;
     padding-bottom: 60px;
-    .ContactFormWrapper{
-            padding-top: 30px;
+
+    .ContactFormWrapper {
+        padding-top: 30px;
     }
-    .ContactFormSendWrapper{
+
+    .ContactFormSendWrapper {
         display: block;
         float: right;
         margin: 1px 1px 1px 1px;
@@ -54,46 +56,56 @@
     button.ContactFormSend:active {
         background: rgba($color: $white, $alpha: 0.7);
     }
-    .NotUnderlinedButton{
+
+    .NotUnderlinedButton {
         text-decoration: none;
     }
-    .UnderlinedButton{
+
+    .UnderlinedButton {
         text-decoration: underline;
     }
 
 
 }
-.ContactFormWideInput{
-width: 100%;
+
+.ContactFormWideInput {
+    width: 100%;
 }
-.ContactFormRestricted40Input{
+
+.ContactFormRestricted40Input {
     width: 40%;
     padding-left: 10px;
 }
-.ContactFormPhoneInput{
-min-width: 200px;
+
+.ContactFormPhoneInput {
+    min-width: 200px;
 }
-.ContactFormInputWrapper{
+
+.ContactFormInputWrapper {
     display: inline-flex;
     width: 100%;
-    p{
+
+    p {
         font-size: $FontSizeTop16;
     }
-    input{
+
+    input {
         font-size: $FontSizeTop20;
         color: $white;
-        background-color:  #0B0A0B;
+        background-color: #0B0A0B;
         border: 0px;
         width: 100%;
         padding-bottom: 10px;
         min-height: 30px;
     }
-    input:focus-visible{
+
+    input:focus-visible {
         border-radius: 0px;
         outline: none;
         background-color: rgba($color: $white, $alpha: 0.05);
     }
-    textarea{
+
+    textarea {
         resize: vertical;
         width: 100%;
         background-color: $secondaryColor;
@@ -104,20 +116,30 @@ min-width: 200px;
         font-size: $FontSizeTop16;
 
     }
-    textarea:focus-visible{
+
+    textarea:focus-visible {
         outline: none;
         background-color: rgba($color: $white, $alpha: 0.05);
     }
 }
-.DragAndDropArea{
+
+.ContactFormMain {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.DragAndDropArea {
     width: 100%;
     height: 100%;
 }
-.ContactFormUnderlining{
+
+.ContactFormUnderlining {
     border-bottom: 1px solid $white;
     width: 100%;
 }
-.DragAndDropBorder{
+
+.DragAndDropBorder {
     border: 1px solid $white;
     height: 100%;
 }
@@ -129,4 +151,16 @@ min-width: 200px;
 
 .NotVisible {
     display: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }

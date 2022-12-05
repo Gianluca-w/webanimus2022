@@ -22,7 +22,7 @@ const ContactFormForm = ({ }) => {
     const HandleClickToVerify = event => {
         Visibility(true);
     };
-    return <div >
+    return <div className='ContactFormMain'>
         <button className={visible ? 'NotUnderlinedButton ContactFormSelector' : 'UnderlinedButton ContactFormSelector'} onClick={HandleClickToFalsify}>Want To Hire the Coop?</button>
         <button className={visible ? 'UnderlinedButton ContactFormSelector' : 'NotUnderlinedButton ContactFormSelector'} onClick={HandleClickToVerify}>Be part of ANIMUS</button>
         <form action="/api/mailing" method="post">
@@ -48,7 +48,7 @@ const ContactFormHireTheCoop = ({ }) => {
             <div className='ContactFormInputWrapper'>
                 <div className='ContactFormWideInput'>
                     <p>Name</p>
-                    <input type="text" placeholder='Name' name='nName'></input>
+                    <input type="text" placeholder='Name' name='name'></input>
                 </div>
                 <div className='ContactFormWideInput'>
                     <p>Email</p>
@@ -56,7 +56,7 @@ const ContactFormHireTheCoop = ({ }) => {
                 </div>
                 <div className='ContactFormPhoneInput'>
                     <p>Phone</p>
-                    <input type="text" placeholder='Phone' name='phone'></input>
+                    <input type="number" placeholder='Phone' name='phone'></input>
                 </div>
             </div>
         </div>
@@ -78,15 +78,15 @@ const ContactFormHiring = ({ }) => {
             <div className='ContactFormInputWrapper'>
                 <div className='ContactFormWideInput'>
                     <p>Name</p>
-                    <input type="text" placeholder='NAME'></input>
+                    <input type="text" placeholder='Name'></input>
                 </div>
                 <div className='ContactFormWideInput'>
                     <p>Email</p>
-                    <input type="mail" placeholder='EMAIL'></input>
+                    <input type="mail" placeholder='Email'></input>
                 </div>
                 <div className='ContactFormPhoneInput'>
                     <p>Phone</p>
-                    <input type="text" placeholder='PHONE'></input>
+                    <input type="number" placeholder='Phone'></input>
                 </div>
             </div>
         </div>
