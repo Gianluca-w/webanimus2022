@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import Image from 'next/image';
+import Arrow from '../public/assets/icons/arrowBlack.svg'
 
 
 const ContactForm = ({ }) => {
@@ -36,7 +37,16 @@ const ContactFormForm = ({ }) => {
                 <ContactFormHiring />
 
             </div>
-            <div className="ContactFormSendWrapper" ><button className='ContactFormSend' type='submit'>Send</button></div>
+            <div className="ContactFormSendWrapper" >
+                <button className='ContactFormSend' type='submit'><div className=''>Send</div>
+                    <div className='ContactFormSendLineContent'>
+                        <Image src={Arrow.src}
+                            width={'1px'}
+                            height={'1px'}
+                            layout='responsive'
+                            alt='>' />
+                    </div>
+                </button></div>
         </form>
     </div>
 }
@@ -64,7 +74,7 @@ const ContactFormHireTheCoop = ({ }) => {
             <div className='ContactFormInputWrapper'>
                 <div className='ContactFormWideInput'>
                     <p>Message</p>
-                    <textarea type='text' placeholder='Your message' name='message'>
+                    <textarea type='text' placeholder='Your message' name='message' className=''>
 
                     </textarea>
                 </div>
@@ -106,7 +116,7 @@ const ContactFormHiring = ({ }) => {
         <div className='ContactFormInputWrapper'>
             <div className='ContactFormUnderlining'>
                 <div className='ContactFormWideInput'>
-                    <textarea type='text' placeholder='Message'>
+                    <textarea type='text' placeholder='Message' className=''>
                     </textarea>
                 </div>
             </div>
