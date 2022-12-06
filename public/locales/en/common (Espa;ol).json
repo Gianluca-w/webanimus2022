@@ -1,0 +1,156 @@
+{
+	"slogan": "Transformando codigo con una base solidaria",
+	"subSlogan": "Somos una empresa cooperativa que diseña y desarrolla software.",
+	"RestSectionTitle": "",
+	"RestSectionBody": "Software y diseño inteligente e innovador, desde la empatía hacia el conocimiento.",
+	"TitleAndSubtitleTitle1": "Enhance your technology capacity",
+	"TitleAndSubtitleBody1": "Proveemos servicios como contractors, en esquemas de Staff Augmentation o Managed Service (project teams), en programación, diseño o perfiles híbridos, en inglés y español. ",
+	"BigParagraphTitle1": "Programamos sistemas y plataformas web a medida, generando soluciones digitales robustas y escalables en áreas verticales, como la educación, el transporte y las finanzas, entre otras. ",
+	"BigParagraphTitle2": "Diseñamos productos y servicios funcionales, lindos y fáciles de usar. Las experiencias digitales generadas son integrales, inclusivas y centradas en las personas. Estamos alineados con el cumplimiento de los estándares Web Content Accessibility Guidelines (WCAG). ",
+	"BigParagraphLinkTitle": "Si queres conocer más",
+	"MetodologyTitle": "Metodology",
+	"MetodologyContent": [
+		{
+			"body": "Utilizamos metodologías ágiles y procesos iterativos. Podemos incorporarnos exitosamente a los flujos de trabajo de equipos externos en proyectos en curso. Como así también, abordar desarrollos en su totalidad, incluyendo ingeniería, arquitectura, definiciones técnicas y diseños desde cero.",
+			"TextPosition": "1"
+		},
+		{
+			"body": "Como equipo nos retroalimentamos en procesos colectivos de aprendizaje, y prestamos especial atención a las buenas prácticas de la programación y el diseño, el control de calidad y deadline pactados, para alcanzar los objetivos comerciales y estratégicos deseados. ",
+			"TextPosition": "2"
+		}
+	],
+	"WhyHireUs": {
+		"TitleText": "¿Porqué contratarnos?",
+		"GridBody": [
+			{
+				"body": "Te asistimos en tus necesidades de desarrollo y crecimiento sin que arriesgues en empleados a tu cargo.",
+				"GridPosition": "1"
+			},
+			{
+				"body": "Hacemos un trato directo. Ahorrás el costo del proceso de recruitment y te queda un canal abierto para siguientes búsquedas.",
+				"GridPosition": "5"
+			},
+			{
+				"body": "La trayectoria de la cooperativa respalda y responde por la persona a la que contratás.",
+				"GridPosition": "3"
+			},
+			{
+				"body": "Las dudas o dificultades técnicas pueden ser filtradas y no escalar inmediatamente, porque las personas contratadas tienen el sostén de la cooperativa. ",
+				"GridPosition": "4"
+			},
+			{
+				"body": "Garantizamos estabilidad y seriedad. Pertenecemos a FACTTIC, la Federación Argentina de Cooperativas de Trabajo de Tecnología Innovación y Conocimiento.",
+				"GridPosition": "2"
+				
+			},
+			{
+				"body": "Podemos escalar equipos y trabajos, porque contamos con la capacidad operativa y la colaboración de otras cooperativas integrantes de FACTTIC.",
+				"GridPosition": "6"
+			},
+			{
+				"body": "Estamos en un ámbito en el que el aprendizaje es constante, esto nos empuja a estar en el top de la tecnología.",
+				"GridPosition": "7"
+			}
+		]
+	},
+	"FooterTitle": "Let´s talk",
+	"FooterMail": "info@animus.com.ar",
+	"FooterAdress": "Bariloche, Patagonia | Argentina",
+	"FooterLinkTitle": "Contact Us",
+	"SmallParagraphTitle":"The Coop",
+	"SmallParagraphLink":"Compania tecnologica de los trabajadores ",
+	"SmallParagraphContent":"Democraticamente gobernada por sus miembros",
+	"AboutUs": {
+		"slogan":"¡Somos una coop! En este mundo, eso es un montón.",
+		"GridContent": [
+			{
+				"GridTitle": "Decisiones conjuntas y autónomas",
+				"GridBody": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
+				"GridPosition": "1"
+			},
+			{
+				"GridTitle": "Definimos nuestros destinos",
+				"GridBody": "Proponemos y decidimos en asamblea qué proyectos y rumbo estratégico queremos tomar y cómo organizarnos.",
+				"GridPosition": "2"
+			},
+			{
+				"GridTitle": "Consensuamos",
+				"GridBody": "Hay ideas difíciles que llevan mucha charla, trabajo y sinceridad hasta llegar a los acuerdos necesarios.",
+				"GridPosition": "3"
+			},
+			{
+				"GridTitle": "Estamos en el lugar correcto",
+				"GridBody": "Hacemos lo que nos gusta, nos desarrollamos profesionalmente y nos vinculamos en un ámbito solidario y colaborativo.",
+				"GridPosition": "4"
+			},
+			{
+				"GridTitle": "Nadie se queda con lo nuestro",
+				"GridBody": "Percibimos un ingreso por nuestro trabajo sin que terceros lucren con lo que generamos.",
+				"GridPosition": "5"
+			},
+			{
+				"GridTitle": "Un pie en la comunidad",
+				"GridBody": "Somos parte del lugar al que pertenecemos y buscamos hacer nuestro aporte desde la tecnología.",
+				"GridPosition": "6"
+			}
+		],
+		"BuddiesTitle": "Coop Buddies",
+		"BuddiesBody": "Somos un poco nerds. Amantes de la naturaleza y sobre todas las cosas compañeres. Desde el 2018 funcionamos como cooperativa. Pero trabajamos en sistemas como Animus desde el 2007. Estamos en Bariloche, Patagonia argentina.",
+		"NetworkTitle": "Red de Redes",
+		"NetworkBody": "Pertenecemos a la Federación Argentina de Cooperativas de Trabajo de Tecnología, Innovación y Conocimiento (FACTTIC). Compartimos el espacio con otras coopes del sector, con quienes tenemos el mismo interés en generar relaciones laborales justas, un entorno solidario y la gestión de proyectos de acuerdo a intereses propios y soberanos.",
+		"SchoolLabsTitle": "School Labs.",
+		"SchoolLabsSubTitle": "Espacio de aprendizaje colectivo",
+		"SchoolLabsBody": "Suamos a estudiantes y autodidactas de nuestra ciudad que tienen interés en ampliar su conocimiento y compartir el proceso de  co-creación de proyectos. Creemos que esta experiencia puede ayudar a su inserción laboral y práctica profesional.",
+		"HackaCoopTitle": "Hackacoop",
+		"HackaCoopSubTitle": "Capacitación e investigación interna",
+		"HackaCoopBody": "El Hackacoop es nuestro marco para estudiar nuevas tecnologías y abordar proyectos de innovación que nos interesan, pero no tienen un lugar comercial. Un tiempo de intercambio para enseñar y aprender. "
+	},
+	"TextInColumns": [
+		{
+			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
+			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"TextPosition": "1"
+		},
+		{
+			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
+			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"TextPosition": "2"
+		},
+		{
+			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
+			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"TextPosition": "3"
+		},
+		{
+			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
+			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"TextPosition": "4"
+		},
+		{
+			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
+			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"TextPosition": "5"
+		},
+		{
+			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
+			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"TextPosition": "6"
+		}
+	],
+	"StaticExample": "Example",
+	"template": {
+		"title": "Template",
+		"body": {
+			"paragraph1": "shorterTemplate",
+			"paragraph2": "For tax purposes"
+		}
+	},
+	"example": "\"{{changeTo}}\"",
+	"nested": {
+		"1stNest": {
+			"1stNestContent": "ejemplo de contenido nesteado",
+			"1stNestMoreContent": "ejemplo de contenido nesteado.",
+			"1stNestThirdContent": "ejemplo de contenido nesteado"
+		}
+	}
+}
