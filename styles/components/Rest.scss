@@ -27,9 +27,9 @@
     min-width: 0.00000001vw;
     padding-left: $paddingLeft;
     padding-right: $paddingRight;
-    width: 60%;
+    width: 40%;
     height: auto;
-    line-height: 90px;
+    line-height: 70px;
 }
 @media (max-width: #{$screen-sm-min}) {
 .restContent{

@@ -6,7 +6,7 @@
     padding-right: $paddingRight;
     background: $secondaryColor;
     padding-top: $GeneralSeparator100;
-    padding-bottom: $GeneralSeparator160;
+    padding-bottom: $GeneralSeparator100;
 
 }
 
@@ -25,7 +25,7 @@
 
 .ColumnSize3 {
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 90.5px;
+    column-gap: 150px;
 }
 
 .RowSize2 {
@@ -69,26 +69,25 @@
 }
 
 .ColumnContentTitle {
-    font-size: $FontSizeTop28;
-    padding-bottom: 28px;
-    line-height: 40px;
+    font-size: $FontSizeTop24;
+    padding-bottom: 16px;
+    line-height: 30px;
     font-weight: 500;
 }
 
 .ColumnContentText {
     font-size: $FontSizeTop18;
-    font-weight: 500;
-    line-height: 35px;
-    padding-bottom: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-bottom: 80px;
 }
 
 .ColumnSize2 {
     .ColumnContentText {
         font-style: normal;
-        font-weight: 500;
-        font-size: $FontSizeTop24;
-        font-weight: 500;
-        line-height: 45px;
+        font-weight: 400;
+        font-size: $FontSizeTop20;
+        line-height: 40px;
     }
 }
 
