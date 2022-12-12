@@ -145,6 +145,7 @@
 			"paragraph2": "For tax purposes"
 		}
 	},
+	"Locale":"{{changeTo}}",
 	"example": "\"{{changeTo}}\"",
 	"nested": {
 		"1stNest": {

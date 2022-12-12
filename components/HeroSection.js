@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import asterisk from '../public/assets/icons/asterisc.svg'
 import animus from '../public/assets/icons/logoanimus-w.svg'
+import LanguageChangeButton from './LanguageButton';
 
 
 const Asterisk = ({ hide , Size }) => (
@@ -33,7 +34,7 @@ const Nav = ({ }) => (
         <div className="NavMenuLink AltHoverableLink"><Link href="/contact" >Contact</Link></div>
         {//TODO Make the button work and translate things
         }
-        <div className="NavMenuLink"><button  onClick={() => onToggleLanguageClick(changeTo)}> ES</button></div>
+        <div className="NavMenuLink"><LanguageChangeButton/></div>
 
 
     </div>
