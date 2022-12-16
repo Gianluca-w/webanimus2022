@@ -47,6 +47,7 @@
         color: $secondaryColor;
         padding: 16px 16px 16px 16px;
         border-radius: 100px;
+       
     }
 
     button.ContactFormSend:hover {
@@ -164,6 +165,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 .ContactFormSend{
     display: flex;
@@ -174,5 +176,15 @@ input[type=number] {
 .ContactFormSendLineContent{
     width: $FontSizeTop24;
     height: $FontSizeTop24;
-    margin-left: 10px;
+    margin-left: $GeneralSeparator40;
+}
+@media (max-width: #{$screen-md-min}) {
+    .ContactFormMain{
+        width: 100%;
+    }
+.ContactFormRestricted40Input{
+    width: 100%;
+    padding: 0,0,0,0;
+}
+
 }

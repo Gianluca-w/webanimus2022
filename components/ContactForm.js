@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Arrow from '../public/assets/icons/arrowBlack.svg'
+import ContactFormHireTheCoop from './ContactHireCoop';
+import ContactSubmitResume from './ContactSubmitResume';
 
 
 const ContactForm = ({ }) => {
@@ -34,7 +36,7 @@ const ContactFormForm = ({ }) => {
             </div>
             <div className={visible ? 'Visible' : 'NotVisible'}>
 
-                <ContactFormHiring />
+                <ContactSubmitResume />
 
             </div>
             <div className="ContactFormSendWrapper" >
@@ -50,87 +52,6 @@ const ContactFormForm = ({ }) => {
         </form>
     </div>
 }
-const ContactFormHireTheCoop = ({ }) => {
-    return <div className={`ContactFormWrapper`}>
-
-        <div className='ContactFormUnderlining'>
-
-            <div className='ContactFormInputWrapper'>
-                <div className='ContactFormWideInput'>
-                    <p>Name</p>
-                    <input type="text" placeholder='Name' name='name'></input>
-                </div>
-                <div className='ContactFormWideInput'>
-                    <p>Email</p>
-                    <input type="mail" placeholder='Email' name='mail'></input>
-                </div>
-                <div className='ContactFormPhoneInput'>
-                    <p>Phone</p>
-                    <input type="number" placeholder='Phone' name='phone'></input>
-                </div>
-            </div>
-        </div>
-        <div className='ContactFormUnderlining'>
-            <div className='ContactFormInputWrapper'>
-                <div className='ContactFormWideInput'>
-                    <p>Message</p>
-                    <textarea type='text' placeholder='Your message' name='message' className=''>
-
-                    </textarea>
-                </div>
-            </div>
-        </div>
-    </div>
-}
-const ContactFormHiring = ({ }) => {
-    return <div className={`ContactFormWrapper`}>
-        <div className='ContactFormUnderlining'>
-            <div className='ContactFormInputWrapper'>
-                <div className='ContactFormWideInput'>
-                    <p>Name</p>
-                    <input type="text" placeholder='Name'></input>
-                </div>
-                <div className='ContactFormWideInput'>
-                    <p>Email</p>
-                    <input type="mail" placeholder='Email'></input>
-                </div>
-                <div className='ContactFormPhoneInput'>
-                    <p>Phone</p>
-                    <input type="number" placeholder='Phone'></input>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div className='ContactFormInputWrapper'>
-                <div className='ContactFormWideInput'>
-                    <p>Message</p>
-                </div>
-                <div className='ContactFormRestricted40Input'>
-                    <p>Resume</p>
-                </div>
-
-            </div>
-        </div>
-
-        <div className='ContactFormInputWrapper'>
-            <div className='ContactFormUnderlining'>
-                <div className='ContactFormWideInput'>
-                    <textarea type='text' placeholder='Message' className=''>
-                    </textarea>
-                </div>
-            </div>
-            <div className='ContactFormRestricted40Input'>
-                <div className='DragAndDropBorder'>
-                    DRAG AND DROP HERE
-                </div>
-
-            </div>
 
 
-        </div>
-
-
-    </div>
-}
 export default ContactForm
