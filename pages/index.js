@@ -1,5 +1,3 @@
-import { useRouter } from 'next/router'
-
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
@@ -18,24 +16,10 @@ import SmallParagraph from '../components/SmallParagraph'
 
 
 export default function Home(props) {
-  const router = useRouter()
   const { t } = useTranslation('common')
-
-
-  const onToggleLanguageClick = (newLocale) => {
-    const { pathname, asPath, query } = router
-    router.push({ pathname, query }, asPath, { locale: newLocale })
-  }
-
-  const changeTo = router.locale === 'en' ? 'es' : 'en'
   return (
     <div className='indexContentWrapper'>
-
-
-      <button style={{width:"100%"}} onClick={() => onToggleLanguageClick(changeTo)}>
-        {t('example', { changeTo })}
-      </button>
-      <HeroSection slogan={t('slogan')} AsteriskVisibility={'hide'} BackgroundImageSrc={'heroSectionBackground.jpg'}/>
+      <HeroSection slogan={t('slogan')} AsteriskVisibility={'hide'} BackgroundImageSrc={'heroSectionBackground.jpg'} />
       <BigParagraph title={t('BigParagraphTitle1')} Tags={t('BigParagraphTags1', { returnObjects: true })} OptionalImage={'TechLogos.png'} />
       <ImageSection FillingImg={'ImageSection.jpeg'}></ImageSection>
       <SmallParagraph SmallTitle={t('SmallParagraphTitle')} Content={t('SmallParagraphContent')} UnderlinedLinkTitle={t('SmallParagraphLink')}></SmallParagraph>
@@ -44,7 +28,7 @@ export default function Home(props) {
       <TextInColumns TitleColumn={t('MetodologyTitle')} ColumnContents={t('MetodologyContent', { returnObjects: true })} ColumnSize={2} MainStyle={"White"} />
       <TitleAndSubtitle title={t('TitleAndSubtitleTitle1')} Subtitle={t('TitleAndSubtitleBody1')} />
       <PhraseAndItems Content={t('WhyHireUs', { returnObjects: true })} />
-      {/*Still hardcoded */}<Grid Content={[{ Filler:"FillerGridImage2", GridPosition: "1" }, { Image:"FIllerA.svg", Filler:"FillerGridImageCenter", GridPosition: "6" }, {GridPosition: "3" ,Filler:"FillerGridItem"}, { GridTitle: "Working!", GridPosition: "4" }, {GridPosition: "5",Filler:"FillerGridImage1" }, { GridTitle: "Working EARLY!", GridPosition: "2" }]} />
+      {/*Still hardcoded */}<Grid Content={[{ Filler: "FillerGridImage2", GridPosition: "1" }, { Image: "FIllerA.svg", Filler: "FillerGridImageCenter", GridPosition: "6" }, { GridPosition: "3", Filler: "FillerGridItem" }, { GridTitle: "Working!", GridPosition: "4" }, { GridPosition: "5", Filler: "FillerGridImage1" }, { GridTitle: "Working EARLY!", GridPosition: "2" }]} />
       <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')} />
       <LinksComponent />
     </div>

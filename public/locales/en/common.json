@@ -192,6 +192,7 @@
 			"paragraph2": "For tax purposes"
 		}
 	},
+	"Locale":"{{changeTo}}",
 	"example": "ejemplo usando elementos existentes en el modulo en el que entra\"{{changeTo}}\"",
 	"nested": {
 		"1stNest": {

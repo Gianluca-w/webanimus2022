@@ -47,6 +47,7 @@
         color: $secondaryColor;
         padding: 16px 16px 16px 16px;
         border-radius: 100px;
+       
     }
 
     button.ContactFormSend:hover {
@@ -87,6 +88,7 @@
 
     p {
         font-size: $FontSizeTop16;
+        padding-bottom: 10px;
     }
 
     input {
@@ -112,8 +114,9 @@
         border: 0px;
         padding: 0px 0px 0px 0px;
         color: $white;
-        min-height: 30px;
+        min-height: 200px;
         font-size: $FontSizeTop16;
+        padding: 0,0,0,0;
 
     }
 
@@ -130,14 +133,19 @@
 }
 
 .DragAndDropArea {
-    width: 100%;
-    height: 100%;
+    min-height: 200px;
+    width: auto;
+    border: 1px solid $white;
+    margin: 10px 10px 10px 10px;
 }
-
+.DragAndDropWrapper{
+    width: 100%;
+}
 .ContactFormUnderlining {
     border-bottom: 1px solid $white;
     width: 100%;
-    padding-top: $GeneralSeparator50;
+    
+    margin-bottom: $GeneralSeparator40;
 }
 
 .DragAndDropBorder {
@@ -164,6 +172,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 .ContactFormSend{
     display: flex;
@@ -174,5 +183,15 @@ input[type=number] {
 .ContactFormSendLineContent{
     width: $FontSizeTop24;
     height: $FontSizeTop24;
-    margin-left: 10px;
+    margin-left: $GeneralSeparator40;
+}
+@media (max-width: #{$screen-md-min}) {
+    .ContactFormMain{
+        width: 100%;
+    }
+.ContactFormRestricted40Input{
+    width: 100%;
+    padding: 0,0,0,0;
+}
+
 }
