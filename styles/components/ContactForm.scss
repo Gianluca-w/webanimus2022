@@ -1,13 +1,12 @@
 //Usual CSS Styles
 .FormWrapper {
-    background: $secondaryColor;
+    background: $thirdColor;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     padding-left: $paddingLeft;
     padding-right: $paddingRight;
-    padding-top: $GeneralSeparator100;
-    padding-bottom: 60px;
-
+    padding-bottom: $GeneralSeparator300;
+    
     .ContactFormWrapper {
         padding-top: 30px;
     }
@@ -26,15 +25,21 @@
 
     button.ContactFormSelector {
 
-        font-size: $FontSizeTop24;
-        background: $secondaryColor;
+        font-size: $FontSizeTop20;
+        background: $thirdColor;
         color: $white;
         padding: 10px 10px 10px 10px;
         margin: 0px 30px 0px 0px;
+ 
+     
+    
     }
 
     button.ContactFormSelector:hover {
-        background: rgba($color: $white, $alpha: 0.05);
+        /*background: rgba($color: $white, $alpha: 0.05);*/
+        color:$accentColor;
+        border-bottom-width: 1px #fff;
+        border-bottom-style: solid;
     }
 
     button.ContactFormSelector:active {
@@ -47,6 +52,7 @@
         color: $secondaryColor;
         padding: 16px 16px 16px 16px;
         border-radius: 100px;
+        font-weight: 600;
        
     }
 
@@ -62,9 +68,9 @@
         text-decoration: none;
     }
 
-    .UnderlinedButton {
+    /*.UnderlinedButton {
         text-decoration: underline;
-    }
+    }*/
 
 
 }
@@ -94,11 +100,12 @@
     input {
         font-size: $FontSizeTop20;
         color: $white;
-        background-color: #0B0A0B;
+        background-color: $thirdColor;
         border: 0px;
         width: 100%;
         padding-bottom: 10px;
         min-height: 30px;
+        font-family: 'Montserrat', sans-serif;
     }
 
     input:focus-visible {
@@ -110,13 +117,15 @@
     textarea {
         resize: vertical;
         width: 100%;
-        background-color: $secondaryColor;
+        background-color: $thirdColor;
         border: 0px;
-        padding: 0px 0px 0px 0px;
+        padding: 16px 16px 16px 16px;
         color: $white;
         min-height: 200px;
         font-size: $FontSizeTop16;
         padding: 0,0,0,0;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 30px;
 
     }
 
@@ -137,6 +146,7 @@
     width: auto;
     border: 1px solid $white;
     margin: 10px 10px 10px 10px;
+    padding:16px;
 }
 .DragAndDropWrapper{
     width: 100%;
@@ -183,7 +193,7 @@ input[type=number] {
 .ContactFormSendLineContent{
     width: $FontSizeTop24;
     height: $FontSizeTop24;
-    margin-left: $GeneralSeparator40;
+    margin-left: $GeneralSeparator20;
 }
 @media (max-width: #{$screen-md-min}) {
     .ContactFormMain{

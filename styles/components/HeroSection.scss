@@ -51,7 +51,7 @@ display: flex;
     }
 }
 .BaseContactUs{
-    background: $secondaryColor;
+    background: $thirdColor;
     color: $white;
     font-weight: 700;
     .AsteriskSvg{
@@ -139,6 +139,7 @@ display: flex;
 .ALternativeTitleWrapper{
     padding-left: $paddingLeft;
     padding-right: $paddingRight;
+    font-size:$FontSizeTop20 ;
 
 }
 .ALternativeTitleContent{

@@ -12,7 +12,7 @@ const AboutInfoCard = ({ Title, SubTitle, Body }) => (
 );
 const AboutInfoCardTitle = ({ Content }) => (
     <div className="AboutInfoCardTitle">
-        <strong>{Content}</strong>
+        {Content}
     </div>
 );
 const AboutInfoCardSubTitle = ({ Content }) => (

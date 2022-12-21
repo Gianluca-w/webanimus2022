@@ -8,9 +8,9 @@
     text-align: center;
 }
 .AboutInfoCardTitle{
-    font-size: $FontSizeTop50;
-    line-height: 85.33px;
-    font-weight: 600;
+    font-size: $FontSizeTop30;
+    /*line-height: 85.33px;*/
+    font-weight: 200;
     text-align: left;
     padding-left: 10px;
     padding-right: 10px;
@@ -33,6 +33,7 @@ text-align: left;
 }
 .AboutInfoCardInliner{
     display: flex;
+    width:80%;
 }
 .InfoCardColumnContent{
 width: 100%;
