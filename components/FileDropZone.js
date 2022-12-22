@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import DropzoneFilePreview from "./DropzoneFilePreview";
 //import styles from "../styles/DropZone.module.css";
 
@@ -77,7 +76,7 @@ const  FileDropZone = ({ data, dispatch }) => {
     // initialize formData object
     const formData = new FormData();
     // loop over files and add to formData
-    files.forEach((file) => formData.append("files", file));
+    files.forEach((file) => formData.append("resume", file));
 
     // Upload the files as a POST request to the server using fetch
     // Note: /api/fileupload is not a real endpoint, it is just an example
@@ -109,6 +108,7 @@ const  FileDropZone = ({ data, dispatch }) => {
           id="fileSelect"
           type="file"
           accept="application/pdf"
+          name="ResumeFile"
           onChange={(e) => handleFileSelect(e)}
         />
         <label htmlFor="fileSelect">You can select multiple Files</label>

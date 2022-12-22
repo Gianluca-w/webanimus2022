@@ -21,6 +21,7 @@
         font-family: inherit;
         text-decoration: none;
         border: none;
+        cursor: pointer;
     }
 
     button.ContactFormSelector {
@@ -34,13 +35,15 @@
      
     
     }
-
+    button.ContactFormSelector {
+        border-bottom:1px solid $thirdColor ;
+    }
     button.ContactFormSelector:hover {
         /*background: rgba($color: $white, $alpha: 0.05);*/
         color:$accentColor;
-        border-bottom-width: 1px #fff;
-        border-bottom-style: solid;
+        border-bottom: 1px solid #fff;
     }
+    
 
     button.ContactFormSelector:active {
         background: rgba($color: $white, $alpha: 0.1);
@@ -68,9 +71,9 @@
         text-decoration: none;
     }
 
-    /*.UnderlinedButton {
+    .UnderlinedButton {
         text-decoration: underline;
-    }*/
+    }
 
 
 }
@@ -113,13 +116,15 @@
         outline: none;
         background-color: rgba($color: $white, $alpha: 0.05);
     }
-
+    .TextareaWrapper{
+        margin: 0px 16px;
+    }
     textarea {
         resize: vertical;
         width: 100%;
         background-color: $thirdColor;
         border: 0px;
-        padding: 16px 16px 16px 16px;
+        padding: 0px 0px 0px 0px;
         color: $white;
         min-height: 200px;
         font-size: $FontSizeTop16;
@@ -195,6 +200,7 @@ input[type=number] {
     height: $FontSizeTop24;
     margin-left: $GeneralSeparator20;
 }
+
 @media (max-width: #{$screen-md-min}) {
     .ContactFormMain{
         width: 100%;
@@ -204,4 +210,7 @@ input[type=number] {
     padding: 0,0,0,0;
 }
 
+}
+.InputFlagger{
+ display: none;
 }

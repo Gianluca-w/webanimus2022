@@ -123,7 +123,7 @@ a:hover{
 @import './components/SmallParagraph.scss';
 @import './components/ContactSubmitResume.scss';
 .AltHoverableLink:hover{
-    color: #3C8BEA;
+    color: $accentColor;
 }
 .ForcedUppercase{
     text-transform: uppercase;

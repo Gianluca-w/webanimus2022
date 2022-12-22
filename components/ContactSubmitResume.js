@@ -35,20 +35,21 @@ const ContactSubmitResume = ({ }) => {
         if (ReturnTo == "Phone") { ToSanitize.value = SanitizedValue; setPhone(SanitizedValue); }
         if (ReturnTo == "Message") { setMessage(SanitizedValue); }
     }
-    return <div className={`ContactFormWrapper`}>
+    return <form action="/api/mailing" method="post">
+    <div className={`ContactFormWrapper`}>
         <div className='ContactFormUnderlining'>
             <div className='ContactFormInputWrapper'>
                 <div className='ContactFormWideInput'>
                     <p className="PlaceholderAligner">Name</p>
-                    <input type="text" placeholder='Name' onChange={(event) => SanitizeGeneral(event.target, "Name", 30)}></input>
+                    <input type="text" placeholder='Name' name="name" onChange={(event) => SanitizeGeneral(event.target, "Name", 30)}></input>
                 </div>
                 <div className='ContactFormWideInput'>
                     <p className="PlaceholderAligner">Email</p>
-                    <input type="mail" placeholder='Email' onChange={(event) => SanitizeGeneral(event.target, "Mail", 35)}></input>
+                    <input type="mail" placeholder='Email'name="mail" onChange={(event) => SanitizeGeneral(event.target, "Mail", 35)}></input>
                 </div>
                 <div className='ContactFormPhoneInput'>
                     <p className="PlaceholderAligner">Phone</p>
-                    <input type="text" placeholder='Phone' onChange={(event) => SanitizeGeneral(event.target, "Phone", 15, /[^0-9+]/g)}></input>
+                    <input type="text" placeholder='Phone' name="phone" onChange={(event) => SanitizeGeneral(event.target, "Phone", 15, /[^0-9+]/g)}></input>
                 </div>
             </div>
         </div>
@@ -68,10 +69,10 @@ const ContactSubmitResume = ({ }) => {
                 <div className="DragAndDropWrapper"><div className="DragAndDropArea"><FileDropZone data={data} dispatch={dispatch}/> </div></div>
                 
             </div>
-
+            
     </div>
         <div className="ContactFormSendWrapper" >
-                <button className='ContactFormSend' type='button'><div className=''>Send</div>
+                <button className='ContactFormSend' type='submit'><div className=''>Send</div>
                     <div className='ContactFormSendLineContent'>
                         <Image src={Arrow.src}
                             width={'1px'}
@@ -83,5 +84,7 @@ const ContactSubmitResume = ({ }) => {
         </div>
 
     </div>
+    <input name="type" value='resume' className="InputFlagger" readOnly></input>
+    </form>
 }
 export default ContactSubmitResume

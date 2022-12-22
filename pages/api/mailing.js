@@ -4,10 +4,7 @@ const nodemailer = require("nodemailer");
 
 export default async function handler(req, res) {
   async function main() {
-    console.log(req)
-    console.log(req.body)
-    console.log(req.body.name)
-    return res.status(200).json({response:"Recived" , data:req.body.name})
+    return res.status(200).json({response:"Recived" , data:{Name:req.body.name,Mail:req.body.mail,Phone:req.body.phone,Message:req.body.message,File:req.body.ResumeFile, Type:req.body.type}})
     if(!req.body.name){return  res.status(400).json({ Response:"Mail Failed" ,error:"Empty name detected"})}
     if(!req.body.mail){return  res.status(400).json({ Response:"Mail Failed", error:"Empty mail detected"})}
     if(!req.body.phone){return  res.status(400).json({ Response:"Mail Failed", error:"Empty phone detected"})}

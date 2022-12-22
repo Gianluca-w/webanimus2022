@@ -17,7 +17,8 @@ const ContactFormHireTheCoop = ({ }) => {
         if (ReturnTo=="Message") {setMessage(SanitizedValue);}
     }
 
-    return <div className={`ContactFormWrapper`}>
+    return <form action="/api/mailing" method="post">
+    <div className={`ContactFormWrapper`}>
 
         <div className='ContactFormUnderlining'>
 
@@ -38,7 +39,7 @@ const ContactFormHireTheCoop = ({ }) => {
         </div>
         <div className='ContactFormUnderlining'>
             <div className='ContactFormInputWrapper'>
-                <div className='ContactFormWideInput'>
+                <div className='ContactFormWideInput TextareaWrapper'>
                     <p>Message</p>
                     <textarea type='text' placeholder='Your message' name='message' className='' onChange={(event)=>SanitizeGeneral(event.target,"Message")}>
 
@@ -46,8 +47,9 @@ const ContactFormHireTheCoop = ({ }) => {
                 </div>
             </div>
         </div>
+            
         <div className="ContactFormSendWrapper" >
-                <button className='ContactFormSend' type='button' onClick={(event) => SendMail('hire',name,mail,phone,message)}><div className=''>Send</div>
+                <button className='ContactFormSend' type='submit'><div className=''>Send</div>
                     <div className='ContactFormSendLineContent'>
                         <Image src={Arrow.src}
                             width={'1px'}
@@ -58,5 +60,7 @@ const ContactFormHireTheCoop = ({ }) => {
                 </button>
         </div>
     </div>
+    <input name="type" value='hire' className="InputFlagger" readOnly></input>
+    </form>
 }
 export default ContactFormHireTheCoop

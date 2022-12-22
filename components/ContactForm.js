@@ -49,9 +49,8 @@ const ContactFormForm = ({ }) => {
         Visibility(true);
     };
     return <div className='ContactFormMain'>
-        <button className={visible ? 'NotUnderlinedButton ContactFormSelector' : 'UnderlinedButton ContactFormSelector'} onClick={HandleClickToFalsify}>Want To Hire the Coop?</button>
-        <button className={visible ? 'UnderlinedButton ContactFormSelector' : 'NotUnderlinedButton ContactFormSelector'} onClick={HandleClickToVerify}>Be part of ANIMUS</button>
-        <form action="/api/mailing" method="post">
+        <button className={visible ? 'NotUnderlinedButton ContactFormSelector' : 'ContactFormSelector UnderlinedButton'} onClick={HandleClickToFalsify}>Want To Hire the Coop?</button>
+        <button className={visible ? 'ContactFormSelector UnderlinedButton' : 'NotUnderlinedButton ContactFormSelector'} onClick={HandleClickToVerify}>Be part of ANIMUS</button>
             <div className={visible ? 'NotVisible' : 'Visible'}>
 
                 <ContactFormHireTheCoop />
@@ -62,8 +61,7 @@ const ContactFormForm = ({ }) => {
                 <ContactSubmitResume />
 
             </div>
-            
-        </form>
+        
     </div>
 }
 
