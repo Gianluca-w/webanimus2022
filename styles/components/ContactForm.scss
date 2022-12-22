@@ -136,14 +136,16 @@
     min-height: 200px;
     width: auto;
     border: 1px solid $white;
-    margin: 10px 10px 10px 10px;
+    margin-left: 10px;
+
+    
 }
 .DragAndDropWrapper{
     width: 100%;
 }
 .ContactFormUnderlining {
     border-bottom: 1px solid $white;
-    width: 100%;
+    
     
     margin-bottom: $GeneralSeparator40;
 }

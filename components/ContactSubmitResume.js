@@ -1,6 +1,28 @@
-import { useState } from "react"
+import { useState, useReducer } from "react"
+import FileDropZone from "./FileDropZone";
+import Image from 'next/image';
+import Arrow from '../public/assets/icons/arrowBlack.svg'
+
 
 const ContactSubmitResume = ({ }) => {
+     // reducer function to handle state changes
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "SET_IN_DROP_ZONE":
+        return { ...state, inDropZone: action.inDropZone };
+      case "ADD_FILE_TO_LIST":
+        return { ...state, fileList: state.fileList.concat(action.files) };
+      default:
+        return state;
+    }
+  };
+    // destructuring state and dispatch, initializing fileList to empty array
+    const [data, dispatch] = useReducer(reducer, {
+        inDropZone: false,
+        fileList: [],
+      });
+
+
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
     const [phone, setPhone] = useState("");
@@ -13,38 +35,51 @@ const ContactSubmitResume = ({ }) => {
         if (ReturnTo == "Phone") { ToSanitize.value = SanitizedValue; setPhone(SanitizedValue); }
         if (ReturnTo == "Message") { setMessage(SanitizedValue); }
     }
-
     return <div className={`ContactFormWrapper`}>
         <div className='ContactFormUnderlining'>
             <div className='ContactFormInputWrapper'>
                 <div className='ContactFormWideInput'>
-                    <p>Name</p>
+                    <p className="PlaceholderAligner">Name</p>
                     <input type="text" placeholder='Name' onChange={(event) => SanitizeGeneral(event.target, "Name", 30)}></input>
                 </div>
                 <div className='ContactFormWideInput'>
-                    <p>Email</p>
+                    <p className="PlaceholderAligner">Email</p>
                     <input type="mail" placeholder='Email' onChange={(event) => SanitizeGeneral(event.target, "Mail", 35)}></input>
                 </div>
                 <div className='ContactFormPhoneInput'>
-                    <p>Phone</p>
+                    <p className="PlaceholderAligner">Phone</p>
                     <input type="text" placeholder='Phone' onChange={(event) => SanitizeGeneral(event.target, "Phone", 15, /[^0-9+]/g)}></input>
                 </div>
             </div>
         </div>
-
+ 
         <div className='ContactFormInputWrapper'>
             <div className='ContactFormWideInput'>
+            <div className="ContactFormUnderlining">
                 <p>Message</p>
                 <textarea type='text' placeholder='Your message' name='message' className='' onChange={(event) => SanitizeGeneral(event.target, "Message")}>
 
                 </textarea>
+                </div>
             </div>
             <div className='ContactFormWideInput'>
                 
                 <div><p style={{paddingLeft:"10px"}}>Resume</p></div>
-                <div className="DragAndDropWrapper"><div className="DragAndDropArea"> Drag and Drop here</div></div>
+                <div className="DragAndDropWrapper"><div className="DragAndDropArea"><FileDropZone data={data} dispatch={dispatch}/> </div></div>
                 
             </div>
+
+    </div>
+        <div className="ContactFormSendWrapper" >
+                <button className='ContactFormSend' type='button'><div className=''>Send</div>
+                    <div className='ContactFormSendLineContent'>
+                        <Image src={Arrow.src}
+                            width={'1px'}
+                            height={'1px'}
+                            layout='responsive'
+                            alt='>' />
+                    </div>
+                </button>
         </div>
 
     </div>

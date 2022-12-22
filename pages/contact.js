@@ -6,7 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import HeroSection from '../components/HeroSection'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
-
+import LinksComponent from '../components/LinksComponent'
 export default function Home(props) {
     const { t } = useTranslation('common')
 
@@ -15,6 +15,7 @@ export default function Home(props) {
         <HeroSection slogan={t('slogan')} BasicBackgroundStyle={'BaseContactUs'} AsteriskSize='45px'/>
         <ContactForm/>
         <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')}/>
+        <LinksComponent/>
     </div>
     )
    }

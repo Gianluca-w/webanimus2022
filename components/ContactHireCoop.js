@@ -1,4 +1,7 @@
 import { useState } from "react"
+import Image from 'next/image';
+import Arrow from '../public/assets/icons/arrowBlack.svg'
+import {SendMail} from './ContactForm.js'
 
 const ContactFormHireTheCoop = ({ }) => {
     const [name, setName] = useState("");
@@ -20,15 +23,15 @@ const ContactFormHireTheCoop = ({ }) => {
 
             <div className='ContactFormInputWrapper'>
                 <div className='ContactFormWideInput'>
-                    <p>Name</p>
+                    <p className="PlaceholderAligner">Name</p>
                     <input type="text" placeholder='Name' name='name' onChange={(event) => SanitizeGeneral(event.target,"Name",30)}></input>
                 </div>
                 <div className='ContactFormWideInput'>
-                    <p>Email</p>
+                    <p className="PlaceholderAligner">Email</p>
                     <input type="text" placeholder='Email' name='mail' onChange={(event) => SanitizeGeneral(event.target, "Mail",35)}></input>
                 </div>
                 <div className='ContactFormPhoneInput'>
-                    <p>Phone</p>
+                    <p className="PlaceholderAligner">Phone</p>
                     <input type="text" placeholder='Phone' name='phone' onChange={(event) => SanitizeGeneral(event.target, "Phone",15,/[^0-9+]/g)}></input>
                 </div>
             </div>
@@ -42,6 +45,17 @@ const ContactFormHireTheCoop = ({ }) => {
                     </textarea>
                 </div>
             </div>
+        </div>
+        <div className="ContactFormSendWrapper" >
+                <button className='ContactFormSend' type='button' onClick={(event) => SendMail('hire',name,mail,phone,message)}><div className=''>Send</div>
+                    <div className='ContactFormSendLineContent'>
+                        <Image src={Arrow.src}
+                            width={'1px'}
+                            height={'1px'}
+                            layout='responsive'
+                            alt='>' />
+                    </div>
+                </button>
         </div>
     </div>
 }

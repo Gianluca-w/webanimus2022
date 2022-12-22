@@ -1,10 +1,33 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
-import Arrow from '../public/assets/icons/arrowBlack.svg'
 import ContactFormHireTheCoop from './ContactHireCoop';
 import ContactSubmitResume from './ContactSubmitResume';
-
-
+export async function SendMail(type ,contentName ,contentMail ,contentPhone ,contentMessage ,resume){
+    
+    switch (type){
+        case "hire":
+          let response = await fetch('/api/mailing', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                  },
+                body: `{"name":${contentName},
+                        "mail":${contentMail},
+                        "phone":${contentPhone},
+                        "message":${contentMessage}}`
+              });
+            let result = await response.json()
+            
+            console.log(result)
+            break;
+        case "resume":       
+            console.log(name);
+            console.log(mail); 
+            console.log(phone);
+            console.log(message);
+            console.log("here be Resume")
+        break;
+    }
+}
 const ContactForm = ({ }) => {
     return <div className={`FormWrapper`}>
         <ContactFormButtons />
@@ -39,16 +62,7 @@ const ContactFormForm = ({ }) => {
                 <ContactSubmitResume />
 
             </div>
-            <div className="ContactFormSendWrapper" >
-                <button className='ContactFormSend' type='submit'><div className=''>Send</div>
-                    <div className='ContactFormSendLineContent'>
-                        <Image src={Arrow.src}
-                            width={'1px'}
-                            height={'1px'}
-                            layout='responsive'
-                            alt='>' />
-                    </div>
-                </button></div>
+            
         </form>
     </div>
 }

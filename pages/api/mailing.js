@@ -2,12 +2,17 @@
 const nodemailer = require("nodemailer");
 
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   async function main() {
-// Starto of the Guard clauses and sanitizing of what we recieve
-    if(!req.body.name){return  res.status(400).json({ Response:"Mail Failed" ,error:"A valid name was not provided"})}
-    if(!req.body.mail){return  res.status(400).json({ Response:"Mail Failed", error:"A valid mail was not provided pOSTA QUE ANDAN LAS CLAUSES"})}
-    if(!req.body.phone){return  res.status(400).json({ Response:"Mail Failed", error:"A valid phone was not provided"})}
+    console.log(req)
+    console.log(req.body)
+    console.log(req.body.name)
+    return res.status(200).json({response:"Recived" , data:req.body.name})
+    if(!req.body.name){return  res.status(400).json({ Response:"Mail Failed" ,error:"Empty name detected"})}
+    if(!req.body.mail){return  res.status(400).json({ Response:"Mail Failed", error:"Empty mail detected"})}
+    if(!req.body.phone){return  res.status(400).json({ Response:"Mail Failed", error:"Empty phone detected"})}
+    if(!req.body.message){return  res.status(400).json({ Response:"Mail Failed", error:"Empty message detected"})}
+    console.log("Clauses Abided")
 //Endo of the Security*/
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
