@@ -1,29 +1,23 @@
 import React, { useState } from 'react';
 import ContactFormHireTheCoop from './ContactHireCoop';
 import ContactSubmitResume from './ContactSubmitResume';
-export async function SendMail(type ,contentName ,contentMail ,contentPhone ,contentMessage ,resume){
+export async function SendMail(type ,ContentName ,TargetMail ,ContentPhone ,ContentMessage ,ContentResume){
     
     switch (type){
         case "hire":
-          let response = await fetch('/api/mailing', {
+            let WorkOffer = {Name:ContentName, Mail:TargetMail, Phone:ContentPhone, Message:ContentMessage, HandlerType:type};
+            let response = await fetch('/api/mailing', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                   },
-                body: `{"name":${contentName},
-                        "mail":${contentMail},
-                        "phone":${contentPhone},
-                        "message":${contentMessage}}`
+                body: JSON.stringify(WorkOffer)
               });
             let result = await response.json()
             
             console.log(result)
             break;
         case "resume":       
-            console.log(name);
-            console.log(mail); 
-            console.log(phone);
-            console.log(message);
             console.log("here be Resume")
         break;
     }

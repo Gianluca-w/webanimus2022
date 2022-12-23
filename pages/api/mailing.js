@@ -4,12 +4,12 @@ const nodemailer = require("nodemailer");
 
 export default async function handler(req, res) {
   async function main() {
-    return res.status(200).json({response:"Recived" , data:{Name:req.body.name,Mail:req.body.mail,Phone:req.body.phone,Message:req.body.message,File:req.body.ResumeFile, Type:req.body.type}})
-    if(!req.body.name){return  res.status(400).json({ Response:"Mail Failed" ,error:"Empty name detected"})}
-    if(!req.body.mail){return  res.status(400).json({ Response:"Mail Failed", error:"Empty mail detected"})}
-    if(!req.body.phone){return  res.status(400).json({ Response:"Mail Failed", error:"Empty phone detected"})}
-    if(!req.body.message){return  res.status(400).json({ Response:"Mail Failed", error:"Empty message detected"})}
-    console.log("Clauses Abided")
+    
+    if(!req.body.Name){return  res.status(400).json({ Response:"Mail Failed" ,error:"Empty name detected"})}
+    if(!req.body.Mail){return  res.status(400).json({ Response:"Mail Failed", error:"Empty mail detected"})}
+    if(!req.body.Phone){return  res.status(400).json({ Response:"Mail Failed", error:"Empty phone detected"})}
+    if(!req.body.Message){return  res.status(400).json({ Response:"Mail Failed", error:"Empty message detected"})}
+    console.log("Clauses Abided, Mail in progress")
 //Endo of the Security*/
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
@@ -26,25 +26,50 @@ export default async function handler(req, res) {
     });
 
     // send mail with defined transport object
-    let info = await transporter.sendMail({
-      from: `${process.env.MAILR_USR}@gmail.com`, // sender address
-      to: 'barreyro.gian@gmail.com', // list of receivers, usually info@animus.com.ar
-      subject: "Llamado al trabajo", // Subject line
-      text:"FIller Text",
-      html: "<b>Funca</b>", // html body
-/*
-      attachments: [
-        {
-            filename: 'Curriculum.pdf',
-            path: 'C:/Users/Username/Desktop/somefile.pdf',                                         
-            contentType: 'application/pdf'
-        }],
-*/
-      replyTo:"barreyro.gian@gmail.com" //Substitute for req.mail
-    });
-  
-    console.log("Message sent: %s", info.messageId);
-    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+    switch (req.body.HandlerType) {
+      case "hire":
+
+      let WorkMail = await transporter.sendMail({
+        from: `${process.env.MAILR_USR}@gmail.com`, // sender address
+        to: 'barreyro.gian@gmail.com', // list of receivers, usually info@animus.com.ar
+        subject: "Llamado al trabajo", // Subject line
+        text:"FIller Text",
+        html: "<b>Funca</b>", // html body
+  /*
+        attachments: [
+          {
+              filename: 'Curriculum.pdf',
+              path: 'C:/Users/Username/Desktop/somefile.pdf',                                         
+              contentType: 'application/pdf'
+          }],
+  */
+        replyTo:"barreyro.gian@gmail.com" //Substitute for req.mail
+      });
+      console.log("Message sent: %s", WorkMail.messageId);
+        
+      break;
+      case "resume":
+        let ResumeMail = await transporter.sendMail({
+          from: `${process.env.MAILR_USR}@gmail.com`, // sender address
+          to: 'barreyro.gian@gmail.com', // list of receivers, usually info@animus.com.ar
+          subject: "Llamado al trabajo", // Subject line
+          text:"FIller Text",
+          html: "<b>Funca</b>", // html body
+          attachments: [
+            {
+                filename: `${req.body.Name}Curriculum.pdf`,
+                path: 'C:/Users/Username/Desktop/somefile.pdf',                                         
+                contentType: 'application/pdf'
+            }],
+          replyTo:"barreyro.gian@gmail.com" //Substitute for req.mail
+        });
+        console.log("Message sent: %s", ResumeMail.messageId);
+      break;
+    
+      default:
+        res.status(500).json({ Response:"Mail unsuccessfully Sent"})
+        break;
+    }
     res.status(200).json({ Response:"Mail Succesfully Sent"})
   }
   main().catch(console.error)//.then(res.status(400).json({ Response:"Mail Failed"}));
