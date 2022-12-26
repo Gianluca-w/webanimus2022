@@ -124,6 +124,7 @@ a:hover{
 @import './components/ContactSubmitResume.scss';
 .AltHoverableLink:hover{
     color: $accentColor;
+    text-decoration-color: $accentColor;
 }
 .ForcedUppercase{
     text-transform: uppercase;

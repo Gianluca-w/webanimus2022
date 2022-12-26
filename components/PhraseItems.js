@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import asterisc from '../public/assets/icons/asterisc.svg'
+
 const PhraseAndItems = ({ Content }) => (
     <div className="PhraseWrapper">
         <div className="PraseGrid">

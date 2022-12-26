@@ -2,7 +2,7 @@ import { useState, useReducer } from "react"
 import FileDropZone from "./FileDropZone";
 import Image from 'next/image';
 import Arrow from '../public/assets/icons/arrowBlack.svg'
-
+import ContactFormDragNDrop from './ContactFormDragNDrop';
 
 const ContactSubmitResume = ({ }) => {
      // reducer function to handle state changes
@@ -66,7 +66,7 @@ const ContactSubmitResume = ({ }) => {
             <div className='ContactFormWideInput'>
                 
                 <div><p style={{paddingLeft:"10px"}}>Resume</p></div>
-                <div className="DragAndDropWrapper"><div className="DragAndDropArea"><FileDropZone data={data} dispatch={dispatch}/> </div></div>
+                <div className="DragAndDropWrapper"><div className="DragAndDropArea"> <ContactFormDragNDrop/> </div></div>
                 
             </div>
             

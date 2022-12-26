@@ -32,8 +32,6 @@ const Nav = ({ }) => (
         <div className='NavMenuSeparator'></div>
         <div className="NavMenuLink AltHoverableLink"><Link href="/es/about" className='AltHoverableLink'>About</Link></div>
         <div className="NavMenuLink AltHoverableLink"><Link href="/contact" >Contact</Link></div>
-        {//TODO Make the button work and translate things
-        }
         <div className="NavMenuLink"><LanguageChangeButton/></div>
 
 
@@ -49,6 +47,10 @@ const AlternativeTitle = ({ Content }) => (
         }
     </div>
 );
+/**
+         * Send 'slogan' to make the main text change, this fiel is required for it to work
+         * Send anything in AsteriskVisibility to make it dissapear
+**/
 const HeroSection = ({ slogan, AsteriskVisibility, MaxWidth, AlternativeTitleContent,BackgroundImageSrc, BasicBackgroundStyle="BaseHero",AsteriskSize ='74px'}) => (
     <HeroSectionParent backgroundImageToUse={`/assets/img/${BackgroundImageSrc}`} AltBackgroundStyle={BasicBackgroundStyle}>
         <div className='HeroSectionWrapper'>

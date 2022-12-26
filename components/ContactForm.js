@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ContactFormHireTheCoop from './ContactHireCoop';
 import ContactSubmitResume from './ContactSubmitResume';
+
 export async function SendMail(type ,ContentName ,TargetMail ,ContentPhone ,ContentMessage ,ContentResume){
     
     switch (type){
@@ -53,7 +54,7 @@ const ContactFormForm = ({ }) => {
             <div className={visible ? 'Visible' : 'NotVisible'}>
 
                 <ContactSubmitResume />
-
+                
             </div>
         
     </div>

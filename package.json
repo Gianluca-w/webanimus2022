@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@google-cloud/local-auth": "^2.1.1",
+    "formidable": "^2.1.1",
     "googleapis": "^109.0.1",
     "i18next": "^21.9.2",
     "next": "12.3.0",
