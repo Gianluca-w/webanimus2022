@@ -5,23 +5,6 @@ import Arrow from '../public/assets/icons/arrowBlack.svg'
 import ContactFormDragNDrop from './ContactFormDragNDrop';
 
 const ContactSubmitResume = ({ }) => {
-     // reducer function to handle state changes
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case "SET_IN_DROP_ZONE":
-        return { ...state, inDropZone: action.inDropZone };
-      case "ADD_FILE_TO_LIST":
-        return { ...state, fileList: state.fileList.concat(action.files) };
-      default:
-        return state;
-    }
-  };
-    // destructuring state and dispatch, initializing fileList to empty array
-    const [data, dispatch] = useReducer(reducer, {
-        inDropZone: false,
-        fileList: [],
-      });
-
 
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");

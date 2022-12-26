@@ -14,7 +14,6 @@ const post = async (req, res) => {
     if (files.file.mimetype!='application/pdf') {
       return res.status(400).send("File not a PDF");
     }
-    console.log(files.file.mimetype)
     await saveFile(files.file);
     
     return res.status(201).send("Resume Correctly Uploaded");
