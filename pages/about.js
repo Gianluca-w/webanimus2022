@@ -13,7 +13,7 @@ export default function Home(props) {
   const { t } = useTranslation('common')
   return (
     <div className='indexContentWrapper'>
-      <HeroSection slogan={t('AboutUs.slogan')} MaxWidth={true} AlternativeTitleContent={'Esto es lo que hacemos.'} BasicBackgroundStyle={'BaseAboutUs'} AsteriskSize='45px'/>
+      <HeroSection slogan={t('AboutUs.slogan')} MaxWidth={true} AlternativeTitleContent={'Esto es lo que hacemos.'} BasicBackgroundStyle={'BaseAboutUs'} AsteriskSize='45px' BackgroundImageSrc='AboutUsBackground.jpg'/>
       <TextInColumns ColumnContents={t('TextInColumns', { returnObjects: true })} ColumnSize={3} MainStyle={"white"}></TextInColumns>
       <AboutSmallCard Title={t('AboutUs.BuddiesTitle')} Body={t('AboutUs.BuddiesBody')} />
       <AboutImage />

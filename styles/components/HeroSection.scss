@@ -37,7 +37,6 @@ display: flex;
     
 }
 .BaseHero{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../public/assets/img/heroSectionBackground.jpg');
     color: $white;
         h1{
             font-weight: 100;
@@ -92,6 +91,7 @@ display: flex;
 
 .nav {
     padding-top: 1vh;
+    font-weight: 400;
 
     .navContentWrapperGrid {
         padding-left: $paddingLeft;
@@ -192,6 +192,11 @@ display: flex;
         width: auto;
     
     }
+}
+.SkyboxBackgroundWrapper{
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
 }
 
 @media (max-width: #{$screen-lg-min}) {}

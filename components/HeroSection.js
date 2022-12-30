@@ -4,6 +4,7 @@ import Image from 'next/image';
 import asterisk from '../public/assets/icons/asterisc.svg'
 import animus from '../public/assets/icons/logoanimus-w.svg'
 import LanguageChangeButton from './LanguageButton';
+import SkyboxBackground from './SkyboxBackground';
 
 
 const Asterisk = ({ hide , Size }) => (
@@ -51,8 +52,8 @@ const AlternativeTitle = ({ Content }) => (
          * Send 'slogan' to make the main text change, this fiel is required for it to work
          * Send anything in AsteriskVisibility to make it dissapear
 **/
-const HeroSection = ({ slogan, AsteriskVisibility, MaxWidth, AlternativeTitleContent,BackgroundImageSrc, BasicBackgroundStyle="BaseHero",AsteriskSize ='74px'}) => (
-    <HeroSectionParent backgroundImageToUse={`/assets/img/${BackgroundImageSrc}`} AltBackgroundStyle={BasicBackgroundStyle}>
+const HeroSection = ({ slogan, AsteriskVisibility, MaxWidth, AlternativeTitleContent,BackgroundImageSrc, BasicBackgroundStyle="BaseHero",AsteriskSize ='74px', Skybox, BlackFIlter=false}) => (
+    <HeroSectionParent backgroundImageToUse={`/assets/img/${BackgroundImageSrc}`} AltBackgroundStyle={BasicBackgroundStyle} SkyboxVIsibility={Skybox} Filtered={BlackFIlter}>
         <div className='HeroSectionWrapper'>
         <div className="nav">
             <Nav />
@@ -70,13 +71,34 @@ const HeroSection = ({ slogan, AsteriskVisibility, MaxWidth, AlternativeTitleCon
     </HeroSectionParent>
 );
 
-const HeroSectionParent = ({ children, backgroundImageToUse ,AltBackgroundStyle}) => {
-    return <div className={`heroWrapper ${AltBackgroundStyle}`} >
+const HeroSectionParent = ({ children, backgroundImageToUse="none" ,AltBackgroundStyle,SkyboxVIsibility, BackgroundStyle="",Filtered}) => {
+    if(Filtered!=false){
+        BackgroundStyle += "linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),"
+    }
+    if(backgroundImageToUse != '/assets/img/undefined'){
+        BackgroundStyle = BackgroundStyle += `url('${backgroundImageToUse}'),`
+    }
+    if(BackgroundStyle.endsWith(',')){
+        BackgroundStyle = BackgroundStyle.substring(0,(BackgroundStyle.length-1))
+    }
+
+    return<div className={`heroWrapper ${AltBackgroundStyle}`} style={{background:BackgroundStyle}} >
+        <HeroSkyboxBackground Visibility={SkyboxVIsibility}/>
         <div className="heroGrid">
             {children}
         </div>
     </div>
 
 }
+const HeroSkyboxBackground = ({Visibility} )=>{
+    if (Visibility) {
+        return <div  className='SkyboxBackgroundWrapper'>
+                <SkyboxBackground/>
+        </div>
+    }
+}
+
+
+
 
 export default HeroSection;
