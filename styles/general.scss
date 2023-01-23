@@ -127,6 +127,7 @@ a:hover{
 @import './components/AboutImage.scss';
 @import './components/SmallParagraph.scss';
 @import './components/ContactSubmitResume.scss';
+@import './components/NotificationCard.scss';
 .AltHoverableLink:hover{
     color: $accentColor;
     text-decoration-color: $accentColor;

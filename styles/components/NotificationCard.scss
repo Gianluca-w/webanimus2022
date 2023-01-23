@@ -1,6 +1,9 @@
 .NotificationCardWrapper{
-
+background: red;
 }
-.NotificationCardWrapper:hover{
+.NotificationMaster{
+    z-index: 1;
+}
+.NotificationMaster:hover{
     z-index: 2;
 }

@@ -19,7 +19,7 @@ export default function Home(props) {
   const { t } = useTranslation('common')
   return (
     <div className='indexContentWrapper'>
-      <HeroSection slogan={t('slogan')} AsteriskVisibility={'hide'} BackgroundImageSrc={'HeroSectionBackground.jpg'} BlackFIlter={true} />
+      <HeroSection slogan={t('slogan')} AsteriskVisibility={'hide'} Skybox={"Visible"} BlackFIlter={true} />
       <BigParagraph title={t('BigParagraphTitle1')} Tags={t('BigParagraphTags1', { returnObjects: true })} OptionalImage={'TechLogos.png'} />
       <ImageSection FillingImg={'ImageSection.jpeg'}></ImageSection>
       <SmallParagraph SmallTitle={t('SmallParagraphTitle')} Content={t('SmallParagraphContent')} UnderlinedLinkTitle={t('SmallParagraphLink')}></SmallParagraph>

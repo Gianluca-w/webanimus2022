@@ -2,7 +2,7 @@ import { useState } from "react"
 import Image from 'next/image';
 import Arrow from '../public/assets/icons/arrowBlack.svg'
 import { SendMail, SanitizeGeneral } from './GeneralistFunctions'
-import NorificationCard from "./NotificationCard";
+import NotificationCard from "./NotificationCard";
 
 
 const ContactFormHireTheCoop = ({ }) => {
@@ -75,7 +75,9 @@ const ContactFormHireTheCoop = ({ }) => {
                 </div>
             </div>
         </div>
-        <NorificationCard Title={`Incomplete field `} Body={`Please COmplete the field before trying again`}/>
+        <NotificationCard Title={`Incomplete field `} Body={`Please Complete the field before trying again`}/>
+        <NotificationCard Title={`Incomplete field `} Body={`Please Complete the field before trying again`} Positioner={"180px"}/>
+        <NotificationCard Title={`Incomplete field `} Body={`Please Complete the field before trying again`} Positioner={"210px"}/>
             
         <div className="ContactFormSendWrapper" >
                 <button className='ContactFormSend' type='button' onClick={(e)=>CheckHireFormCompletion()}><div className=''>Send</div>
