@@ -128,6 +128,10 @@ a:hover{
 @import './components/SmallParagraph.scss';
 @import './components/ContactSubmitResume.scss';
 @import './components/NotificationCard.scss';
+@import './components/HeroSectionRemaster.scss';
+.AltHoverableLink{
+    cursor: pointer;
+}
 .AltHoverableLink:hover{
     color: $accentColor;
     text-decoration-color: $accentColor;

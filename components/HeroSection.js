@@ -52,8 +52,8 @@ const AlternativeTitle = ({ Content }) => (
          * Send 'slogan' to make the main text change, this fiel is required for it to work
          * Send anything in AsteriskVisibility to make it dissapear
 **/
-const HeroSection = ({ slogan, AsteriskVisibility, MaxWidth, AlternativeTitleContent,BackgroundImageSrc, BasicBackgroundStyle="BaseHero",AsteriskSize ='74px', Skybox, BlackFIlter=false}) => (
-    <HeroSectionParent backgroundImageToUse={`/assets/img/${BackgroundImageSrc}`} AltBackgroundStyle={BasicBackgroundStyle} SkyboxVIsibility={Skybox} Filtered={BlackFIlter}>
+const HeroSection = ({ slogan, AsteriskVisibility, MaxWidth, AlternativeTitleContent,BackgroundImageSrc, BasicBackgroundStyle="BaseHero",AsteriskSize ='74px', Skybox, BlackFilter=false}) => (
+    <HeroSectionParent backgroundImageToUse={`/assets/img/${BackgroundImageSrc}`} AltBackgroundStyle={BasicBackgroundStyle} SkyboxVIsibility={Skybox} Filtered={BlackFilter}>
         <div className='HeroSectionWrapper'>
         <div className="nav">
             <Nav />

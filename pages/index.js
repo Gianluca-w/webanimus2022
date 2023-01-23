@@ -12,6 +12,7 @@ import ImageSection from '../components/ImageSection'
 import TextInColumns from '../components/TextInColumns'
 import LinksComponent from '../components/LinksComponent'
 import SmallParagraph from '../components/SmallParagraph'
+import HeroSectionRemastered from '../components/HeroSectionRemaster'
 
 
 
@@ -19,7 +20,8 @@ export default function Home(props) {
   const { t } = useTranslation('common')
   return (
     <div className='indexContentWrapper'>
-      <HeroSection slogan={t('slogan')} AsteriskVisibility={'hide'} Skybox={"Visible"} BlackFIlter={true} />
+      <HeroSection slogan={t('slogan')} AsteriskVisibility={'hide'} BlackFilter={true}  />
+      <HeroSectionRemastered slogan={t('slogan')} AsteriskVisibility={'hide'} BlackFilter={true}  />
       <BigParagraph title={t('BigParagraphTitle1')} Tags={t('BigParagraphTags1', { returnObjects: true })} OptionalImage={'TechLogos.png'} />
       <ImageSection FillingImg={'ImageSection.jpeg'}></ImageSection>
       <SmallParagraph SmallTitle={t('SmallParagraphTitle')} Content={t('SmallParagraphContent')} UnderlinedLinkTitle={t('SmallParagraphLink')}></SmallParagraph>

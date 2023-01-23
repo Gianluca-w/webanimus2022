@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+
+.NavMainWrapper {
+  display: flex;
+
+}
+
+
+.NavIcon {
+  display: block;
+}
+.PointerCursor{
+    min-height: 50px;
+}
+.NavMenuLink {
+  padding-left: 40px;
+  float: right;
+}
+.AsteriskWrapperRemaster{
+    display:block;
+    padding-top: $GeneralSeparator50;
+    padding-bottom: $GeneralSeparator50;
+}
+.SkyboxBackground{
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+}
+
+//Usual Scss classes and styles, work here to change styles and s
+
+@media (max-width: #{$screen-lg-min}) {
+}
+
+@media (max-width: #{$screen-xl-min}) {
+}
+
+/*
+Para la imagen
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(marita-kavelashvili-ugnrXk1129g-unsplash.jpg);
+
+//Inside auto layout 
+
+flex: none;
+order: 0;
+flex-grow: 0;*/
+.Blak {
+  background-color: $secondaryColor;
+  padding-left: $paddingLeft;
+  padding-right: $paddingRight
+}
