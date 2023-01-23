@@ -10,7 +10,6 @@ const BigParagraph = ({
   <BigParagraphParent>
     <BigParagraphTitle Content={title}></BigParagraphTitle>
     <BigParagraphSubTitle Content={body}></BigParagraphSubTitle>
-    <BigParagraphTags Content={Tags} />
     <BigParagraphImg ImgSrc={OptionalImage}></BigParagraphImg>
     <BigParagraphLink Title={LinkTitle} Href={LinkHref}></BigParagraphLink>
   </BigParagraphParent>
@@ -19,18 +18,7 @@ const BigParagraphTitle = ({ Content }) => {
   return <div className="BigParagraphTitleWrapper">{Content}</div>;
 };
 
-const BigParagraphTags = ({ Content }) => {
-  return (
-    <div className="BigParagraphTagsWrapper">
-      {Content &&
-        Content.map((Tag) => (
-          <div className="Tag" key={Tag.TagName}>
-            {Tag.TagName}
-          </div>
-        ))}
-    </div>
-  );
-};
+
 
 const BigParagraphSubTitle = ({ Content }) => {
   return <div className="BigParagraphBodyWrapper">{Content}</div>;

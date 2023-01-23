@@ -62,38 +62,7 @@
 	"SmallParagraphContent":" Democraticamente gobernada por sus miembros",
 	"AboutUs": {
 		"slogan":"¡Somos una coop! En este mundo, eso es un montón.",
-		"GridContent": [
-			{
-				"GridTitle": "Decisiones conjuntas y autónomas",
-				"GridBody": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-				"GridPosition": "1"
-			},
-			{
-				"GridTitle": "Definimos nuestros destinos",
-				"GridBody": "Proponemos y decidimos en asamblea qué proyectos y rumbo estratégico queremos tomar y cómo organizarnos.",
-				"GridPosition": "2"
-			},
-			{
-				"GridTitle": "Consensuamos",
-				"GridBody": "Hay ideas difíciles que llevan mucha charla, trabajo y sinceridad hasta llegar a los acuerdos necesarios.",
-				"GridPosition": "3"
-			},
-			{
-				"GridTitle": "Estamos en el lugar correcto",
-				"GridBody": "Hacemos lo que nos gusta, nos desarrollamos profesionalmente y nos vinculamos en un ámbito solidario y colaborativo.",
-				"GridPosition": "4"
-			},
-			{
-				"GridTitle": "Nadie se queda con lo nuestro",
-				"GridBody": "Percibimos un ingreso por nuestro trabajo sin que terceros lucren con lo que generamos.",
-				"GridPosition": "5"
-			},
-			{
-				"GridTitle": "Un pie en la comunidad",
-				"GridBody": "Somos parte del lugar al que pertenecemos y buscamos hacer nuestro aporte desde la tecnología.",
-				"GridPosition": "6"
-			}
-		],
+		"SubSlogan":"Esto es lo que hacemos.",
 		"BuddiesTitle": "Coop Buddies",
 		"BuddiesBody": "Somos un poco nerds. Amantes de la naturaleza y sobre todas las cosas compañeres. Desde el 2018 funcionamos como cooperativa. Pero trabajamos en sistemas como Animus desde el 2007. Estamos en Bariloche, Patagonia argentina.",
 		"NetworkTitle": "Red de Redes",
@@ -112,28 +81,28 @@
 			"TextPosition": "1"
 		},
 		{
-			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"body": "Proponemos y decidimos en asamblea qué proyectos y rumbo estratégico queremos tomar y cómo organizarnos.",
+			"InnerTitle": "Definimos nuestros destinos",
 			"TextPosition": "2"
 		},
 		{
-			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"body": "Hay ideas difíciles que llevan mucha charla, trabajo y sinceridad hasta llegar a los acuerdos necesarios.",
+			"InnerTitle": "Consensuamos",
 			"TextPosition": "3"
 		},
 		{
-			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"body": "Hacemos lo que nos gusta, nos desarrollamos profesionalmente y nos vinculamos en un ámbito solidario y colaborativo.",
+			"InnerTitle": "Estamos en el lugar correcto",
 			"TextPosition": "4"
 		},
 		{
-			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"body": "Percibimos un ingreso por nuestro trabajo sin que terceros lucren con lo que generamos.",
+			"InnerTitle": "Nadie se queda con lo nuestro",
 			"TextPosition": "5"
 		},
 		{
-			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"body": "Somos parte del lugar al que pertenecemos y buscamos hacer nuestro aporte desde la tecnología.",
+			"InnerTitle": "Un pie en la comunidad",
 			"TextPosition": "6"
 		}
 	],

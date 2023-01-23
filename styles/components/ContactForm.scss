@@ -30,7 +30,7 @@
         background: $thirdColor;
         color: $white;
         padding: 10px 10px 10px 10px;
-        margin: 0px 30px 0px 0px;
+        margin: 0px 0px 0px 0px;
  
      
     
@@ -39,11 +39,12 @@
         border-bottom:1px solid $thirdColor ;
     }
     button.ContactFormSelector:hover {
-        /*background: rgba($color: $white, $alpha: 0.05);*/
-        color:$accentColor;
-        border-bottom: 1px solid #fff;
+        background: rgba($color: $white, $alpha: 0.05);
+
     }
-    
+    .ButtonRestricter{
+        width: fit-content;
+    }
 
     button.ContactFormSelector:active {
         background: rgba($color: $white, $alpha: 0.1);
@@ -68,11 +69,12 @@
     }
 
     .NotUnderlinedButton {
-        text-decoration: none;
+        width: 0%;
+        transition: 300ms width;
     }
-
     .UnderlinedButton {
-        text-decoration: underline;
+        width: 100%;
+        transition: 300ms width;
     }
 
 
@@ -90,6 +92,7 @@
 .ContactFormPhoneInput {
     min-width: 200px;
 }
+
 
 .ContactFormInputWrapper {
     display: inline-flex;
@@ -141,7 +144,7 @@
 .ContactFormMain {
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 100%;
 }
 
 .DragAndDropArea {

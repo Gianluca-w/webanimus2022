@@ -100,6 +100,11 @@ a:hover{
     height:12px;
     margin-left: 10px;
 }
+.Underline{
+    height: 1px;
+    background-color: $white;
+    padding-top: 2px;
+}
 
 .indexContentWrapper {
     font-family: 'Montserrat', sans-serif;
@@ -128,4 +133,9 @@ a:hover{
 }
 .ForcedUppercase{
     text-transform: uppercase;
+}
+.Spacer5{
+    width: 5%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }

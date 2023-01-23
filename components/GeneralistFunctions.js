@@ -1,3 +1,9 @@
+ /**
+   * Send a mail via api/mailing, Required Params depend on the type                  
+   * type "hire" requires ContentName, TargetMail, ContentPhone & ContentMessage                    
+   * type "resume" requires ContentName, TargetMail, ContentPhone, ContentMessage & ContentResume        
+   * currently does not yield any response
+   */
 export async function SendMail(type, ContentName, TargetMail, ContentPhone, ContentMessage, ContentResume) {
 
     switch (type) {

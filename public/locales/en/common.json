@@ -1,100 +1,54 @@
 {
-	"slogan": "Transforming code with solidarity basis",
+	"slogan": "We develop software with solidarity bases",
 	"subSlogan": "Somos una empresa cooperativa que diseña y desarrolla software.",
+	"BigParagraphTitle1": "We program customized web platforms and systems, creating robust and scalable digital solutions in vertical areas, such as education, transport and finance, among others.",
 	"RestSectionTitle": "",
-	"RestSectionBody": "Software y diseño inteligente e innovador, desde la empatía hacia el conocimiento.",
+	"RestSectionBody": "Intelligent and innovative software and design, from empathy to knowledge.",
 	"TitleAndSubtitleTitle1": "Enhance your technology capacity",
-	"TitleAndSubtitleBody1": "Proveemos servicios como contractors, en esquemas de Staff Augmentation o Managed Service (project teams), en programación, diseño o perfiles híbridos, en inglés y español. ",
-	"BigParagraphTitle1": "Programamos sistemas y plataformas web a medida, generando soluciones digitales robustas y escalables en áreas verticales, como la educación, el transporte y las finanzas, entre otras. ",
-	"BigParagraphTags1": [
-		{
-			"TagName": "PHP (Laravel, Symfony, Codeigniter)"
-		},
-		{
-			"TagName": "JavaScript (NodeJS, React, NextJs, Svelte, Sapper)"
-		},
-		{
-			"TagName": "Databases (MySQL, MongoDB, PostgreSQL)"
-		},
-		{
-			"TagName": "HTML"
-		},
-		{
-			"TagName": "CSS - SASS"
-		},
-		{
-			"TagName": "React Native"
-		},
-		{
-			"TagName": "Elixir - Phoenix"
-		},
-		{
-			"TagName": "Solidity"
-		},
-		{
-			"TagName": "PWA"
-		},
-		{
-			"TagName": "Python"
-		}
-	],
-	"BigParagraphTitle2": "Diseñamos productos y servicios funcionales, lindos y fáciles de usar. Las experiencias digitales generadas son integrales, inclusivas y centradas en las personas. Estamos alineados con el cumplimiento de los estándares Web Content Accessibility Guidelines (WCAG). ",
-	"BigParagraphTags2": [
-		{
-			"TagName": "Data insigth"
-		},
-		{
-			"TagName": "UX / UI Design"
-		},
-		{
-			"TagName": "Accesibilidad"
-		},
-		{
-			"TagName": "Co-creación"
-		}
-	],
+	"TitleAndSubtitleBody1": "We provide services as contractors, in Staff Augmentation or Managed Service (project teams) schemes, in programing, design or hybrid profiles, both in English and Spanish.",
+	"BigParagraphTitle2": "We design both products and services that are functional, aesthetically pleasing and easy  to use, with the focus on making digital experiences comprehensive, inclusive and people- centered. In addition, we are aligned in compliance with the Web Content Accessibility Guidelines standards (WCAG).",
 	"BigParagraphLinkTitle": "Si queres conocer más",
 	"MetodologyTitle": "Metodology",
 	"MetodologyContent": [
 		{
-			"body": "Utilizamos metodologías ágiles y procesos iterativos. Podemos incorporarnos exitosamente a los flujos de trabajo de equipos externos en proyectos en curso. Como así también, abordar desarrollos en su totalidad, incluyendo ingeniería, arquitectura, definiciones técnicas y diseños desde cero.",
+			"body": "We use agile methodologies and iterative processes. We can either successfully join the workflows of external teams in ongoing projects or address whole developments, including engineering, architecture, technical definitions and designs from scratch.",
 			"TextPosition": "1"
 		},
 		{
-			"body": "Como equipo nos retroalimentamos en procesos colectivos de aprendizaje, y prestamos especial atención a las buenas prácticas de la programación y el diseño, el control de calidad y deadline pactados, para alcanzar los objetivos comerciales y estratégicos deseados. ",
+			"body": "As a team we feed back in collective learning processes, paying close attention to good practice in programming and design, quality control and agreed deadlines, to achieve the desired commercial and strategic goals.",
 			"TextPosition": "2"
 		}
 	],
 	"WhyHireUs": {
-		"TitleText": "Why Hire Us?",
+		"TitleText": "Why hire us?",
 		"GridBody": [
 			{
-				"body": "Working1",
+				"body": "We assist you in your development and growth needs without running the risk of having your own employees.",
 				"GridPosition": "1"
 			},
 			{
-				"body": "Working5 LATE!",
+				"body": "We make a direct deal. You save the cost of the recruitment process and keep an open channel for future searches.",
 				"GridPosition": "5"
 			},
 			{
-				"body": "Working3",
+				"body": "The history of our cooperative stands behind and is responsible for the person you hire.",
 				"GridPosition": "3"
-				
 			},
 			{
-				"body": "Working4",
+				"body": "Doubts or technical issues can be filtered and do not escalate immediately, since the people hired are supported by our cooperative.",
 				"GridPosition": "4"
 			},
 			{
-				"body": "Working2 EARLY!",
+				"body": "Garantizamos estabilidad y seriedad. Pertenecemos a FACTTIC, la Federación Argentina de Cooperativas de Trabajo de Tecnología Innovación y Conocimiento.",
 				"GridPosition": "2"
+				
 			},
 			{
-				"body": "Working6",
+				"body": "We are part of the federation of technology cooperatives, FACTTIC. We can escalate teams and tasks, thanks to our operational capacity and the collaboration of other member companies.",
 				"GridPosition": "6"
 			},
 			{
-				"body": "Working7",
+				"body": "We perform in a constant-learning work field, and this pushes us to be at the top of technology.",
 				"GridPosition": "7"
 			}
 		]
@@ -103,88 +57,59 @@
 	"FooterMail": "info@animus.com.ar",
 	"FooterAdress": "Bariloche, Patagonia | Argentina",
 	"FooterLinkTitle": "Contact Us",
-	"SmallParagraphTitle":"The Coop",
-	"SmallParagraphLink":"Worker-owned tech company",
-	"SmallParagraphContent":" Democratically governed by members",
+	"SmallParagraphTitle":"Our Co-op",
+	"SmallParagraphLink":"We are a cooperative technology company",
+	"SmallParagraphContent": " democratically run by its own workers.",
 	"AboutUs": {
-		"slogan":"We are a coop! In this world, that is a lot.",
-		"GridContent": [
-			{
-				"GridTitle": "Decisiones conjuntas y autónomas",
-				"GridBody": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-				"GridPosition": "1"
-			},
-			{
-				"GridTitle": "Definimos nuestros destinos",
-				"GridBody": "Proponemos y decidimos en asamblea qué proyectos y rumbo estratégico queremos tomar y cómo organizarnos.",
-				"GridPosition": "2"
-			},
-			{
-				"GridTitle": "Consensuamos",
-				"GridBody": "Hay ideas difíciles que llevan mucha charla, trabajo y sinceridad hasta llegar a los acuerdos necesarios.",
-				"GridPosition": "3"
-			},
-			{
-				"GridTitle": "Estamos en el lugar correcto",
-				"GridBody": "Hacemos lo que nos gusta, nos desarrollamos profesionalmente y nos vinculamos en un ámbito solidario y colaborativo.",
-				"GridPosition": "4"
-			},
-			{
-				"GridTitle": "Nadie se queda con lo nuestro",
-				"GridBody": "Percibimos un ingreso por nuestro trabajo sin que terceros lucren con lo que generamos.",
-				"GridPosition": "5"
-			},
-			{
-				"GridTitle": "Un pie en la comunidad",
-				"GridBody": "Somos parte del lugar al que pertenecemos y buscamos hacer nuestro aporte desde la tecnología.",
-				"GridPosition": "6"
-				
-			}
-		],
+		"slogan":"In an individualistic world, we think collectively.",
+		"SubSlogan":"We are a cooperative company",
 		"BuddiesTitle": "Coop Buddies",
-		"BuddiesBody": "Somos un poco nerds. Amantes de la naturaleza y sobre todas las cosas compañeres. Desde el 2018 funcionamos como cooperativa. Pero trabajamos en sistemas como Animus desde el 2007. Estamos en Bariloche, Patagonia argentina.",
-		"NetworkTitle": "Red de Redes",
-		"NetworkBody": "Pertenecemos a la Federación Argentina de Cooperativas de Trabajo de Tecnología, Innovación y Conocimiento (FACTTIC). Compartimos el espacio con otras coopes del sector, con quienes tenemos el mismo interés en generar relaciones laborales justas, un entorno solidario y la gestión de proyectos de acuerdo a intereses propios y soberanos.",
-		"SchoolLabsTitle": "School Labs. Espacio de aprendizaje colectivo",
+		"BuddiesBody": "We are a bit of a nerd, nature lovers and, above all, buddies. Since 2018 we have been operating as a cooperative, but had worked in systems similar to Animus since 2007. We are located in Bariloche, Argentine Patagonia.",
+		
+		"NetworkTitle": "Network of networks",
+		"NetworkBody": "We are members of the Argentine Federation of Technology, Innovation and Knowledge Work Cooperatives (Federación Argentina de Cooperativas de Trabajo de Tecnología, Innovación y Conocimiento, FACTTIC). The space is shared with other coops of the sector, with the same interest in generating fair labor relations, a supportive",
+		
+		"SchoolLabsTitle": "School labs Collective learning space",
 		"SchoolLabsSubTitle": "",
-		"SchoolLabsBody": "Suamos a estudiantes y autodidactas de nuestra ciudad que tienen interés en ampliar su conocimiento y compartir el proceso de  co-creación de proyectos. Creemos que esta experiencia puede ayudar a su inserción laboral y práctica profesional.",
+		"SchoolLabsBody": "We promote an informal training environment with a group of students and self-taught students from our city who are interested in expanding their knowledge and sharing the process of co-creating projects. We think this experience can help them in their job placement and professional practice.",
+		
 		"HackaCoopTitle": "Hackacoop",
-		"HackaCoopSubTitle": "Capacitación e investigación interna",
-		"HackaCoopBody": "El Hackacoop es nuestro marco para estudiar nuevas tecnologías y abordar proyectos de innovación que nos interesan, pero no tienen un lugar comercial. Un tiempo de intercambio para enseñar y aprender. "
+		"HackaCoopSubTitle": "Internal training and research",
+		"HackaCoopBody": "In these meetings that we organize for ourselves, we study new technologies and address innovation projects that interest us, but do not have a commercial place. A time for exchange, to teach and learn."
 	},
 	"TextInColumns": [
 		{
-			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"body": "Each member of the coop voice and vote, and ideas which are relevant to the rest.",
+			"InnerTitle": "Joint and autonomous decisions",
 			"TextPosition": "1"
 		},
 		{
-			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"body": "We propose and decide in assembly what projects and strategic direction we want to take and how to organize ourselves.",
+			"InnerTitle": "We define our destinies",
 			"TextPosition": "2"
 		},
 		{
-			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"body": "There are complex ideas that take a lot of talk, work and honesty until reaching the necessary agreements.",
+			"InnerTitle": "We reach agreements",
 			"TextPosition": "3"
 		},
 		{
-			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"body": "We do what we like, develop professionally and connect in a supportive and collaborative environment.",
+			"InnerTitle": "We are in the right place",
 			"TextPosition": "4"
 		},
 		{
-			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"body": "We receive an income from our work without third parties profiting from what we generate.",
+			"InnerTitle": "Nobody takes what is ours",
 			"TextPosition": "5"
 		},
 		{
-			"body": "Cada integrante de la cooperativa tiene voz y voto, e ideas que importan a los demás.",
-			"InnerTitle": "Decisiones conjuntas y autónomas",
+			"body": "We are part of the place where we belong, and we seek to make our contribution through technology.",
+			"InnerTitle": "One foot in the community",
 			"TextPosition": "6"
 		}
 	],
-	"StaticExample":"Example",
+	"StaticExample": "Example",
 	"template": {
 		"title": "Template",
 		"body": {
@@ -193,7 +118,7 @@
 		}
 	},
 	"Locale":"{{changeTo}}",
-	"example": "ejemplo usando elementos existentes en el modulo en el que entra\"{{changeTo}}\"",
+	"example": "\"{{changeTo}}\"",
 	"nested": {
 		"1stNest": {
 			"1stNestContent": "ejemplo de contenido nesteado",

@@ -23,19 +23,22 @@ const ContactFormForm = ({ }) => {
         Visibility(true);
     };
     return <div className='ContactFormMain'>
-        <button className={visible ? 'NotUnderlinedButton ContactFormSelector' : 'ContactFormSelector UnderlinedButton'} onClick={HandleClickToFalsify}>Want To Hire the Coop?</button>
-        <button className={visible ? 'ContactFormSelector UnderlinedButton' : 'NotUnderlinedButton ContactFormSelector'} onClick={HandleClickToVerify}>Be part of ANIMUS</button>
-            <div className={visible ? 'NotVisible' : 'Visible'}>
+        <div className='ContactFormInputWrapper'>
+            <div className='ButtonRestricter'><button className={visible ? 'ContactFormSelector' : 'ContactFormSelector'} onClick={HandleClickToFalsify}>Want To Hire the Coop?</button> <div className={visible ? 'Underline NotUnderlinedButton' : 'Underline UnderlinedButton'}></div></div>
+            <div className='Spacer5'></div>
+            <div className='ButtonRestricter'><button className={visible ? 'ContactFormSelector' : 'ContactFormSelector'} onClick={HandleClickToVerify}>Be part of ANIMUS</button> <div className={visible ? 'Underline UnderlinedButton' : 'Underline NotUnderlinedButton'}></div> </div>
+        </div>
+        <div className={visible ? 'NotVisible' : 'Visible'}>
 
-                <ContactFormHireTheCoop />
+            <ContactFormHireTheCoop />
 
-            </div>
-            <div className={visible ? 'Visible' : 'NotVisible'}>
+        </div>
+        <div className={visible ? 'Visible' : 'NotVisible'}>
 
-                <ContactSubmitResume />
-                
-            </div>
-        
+            <ContactSubmitResume />
+
+        </div>
+
     </div>
 }
 

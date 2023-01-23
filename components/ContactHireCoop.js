@@ -2,14 +2,51 @@ import { useState } from "react"
 import Image from 'next/image';
 import Arrow from '../public/assets/icons/arrowBlack.svg'
 import { SendMail, SanitizeGeneral } from './GeneralistFunctions'
+import NorificationCard from "./NotificationCard";
+
 
 const ContactFormHireTheCoop = ({ }) => {
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
     const [phone, setPhone] = useState("");
     const [message, setMessage] = useState("");
+    function IncompleteField(Field){
+        switch (Field) {
+            case "Name":
+                return <NorificationCard Title={`Incomplete ${Field}`} Body={`Please COmplete the ${Field} before trying again`}/>
+            case "Mail":
+                break;
+            case "Phone":
+                break;
+            case "Message":
+                break;
+            case "Resume":
+                break;
+            default:
+                break;
+        }
+    }
+    function CheckHireFormCompletion(){
+       let CheckName = name
+       let CheckMail = mail
+       let CheckPhone = phone
+       let CheckMsg = message
+       if(CheckName.replace(/_/g, "") ==""){
+        return IncompleteField("Name")
+       }
+       if(CheckMail.replace(/_/g, "") ==""){
+        return IncompleteField("Mail")
+       }
+       if(CheckPhone.replace(/_/g, "") ==""){
+        return IncompleteField("Phone")
+       }
+       if(CheckMsg.replace(/_/g, "") ==""){
+        return IncompleteField("Message")
+       }
 
-
+    
+        return SendMail('hire',name,mail,phone,message)
+    }
     return <form action="/api/mailing" method="post">
     <div className={`ContactFormWrapper`}>
 
@@ -38,9 +75,10 @@ const ContactFormHireTheCoop = ({ }) => {
                 </div>
             </div>
         </div>
+        <NorificationCard Title={`Incomplete field `} Body={`Please COmplete the field before trying again`}/>
             
         <div className="ContactFormSendWrapper" >
-                <button className='ContactFormSend' type='button' onClick={(e)=>SendMail('hire',name,mail,phone,message)}><div className=''>Send</div>
+                <button className='ContactFormSend' type='button' onClick={(e)=>CheckHireFormCompletion()}><div className=''>Send</div>
                     <div className='ContactFormSendLineContent'>
                         <Image src={Arrow.src}
                             width={'1px'}
