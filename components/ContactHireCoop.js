@@ -12,7 +12,7 @@ const ContactFormHireTheCoop = ({ }) => {
     function IncompleteField(Field){
         switch (Field) {
             case "Name":
-                return <NorificationCard Title={`Incomplete ${Field}`} Body={`Please COmplete the ${Field} before trying again`}/>
+                break;
             case "Mail":
                 break;
             case "Phone":
