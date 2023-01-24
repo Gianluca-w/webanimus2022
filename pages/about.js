@@ -2,6 +2,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import HeroSection from '../components/HeroSection'
+import HeroSectionRemastered from '../components/HeroSectionRemaster'
 import Footer from '../components/Footer'
 import LinksComponent from '../components/LinksComponent'
 import TextInColumns from '../components/TextInColumns'

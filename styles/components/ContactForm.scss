@@ -20,7 +20,7 @@
     button {
         font-family: inherit;
         text-decoration: none;
-        border: none;
+        border: 1px, white;
         cursor: pointer;
     }
 
@@ -34,9 +34,6 @@
  
      
     
-    }
-    button.ContactFormSelector {
-        border-bottom:1px solid $thirdColor ;
     }
     button.ContactFormSelector:hover {
         background: rgba($color: $white, $alpha: 0.05);

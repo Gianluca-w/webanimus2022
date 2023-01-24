@@ -1,13 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.Blak {
+  background-color: $secondaryColor;
+  padding-left: $GeneralSeparator300;
+  padding-right: $GeneralSeparator300
+}
 
-
+.HeroSectionTitleWrapper{
+  width:70%;
+  padding-bottom: $GeneralSeparator160;
+}
+.BaseStyle{
+  min-width: 0.00000001vw;
+  padding-top: $GeneralSeparator300;
+}
+.AboutStyle{
+  min-width: 0.00000001vw;
+  padding-top: $GeneralSeparator100;
+  color:$secondaryColor;
+}
 .NavMainWrapper {
   display: flex;
 
 }
-
-
 .NavIcon {
   display: block;
 }
@@ -47,8 +62,4 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(m
 flex: none;
 order: 0;
 flex-grow: 0;*/
-.Blak {
-  background-color: $secondaryColor;
-  padding-left: $paddingLeft;
-  padding-right: $paddingRight
-}
+
