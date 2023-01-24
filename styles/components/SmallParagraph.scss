@@ -5,6 +5,7 @@
     padding-bottom: $GeneralSeparator100;
     color: $secondaryColor;
     overflow: auto;
+    
 }
 .SmallParagraphTitle{
     display: block;
@@ -25,11 +26,13 @@
 }
 .SmallParagraphContentWrapper{
     width: 50%;
+    transition: 1s;
     float: right;
 }
 @media (max-width: #{$screen-lg-min}) {
     .SmallParagraphContentWrapper{
         width: auto;
         float: left;
+        
     }
     }

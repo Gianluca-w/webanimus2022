@@ -10,7 +10,7 @@
     padding-bottom: $GeneralSeparator300;
     padding-left: $GeneralSeparator160;
     padding-right: $GeneralSeparator160;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../public/assets/img/RestComponentBackground.jpeg');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../public/assets/img/RestComponentBackground.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,12 +27,13 @@
     min-width: 0.00000001vw;
     padding-left: $paddingLeft;
     padding-right: $paddingRight;
-    width: 40%;
+    width: 60%;
     height: auto;
     line-height: 70px;
 }
-@media (max-width: #{$screen-sm-min}) {
+@media (max-width: #{$screen-md-min}) {
 .restContent{
     width: auto;
+    line-height:normal;
 }
 }

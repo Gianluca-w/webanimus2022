@@ -78,24 +78,24 @@ const ContactSubmitResume = ({ }) => {
 
     return <form action="/api/mailing" method="post">
         <div className={`ContactFormWrapper`}>
-            <div className='ContactFormUnderlining'>
-                <div className='ContactFormInputWrapper'>
-                    <div className='ContactFormWideInput'>
+            <div className=''>
+                <div className=''>
+                    <div className='ContactFormWideInput ContactFormUnderlining'>
                         <p className="PlaceholderAligner">Name</p>
                         <input type="text" placeholder='Name' name="name" onChange={(event) => setName(SanitizeGeneral(event.target, 30))}></input>
                     </div>
-                    <div className='ContactFormWideInput'>
+                    <div className='ContactFormWideInput ContactFormUnderlining'>
                         <p className="PlaceholderAligner">Email</p>
                         <input type="mail" placeholder='Email' name="mail" onChange={(event) => setMail(SanitizeGeneral(event.target, 35))}></input>
                     </div>
-                    <div className='ContactFormPhoneInput'>
+                    <div className='ContactFormPhoneInput ContactFormUnderlining'>
                         <p className="PlaceholderAligner">Phone</p>
                         <input type="text" placeholder='Phone' autoComplete="off" name="phone" onChange={(event) => setPhone(SanitizeGeneral(event.target, 15, /[^0-9+]/g))}></input>
                     </div>
                 </div>
             </div>
 
-            <div className='ContactFormInputWrapper'>
+            <div className=''>
                 <div className='ContactFormWideInput'>
                     <div className="ContactFormUnderlining">
                         <p>Message</p>

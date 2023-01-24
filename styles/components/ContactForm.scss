@@ -20,7 +20,7 @@
     button {
         font-family: inherit;
         text-decoration: none;
-        border: 1px, white;
+        border: none;
         cursor: pointer;
     }
 
@@ -35,6 +35,7 @@
      
     
     }
+   
     button.ContactFormSelector:hover {
         background: rgba($color: $white, $alpha: 0.05);
 
@@ -94,7 +95,7 @@
 .ContactFormInputWrapper {
     display: inline-flex;
     width: 100%;
-
+}
     p {
         font-size: $FontSizeTop16;
         padding-bottom: 10px;
@@ -136,9 +137,10 @@
         outline: none;
         background-color: rgba($color: $white, $alpha: 0.05);
     }
-}
+
 
 .ContactFormMain {
+    padding-top: $GeneralSeparator160;
     margin-left: auto;
     margin-right: auto;
     width: 100%;

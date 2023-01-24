@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-.Blak {
+.HeroSectionParent {
   background-color: $secondaryColor;
   padding-left: $GeneralSeparator300;
-  padding-right: $GeneralSeparator300
+  padding-right: $GeneralSeparator300;
+  padding-top:$GeneralSeparator20;
+  
+}
+.MaxHeight{
+  height:100vh;
+  transition: 1s;
 }
 
 .HeroSectionTitleWrapper{
@@ -46,12 +52,22 @@
 }
 
 //Usual Scss classes and styles, work here to change styles and s
-
-@media (max-width: #{$screen-lg-min}) {
-}
-
 @media (max-width: #{$screen-xl-min}) {
 }
+@media (max-width: #{$screen-lg-min}) {
+  .HeroSectionParent{
+    max-height: 640px;
+  }
+}
+@media (max-width: #{$screen-md-min}) {
+  .HeroSectionParent{
+    max-height: 340px;
+  }
+}
+
+
+
+
 
 /*
 Para la imagen

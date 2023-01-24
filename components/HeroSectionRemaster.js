@@ -62,7 +62,7 @@ const HeroSectionParent = ({
   FullHeight=false,
   Color='white'
 }) => {
-    let Height="auto"
+    let AdditiveClasses=""
     if(Filtered!=false){
         BackgroundStyle += `linear-gradient(0deg, rgba(0, 0, 0,${FilterAlpha}), rgba(0, 0, 0, ${FilterAlpha})),`
     }
@@ -73,10 +73,10 @@ const HeroSectionParent = ({
         BackgroundStyle = BackgroundStyle.substring(0,(BackgroundStyle.length-1))
     }
     if(FullHeight!=false){
-        Height = "100vh"
+        AdditiveClasses += "MaxHeight "
     }
   return (
-    <div className="Blak" style={{background:BackgroundStyle,height:Height,color:Color}}>
+    <div className={`HeroSectionParent ${AdditiveClasses}`} style={{background:BackgroundStyle,color:Color}}>
       <Nav />
       <div>{children}</div>
       <Asterisk Size={AsteriskSize} hide={AsteriskVisibility}/>
