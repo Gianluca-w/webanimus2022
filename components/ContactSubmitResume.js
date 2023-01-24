@@ -106,7 +106,7 @@ const ContactSubmitResume = ({ }) => {
                 </div>
                 <div className='ContactFormWideInput'>
 
-                    <div><p style={{ paddingLeft: "10px" }}>Resume</p></div>
+                    <div><p>Resume</p></div>
                     <div className="DragAndDropWrapper"><div className="DragAndDropArea"> <ContactFormDragNDrop resume={resume} setResume={setResume} /> </div></div>
 
                 </div>

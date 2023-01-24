@@ -2,16 +2,16 @@
 	"PageHome":"Inicio",
 	"PageAbout":"Nosotros",
 	"PageContact":"Contacto",
-	"slogan": "Transformando codigo con una base solidaria",
+	"slogan": "Desarrollamos software con bases solidarias",
 	"subSlogan": "Somos una empresa cooperativa que diseña y desarrolla software.",
 	"RestSectionTitle": "",
 	"RestSectionBody": "Software y diseño inteligente e innovador, desde la empatía hacia el conocimiento.",
-	"TitleAndSubtitleTitle1": "Enhance your technology capacity",
-	"TitleAndSubtitleBody1": "Proveemos servicios como contractors, en esquemas de Staff Augmentation o Managed Service (project teams), en programación, diseño o perfiles híbridos, en inglés y español. ",
-	"BigParagraphTitle1": "Programamos sistemas y plataformas web a medida, generando soluciones digitales robustas y escalables en áreas verticales, como la educación, el transporte y las finanzas, entre otras. ",
+	"TitleAndSubtitleTitle1": "Potenciá tu capacidad tecnológica",
+	"TitleAndSubtitleBody1": "Proveemos servicios como contractors, en esquemas de Staff Augmentation o Managed Service (project teams), en programación, diseño o perfiles híbridos, en inglés y español.",
+	"BigParagraphTitle1": "Programamos sistemas y plataformas web a medida, creando soluciones digitales robustas y escalables en áreas verticales, como la educación, el transporte y las finanzas, entre otras.",
 	"BigParagraphTitle2": "Diseñamos productos y servicios funcionales, lindos y fáciles de usar. Las experiencias digitales generadas son integrales, inclusivas y centradas en las personas. Estamos alineados con el cumplimiento de los estándares Web Content Accessibility Guidelines (WCAG). ",
 	"BigParagraphLinkTitle": "Si queres conocer más",
-	"MetodologyTitle": "Metodology",
+	"MetodologyTitle": "Metodología",
 	"MetodologyContent": [
 		{
 			"body": "Utilizamos metodologías ágiles y procesos iterativos. Podemos incorporarnos exitosamente a los flujos de trabajo de equipos externos en proyectos en curso. Como así también, abordar desarrollos en su totalidad, incluyendo ingeniería, arquitectura, definiciones técnicas y diseños desde cero.",
@@ -31,7 +31,7 @@
 			},
 			{
 				"body": "Hacemos un trato directo. Ahorrás el costo del proceso de recruitment y te queda un canal abierto para siguientes búsquedas.",
-				"GridPosition": "5"
+				"GridPosition": "2"
 			},
 			{
 				"body": "La trayectoria de la cooperativa respalda y responde por la persona a la que contratás.",
@@ -42,30 +42,26 @@
 				"GridPosition": "4"
 			},
 			{
-				"body": "Garantizamos estabilidad y seriedad. Pertenecemos a FACTTIC, la Federación Argentina de Cooperativas de Trabajo de Tecnología Innovación y Conocimiento.",
-				"GridPosition": "2"
+				"body": "Las dudas o dificultades técnicas pueden ser filtradas y no escalar inmediatamente, porque las personas contratadas tienen el sostén de la cooperativa. Pertenecemos a la federación de cooperativas de tecnología: FACTTIC. Podemos escalar equipos y trabajos, porque contamos con la colaboración de otras empresas miembro.",
+				"GridPosition": "5"
 				
 			},
 			{
-				"body": "Podemos escalar equipos y trabajos, porque contamos con la capacidad operativa y la colaboración de otras cooperativas integrantes de FACTTIC.",
-				"GridPosition": "6"
-			},
-			{
 				"body": "Estamos en un ámbito en el que el aprendizaje es constante, esto nos empuja a estar en el top de la tecnología.",
-				"GridPosition": "7"
+				"GridPosition": "6"
 			}
 		]
 	},
-	"FooterTitle": "Let´s talk",
+	"FooterTitle": "¡Conversemos!",
 	"FooterMail": "info@animus.com.ar",
 	"FooterAdress": "Bariloche, Patagonia | Argentina",
-	"FooterLinkTitle": "Contact Us",
-	"SmallParagraphTitle":"The Coop",
-	"SmallParagraphLink":"Compania tecnologica de los trabajadores",
-	"SmallParagraphContent":" Democraticamente gobernada por sus miembros",
+	"FooterLinkTitle": "Contactanos",
+	"SmallParagraphTitle":"La coope",
+	"SmallParagraphLink":"Somos una empresa cooperativa de tecnología,",
+	"SmallParagraphContent":" gobernada democráticamente por sus propios trabajadores.",
 	"AboutUs": {
-		"slogan":"¡Somos una coop! En este mundo, eso es un montón.",
-		"SubSlogan":"Esto es lo que hacemos.",
+		"slogan":"En un mundo individualista, pensamos en colectivo.",
+		"SubSlogan":"Somos una empresa cooperativa",
 		"BuddiesTitle": "Coop Buddies",
 		"BuddiesBody": "Somos un poco nerds. Amantes de la naturaleza y sobre todas las cosas compañeres. Desde el 2018 funcionamos como cooperativa. Pero trabajamos en sistemas como Animus desde el 2007. Estamos en Bariloche, Patagonia argentina.",
 		"NetworkTitle": "Red de Redes",
@@ -76,6 +72,9 @@
 		"HackaCoopTitle": "Hackacoop",
 		"HackaCoopSubTitle": "Capacitación e investigación interna",
 		"HackaCoopBody": "El Hackacoop es nuestro marco para estudiar nuevas tecnologías y abordar proyectos de innovación que nos interesan, pero no tienen un lugar comercial. Un tiempo de intercambio para enseñar y aprender. "
+	},
+	"ContactUs":{
+		"Slogan":"Desarrollamos colaborativamente."
 	},
 	"TextInColumns": [
 		{

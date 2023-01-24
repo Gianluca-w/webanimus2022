@@ -61,7 +61,7 @@
 
         a {
             text-decoration: none;
-            padding-right: 24px;
+            padding-right: $GeneralSeparator20
         }
     }
 
@@ -114,11 +114,21 @@
 
 //Mobile Scss
 
-@media (max-width: #{$screen-md-min}) {
+@media (max-width: #{$screen-lg-min}) {
     .ContactFlexWrapper {
         float: none;
     }
-
+    .ContactSocials {
+        strong{
+            a{
+                display:table-cell;
+                width:1%;
+                padding-right: 0px;
+            }
+            
+        }
+    
+    }
     .FooterGrid {
         display: block;
 
