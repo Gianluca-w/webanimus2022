@@ -12,25 +12,51 @@
   transition: 1s;
 }
 
-.HeroSectionTitleWrapper{
-  width:70%;
-  padding-bottom: $GeneralSeparator160;
-}
+
 .BaseStyle{
   min-width: 0.00000001vw;
-  padding-top: $GeneralSeparator300;
+  .HeroSectionTittleWrapper{
+    width:70%;
+    padding-top: $GeneralSeparator300 ;
+    padding-bottom: $GeneralSeparator160;
+  }
+  .HeroSectionTitle{
+    font-size: $FontSizeTop80; font-weight: 100; line-height: 138%;
+
+  }
+  //padding-top: $GeneralSeparator300;
 }
 .AboutStyle{
   min-width: 0.00000001vw;
-  padding-top: $GeneralSeparator100;
+  //padding-top: $GeneralSeparator100;
   color:$secondaryColor;
+  .HeroSectionTittleWrapper{
+    padding-top: $GeneralSeparator100;
+    width:100%;
+    padding-bottom: $GeneralSeparator160;
+  }
+  .HeroSectionTitle{
+    font-size: $FontSizeTop80; font-weight: 700; line-height: 112%;
+    padding-top: $GeneralSeparator40;
+  }
+  .HeroSectionSubTitle{
+    font-size: $FontSizeTop34; font-weight: 400; line-height: 176%;
+  }
+  .PointerCursor{
+    filter: brightness(0);
+}
 }
 .NavMainWrapper {
   display: flex;
 
 }
 .NavIcon {
+  
+  max-width:200px;
+  min-width:80px;
+  position:relative;
   display: block;
+  width:15vw;
 }
 .PointerCursor{
     min-height: 50px;
@@ -61,7 +87,7 @@
 }
 @media (max-width: #{$screen-md-min}) {
   .HeroSectionParent{
-    max-height: 340px;
+    max-height: 400px;
   }
 }
 

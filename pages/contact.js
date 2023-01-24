@@ -11,7 +11,7 @@ export default function Home(props) {
 
     return (
       <div className='indexContentWrapper'>
-        <HeroSectionRemastered Slogan={t('ContactUs.Slogan')} Asterisk={"Hide"}/>
+        <HeroSectionRemastered Slogan={t('ContactUs.Slogan')} Asterisk={"Hide"} FirstLinkText={t('PageHome')} SecondLinkText={t('PageAbout')} FirstLinkHref={'/'} SecondLinkHref={'/about'}/>
         <ContactForm/>
         <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')}/>
         <LinksComponent/>

@@ -25,25 +25,26 @@ const Asterisk = ({ hide, Size }) => (
     )}
   </>
 );
-const Nav = ({}) => (
+const Nav = ({LinkText1, Href1='about', LinkText2, Href2='contact'}) => (
   <div className="NavMainWrapper">
     <div className="NavIcon">
       <Link href="/">
         <Image
           className="PointerCursor"
           src={animus.src}
-          width={"200%"}
-          height={"100%"}
+          width={200}
+          height={100}
+          layout = {'fill'}
           alt="ANIMUS"
         />
       </Link>
     </div>
     <div className="NavMenuSeparator"></div>
     <div className="NavMenuLink AltHoverableLink">
-      <Link href="/about">About</Link>
+      <Link href={Href1}>{LinkText1}</Link>
     </div>
     <div className="NavMenuLink AltHoverableLink">
-      <Link href="/contact">Contact</Link>
+      <Link href={Href2}>{LinkText2}</Link>
     </div>
     <div className="NavMenuLink">
       <LanguageChangeButton />
@@ -60,7 +61,11 @@ const HeroSectionParent = ({
   Filtered=false,
   FilterAlpha=0.8,
   FullHeight=false,
-  Color='white'
+  Style = 'Base',
+  Link1,
+  Link2,
+  Link1Href,
+  Link2Href
 }) => {
     let AdditiveClasses=""
     if(Filtered!=false){
@@ -75,49 +80,25 @@ const HeroSectionParent = ({
     if(FullHeight!=false){
         AdditiveClasses += "MaxHeight "
     }
+    if(Style == 'Base'){
+        AdditiveClasses += "BaseStyle "
+    }
+    if(Style == 'About'){
+        AdditiveClasses += "AboutStyle "
+    }
   return (
-    <div className={`HeroSectionParent ${AdditiveClasses}`} style={{background:BackgroundStyle,color:Color}}>
-      <Nav />
+    <div className={`HeroSectionParent ${AdditiveClasses}`} style={{background:BackgroundStyle}}>
+      <Nav LinkText1={Link1} LinkText2={Link2} Href1={Link1Href} Href2={Link2Href}/>
       <div>{children}</div>
       <Asterisk Size={AsteriskSize} hide={AsteriskVisibility}/>
     </div>
   );
 };
-const HeroSectionTitle = ({ Title, SubTitle, Style = "Base"}) => {
-  let Styling = {
-    MainClass: "",
-    ManualStyle: "",
-  };
-  switch (Style) {
-    case "Base":
-      Styling = {
-        MainClass: "HeroSectionTitleWrapper ThinH1 BaseStyle",
-      };
-      break;
-    case "About":
-      Styling = {
-        MainClass: "HeroSectionTitleWrapper AboutStyle BoldH1",
-        SubClass: "RegH4",
-      };
-      break;
-    case "Contact":
-      Styling = {
-        MainClass: "HeroSectionTitleWrapper ContactStyle",
-        SubClass: "RegH4",
-      };
-      break;
-
-    default:
-      Styling = {
-        MainClass: "HeroSectionTitleWrapper",
-        ManualStyle: Style,
-      };
-      break;
-  }
+const HeroSectionTitle = ({ Title, SubTitle}) => {
   return (
-    <div className={Styling.MainClass} style={Styling.ManualStyle}>
-      <div className={Styling.SubClass}>{SubTitle}</div>
-      <div>{Title}</div>
+    <div className="HeroSectionTittleWrapper">
+      <div className="HeroSectionSubTitle">{SubTitle}</div>
+      <div className="HeroSectionTitle">{Title}</div>
     </div>
   );
 };
@@ -135,8 +116,11 @@ const HeroSectionRemastered = ({
   BlackFilter,
   FilteringAlhpa,
   FullSize,
-  TitleStyle,
-  FontColor
+  MainStyle,
+  FirstLinkText,
+  SecondLinkText,
+  FirstLinkHref,
+  SecondLinkHref
 }) => (
   <HeroSectionParent
     backgroundImageToUse={`/assets/img/${BackgroundImageSrc}`}
@@ -145,10 +129,13 @@ const HeroSectionRemastered = ({
     AsteriskVisibility={Asterisk}
     AsteriskSize={OptionalAsteriskSize}
     FullHeight = {FullSize}
-    Style={TitleStyle}
-    Color={FontColor}
+    Style={MainStyle}
+    Link1={FirstLinkText}
+    Link2={SecondLinkText}
+    Link1Href={FirstLinkHref}
+    Link2Href={SecondLinkHref}
   >
-    <HeroSectionTitle Title={Slogan} SubTitle={SubSlogan} />
+    <HeroSectionTitle Title={Slogan} SubTitle={SubSlogan}/>
   </HeroSectionParent>
 );
 export default HeroSectionRemastered;
