@@ -25,7 +25,7 @@ const Asterisk = ({ hide, Size }) => (
     )}
   </>
 );
-const Nav = ({LinkText1, Href1='about', LinkText2, Href2='contact'}) => (
+const Nav = ({ LinkText1, Href1 = 'about', LinkText2, Href2 = 'contact' }) => (
   <div className="NavMainWrapper">
     <div className="NavIcon">
       <Link href="/">
@@ -34,7 +34,7 @@ const Nav = ({LinkText1, Href1='about', LinkText2, Href2='contact'}) => (
           src={animus.src}
           width={200}
           height={100}
-          layout = {'fill'}
+          layout={'fill'}
           alt="ANIMUS"
         />
       </Link>
@@ -55,46 +55,49 @@ const HeroSectionParent = ({
   children,
   AsteriskSize = "74px",
   backgroundImageToUse = "none",
-  SkyboxVisibility,
-  AsteriskVisibility=false,
+  SkyboxVisibility = false,
+  AsteriskVisibility = false,
   BackgroundStyle = "",
-  Filtered=false,
-  FilterAlpha=0.8,
-  FullHeight=false,
+  Filtered = false,
+  FilterAlpha = 0.8,
+  FullHeight = false,
   Style = 'Base',
   Link1,
   Link2,
   Link1Href,
   Link2Href
 }) => {
-    let AdditiveClasses=""
-    if(Filtered!=false){
-        BackgroundStyle += `linear-gradient(0deg, rgba(0, 0, 0,${FilterAlpha}), rgba(0, 0, 0, ${FilterAlpha})),`
-    }
-    if(backgroundImageToUse != '/assets/img/undefined'){
-        BackgroundStyle = BackgroundStyle += `url('${backgroundImageToUse}'),`
-    }
-    if(BackgroundStyle.endsWith(',')){
-        BackgroundStyle = BackgroundStyle.substring(0,(BackgroundStyle.length-1))
-    }
-    if(FullHeight!=false){
-        AdditiveClasses += "MaxHeight "
-    }
-    if(Style == 'Base'){
-        AdditiveClasses += "BaseStyle "
-    }
-    if(Style == 'About'){
-        AdditiveClasses += "AboutStyle "
-    }
+  const SkyboxController = useRef();
+  let AdditiveClasses = ""
+  if (Filtered != false) {
+    BackgroundStyle += `linear-gradient(0deg, rgba(0, 0, 0,${FilterAlpha}), rgba(0, 0, 0, ${FilterAlpha})),`
+  }
+  if (backgroundImageToUse != '/assets/img/undefined') {
+    BackgroundStyle = BackgroundStyle += `url('${backgroundImageToUse}'),`
+  }
+  if (BackgroundStyle.endsWith(',')) {
+    BackgroundStyle = BackgroundStyle.substring(0, (BackgroundStyle.length - 1))
+  }
+  if (FullHeight != false) {
+    AdditiveClasses += "MaxHeight "
+  }
+  if (Style == 'Base') {
+    AdditiveClasses += "BaseStyle "
+  }
+  if (Style == 'About') {
+    AdditiveClasses += "AboutStyle "
+  }
   return (
-    <div className={`HeroSectionParent ${AdditiveClasses}`} style={{background:BackgroundStyle}}>
-      <Nav LinkText1={Link1} LinkText2={Link2} Href1={Link1Href} Href2={Link2Href}/>
+    <div className={`HeroSectionParent ${AdditiveClasses}`} style={{ background: BackgroundStyle }}>
+      <div className="SkyboxControls" ref={SkyboxController}></div>
+      <Nav LinkText1={Link1} LinkText2={Link2} Href1={Link1Href} Href2={Link2Href} />
       <div>{children}</div>
-      <Asterisk Size={AsteriskSize} hide={AsteriskVisibility}/>
+      <Asterisk Size={AsteriskSize} hide={AsteriskVisibility} />
+      <HeroSkyboxBackground Visibility={SkyboxVisibility} Controller={SkyboxController} />
     </div>
   );
 };
-const HeroSectionTitle = ({ Title, SubTitle}) => {
+const HeroSectionTitle = ({ Title, SubTitle }) => {
   return (
     <div className="HeroSectionTittleWrapper">
       <div className="HeroSectionSubTitle">{SubTitle}</div>
@@ -102,8 +105,11 @@ const HeroSectionTitle = ({ Title, SubTitle}) => {
     </div>
   );
 };
-const HeroSkyboxBackground = ({ Visibility }) => {
-  <SkyboxBackground className="SkyboxBackground" />;
+const HeroSkyboxBackground = ({ Visibility, Controller }) => {
+  if (Visibility != false) {
+    return <SkyboxBackground className="SkyboxBackground" OptionalExternalController={Controller} />;
+  }
+
 };
 
 const HeroSectionRemastered = ({
@@ -125,17 +131,17 @@ const HeroSectionRemastered = ({
   <HeroSectionParent
     backgroundImageToUse={`/assets/img/${BackgroundImageSrc}`}
     Filtered={BlackFilter}
-    FilterAlpha = {FilteringAlhpa}
+    FilterAlpha={FilteringAlhpa}
     AsteriskVisibility={Asterisk}
     AsteriskSize={OptionalAsteriskSize}
-    FullHeight = {FullSize}
+    FullHeight={FullSize}
     Style={MainStyle}
     Link1={FirstLinkText}
     Link2={SecondLinkText}
     Link1Href={FirstLinkHref}
     Link2Href={SecondLinkHref}
   >
-    <HeroSectionTitle Title={Slogan} SubTitle={SubSlogan}/>
+    <HeroSectionTitle Title={Slogan} SubTitle={SubSlogan} />
   </HeroSectionParent>
 );
 export default HeroSectionRemastered;

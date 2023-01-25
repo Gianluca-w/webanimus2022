@@ -1,13 +1,21 @@
 .DropdownButton{
-    height: 74px;
-    width: 74px;
+    height: 64px;
+    width: 64px;
     background-color: black;
+    border: 1px black;
+    border-radius: 100px;
+    position: fixed;
+    top: 30px;
+    right: 30px;
 }
 .Dropdown{
     overflow: hidden;
+    position: fixed;
+    top: 30px;
+    right: 30px;
 }
 .Hideable{
-    transition: 1s;
+    transition: 0.5s;
 }
 .IsDropdownOpenFalse{
     height: 0px;
@@ -15,4 +23,10 @@
 .IsDropdownOpenTrue{
     height: 60px;
     background-color: yellow;
+}
+@media (min-width: #{$screen-md-min}) {
+.DropdownButton{
+    display:none;
+}
+
 }

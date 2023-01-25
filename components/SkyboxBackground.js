@@ -54,13 +54,14 @@ function SkyBox() {
 // Geometry
 
 // Lights
-function SkyboxBackground() {
+function SkyboxBackground({OptionalExternalController}) {
   return (<>
     <Canvas className="canvas" style={{
         width: '100%',
         height: '100%',
         margin: 0,
-        padding: 0}} onCreated={(state)=>state.events.connect()}>
+        padding: 0}} 
+        onCreated={(state)=>state.events.connect(OptionalExternalController.current)}>
       <CameraControls />
       <SkyBox />
     </Canvas>
