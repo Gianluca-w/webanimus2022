@@ -9,24 +9,36 @@
     right: 30px;
 }
 .Dropdown{
+    z-index: 3;
     overflow: hidden;
     position: fixed;
+    max-width: 120px;
     top: 30px;
     right: 30px;
 }
 .Hideable{
     transition: 0.5s;
+    
 }
 .IsDropdownOpenFalse{
     height: 0px;
+    width: 100%;
 }
 .IsDropdownOpenTrue{
+    z-index: 3;
     height: 60px;
-    background-color: yellow;
+    width: 100%;
+}
+.DropdownItem{
+    z-index: 3;
+    
+    width: 100%;
+    height: 20px;
+    background-color: $secondaryColor;
 }
 @media (min-width: #{$screen-md-min}) {
 .DropdownButton{
-    display:none;
+    display:block;
 }
 
 }

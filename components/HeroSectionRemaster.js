@@ -6,6 +6,11 @@ import animus from "../public/assets/icons/logoanimus-w.svg";
 import LanguageChangeButton from "./LanguageButton";
 import SkyboxBackground from "./SkyboxBackground";
 
+/**
+   * Basic Asterisk. Sending anything in hide will prevent the asterisk from showing         
+   * Forces a 1:1 aspect ratio so Size changes both height and width, this can be in any
+   * acceptable format that css can accept (px, rem,vh,vw,etc)
+   */
 const Asterisk = ({ hide, Size }) => (
   <>
     {!hide && (
@@ -25,6 +30,12 @@ const Asterisk = ({ hide, Size }) => (
     )}
   </>
 );
+ /**
+   * Nav only admits 2 links, give the link a title using LinkText1 and a Href1 to give the route               
+   * For the second link is the same                                                          
+   * 
+   * TODO: Change it for a Array so it can have any amount of links
+   */
 const Nav = ({ LinkText1, Href1 = 'about', LinkText2, Href2 = 'contact' }) => (
   <div className="NavMainWrapper">
     <div className="NavIcon">
@@ -32,8 +43,6 @@ const Nav = ({ LinkText1, Href1 = 'about', LinkText2, Href2 = 'contact' }) => (
         <Image
           className="PointerCursor"
           src={animus.src}
-          width={200}
-          height={100}
           layout={'fill'}
           alt="ANIMUS"
         />
