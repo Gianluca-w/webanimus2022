@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 const DropdownMenu = ({
     Items
-  }) => {
+}) => {
     const [dropdownVisibility, setVisibility] = useState(false);
-    return <div className='' onClick={()=>setVisibility(!dropdownVisibility)}>{Items && Items.map((Content)=>(
-        <div className={dropdownVisibility ? 'False' : 'True'} key={Content.Position}>{Content.Title}</div>
-    ))}</div>
-  };
-  export default DropdownMenu;
+    return <div>
+        <div className='DropdownButton' onClick={() => setVisibility(!dropdownVisibility)}></div>
+        <div className='Dropdown'>
+            {Items && Items.map((Content) => (
+                <div className={dropdownVisibility ? 'IsDropdownOpenFalse Hideable' : 'IsDropdownOpenTrue Hideable'} key={Content.Position}>{Content.Title}</div>
+            ))}
+        </div>
+    </div>
+};
+export default DropdownMenu;

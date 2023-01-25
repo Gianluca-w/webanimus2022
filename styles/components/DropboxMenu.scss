@@ -1,0 +1,18 @@
+.DropdownButton{
+    height: 74px;
+    width: 74px;
+    background-color: black;
+}
+.Dropdown{
+    overflow: hidden;
+}
+.Hideable{
+    transition: 1s;
+}
+.IsDropdownOpenFalse{
+    height: 0px;
+}
+.IsDropdownOpenTrue{
+    height: 60px;
+    background-color: yellow;
+}
