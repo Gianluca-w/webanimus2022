@@ -8,14 +8,13 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 extend({ OrbitControls });
 
-const CameraControls = () => {
+const CameraControls = ({OptionalExternalController}) => {
   // Get a reference to the Three.js Camera, and the canvas html element.
   // We need these to setup the OrbitControls class.
   // https://threejs.org/docs/#examples/en/controls/OrbitControls
 
   const {
-    camera,
-    gl: { domElement }
+    camera
   } = useThree();
 
   // Ref to the controls, so that we can update them on every frame using useFrame
@@ -24,7 +23,7 @@ const CameraControls = () => {
   return (
     <orbitControls
       ref={controls}
-      args={[camera, domElement]}
+      args={[camera, OptionalExternalController.current]}
       autoRotate={true}
       enableZoom={false}
       rotateSpeed={0.7}
@@ -54,15 +53,21 @@ function SkyBox() {
 // Geometry
 
 // Lights
-function SkyboxBackground({OptionalExternalController}) {
+function SkyboxBackground({}) {
+  const SkyboxController = useRef();
   return (<>
+  <div className="SkyboxControls" ref={SkyboxController}></div>
     <Canvas className="canvas" style={{
+        position:"absolute",
+        top:0,
+        left:0,
         width: '100%',
-        height: '100%',
+        height: '100vh',
         margin: 0,
-        padding: 0}} 
-        onCreated={(state)=>state.events.connect(OptionalExternalController.current)}>
-      <CameraControls />
+        padding: 0,
+        zIndex:"-1"}} 
+        >
+      <CameraControls OptionalExternalController={SkyboxController} />
       <SkyBox />
     </Canvas>
     </>

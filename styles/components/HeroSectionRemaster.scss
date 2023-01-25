@@ -4,7 +4,7 @@
   background-color: $secondaryColor;
   padding-left: $GeneralSeparator300;
   padding-right: $GeneralSeparator300;
-  padding-top:$GeneralSeparator20;
+  
   
 }
 .MaxHeight{
@@ -49,7 +49,8 @@
 }
 .NavMainWrapper {
   display: flex;
-  padding-top: $GeneralSeparator20;
+  position: relative;
+  padding-top: $GeneralSeparator40;
   z-index: 2;
 }
 .NavIcon {
@@ -73,18 +74,44 @@
     padding-bottom: $GeneralSeparator50;
 }
 .SkyboxBackground{
-    position: absolute;
-    z-index: -1;
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.SkyboxControls{
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.NoBackground{
+  background: none;
 }
 
 //Usual Scss classes and styles, work here to change styles and s
 @media (max-width: #{$screen-xl-min}) {
 }
 @media (max-width: #{$screen-lg-min}) {
+  .SkyboxBackground{
+   display: none;
+  }
+  .SkyboxControls{
+    display: none;
+   }
+  .canvas{
+    display: none;
+  }
+  .NoBackground{
+    background: $secondaryColor;
+  }
   .HeroSectionParent{
     max-height: 640px;
+    background: $secondaryColor;
   }
 }
 @media (max-width: #{$screen-md-min}) {

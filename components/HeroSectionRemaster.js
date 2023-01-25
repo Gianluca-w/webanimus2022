@@ -55,7 +55,6 @@ const HeroSectionParent = ({
   children,
   AsteriskSize = "74px",
   backgroundImageToUse = "none",
-  SkyboxVisibility = false,
   AsteriskVisibility = false,
   BackgroundStyle = "",
   Filtered = false,
@@ -65,9 +64,9 @@ const HeroSectionParent = ({
   Link1,
   Link2,
   Link1Href,
-  Link2Href
+  Link2Href,
+  NoBackground
 }) => {
-  const SkyboxController = useRef();
   let AdditiveClasses = ""
   if (Filtered != false) {
     BackgroundStyle += `linear-gradient(0deg, rgba(0, 0, 0,${FilterAlpha}), rgba(0, 0, 0, ${FilterAlpha})),`
@@ -81,6 +80,9 @@ const HeroSectionParent = ({
   if (FullHeight != false) {
     AdditiveClasses += "MaxHeight "
   }
+  if (NoBackground == "none") {
+    AdditiveClasses += "NoBackground "
+  }
   if (Style == 'Base') {
     AdditiveClasses += "BaseStyle "
   }
@@ -89,11 +91,10 @@ const HeroSectionParent = ({
   }
   return (
     <div className={`HeroSectionParent ${AdditiveClasses}`} style={{ background: BackgroundStyle }}>
-      <div className="SkyboxControls" ref={SkyboxController}></div>
       <Nav LinkText1={Link1} LinkText2={Link2} Href1={Link1Href} Href2={Link2Href} />
       <div>{children}</div>
       <Asterisk Size={AsteriskSize} hide={AsteriskVisibility} />
-      <HeroSkyboxBackground Visibility={SkyboxVisibility} Controller={SkyboxController} />
+      
     </div>
   );
 };
@@ -105,9 +106,9 @@ const HeroSectionTitle = ({ Title, SubTitle }) => {
     </div>
   );
 };
-const HeroSkyboxBackground = ({ Visibility, Controller }) => {
+const HeroSkyboxBackground = ({ Visibility}) => {
   if (Visibility != false) {
-    return <SkyboxBackground className="SkyboxBackground" OptionalExternalController={Controller} />;
+    return <SkyboxBackground className="SkyboxBackground" />;
   }
 
 };
@@ -118,7 +119,7 @@ const HeroSectionRemastered = ({
   Asterisk,
   BackgroundImageSrc,
   OptionalAsteriskSize,
-  Skybox,
+  Skybox = false,
   BlackFilter,
   FilteringAlhpa,
   FullSize,
@@ -126,8 +127,9 @@ const HeroSectionRemastered = ({
   FirstLinkText,
   SecondLinkText,
   FirstLinkHref,
-  SecondLinkHref
-}) => (
+  SecondLinkHref,
+  Background
+}) => (<>
   <HeroSectionParent
     backgroundImageToUse={`/assets/img/${BackgroundImageSrc}`}
     Filtered={BlackFilter}
@@ -140,8 +142,10 @@ const HeroSectionRemastered = ({
     Link2={SecondLinkText}
     Link1Href={FirstLinkHref}
     Link2Href={SecondLinkHref}
-  >
+    NoBackground={Background}  >
     <HeroSectionTitle Title={Slogan} SubTitle={SubSlogan} />
   </HeroSectionParent>
+  <HeroSkyboxBackground Visibility={Skybox} />
+  </>
 );
 export default HeroSectionRemastered;

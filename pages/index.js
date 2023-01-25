@@ -18,7 +18,7 @@ export default function Home(props) {
   const { t } = useTranslation('common')
   return (
     <div className='indexContentWrapper'>
-      <HeroSectionRemastered Slogan={t('slogan')}  FullSize={true} Asterisk={'hide'} BackgroundImageSrc={"HeroSectionBackground.jpg"} BlackFilter={true} FirstLinkText={t('PageAbout')} SecondLinkText={t('PageContact')} FirstLinkHref={'/about'} SecondLinkHref={'/contact'} />
+      <HeroSectionRemastered Slogan={t('slogan')}  FullSize={true} Asterisk={'hide'} Skybox={true} Background={"none"} BlackFilter={true} FirstLinkText={t('PageAbout')} SecondLinkText={t('PageContact')} FirstLinkHref={'/about'} SecondLinkHref={'/contact'} FilteringAlhpa={0.5}/>
       <BigParagraph title={t('BigParagraphTitle1')} Tags={t('BigParagraphTags1', { returnObjects: true })} OptionalImage={'TechLogos.png'} />
       <ImageSection FillingImg={'ImageSection.jpeg'}></ImageSection>
       <SmallParagraph SmallTitle={t('SmallParagraphTitle')} Content={t('SmallParagraphContent')} UnderlinedLinkTitle={t('SmallParagraphLink')}></SmallParagraph>
