@@ -18,7 +18,7 @@ $screen-xl-min: 1200px;
 
 //General Font Sizes
 $FontSizeTop90: clamp(2rem, 6vw, 90px);   
-$FontSizeTop80: clamp(2rem, 6vw, 80px);                                             //6
+$FontSizeTop80: clamp(2rem, 6vw, 80px);                                             
 $FontSizeTop70: clamp(2rem, 6vw, 70px);
 $FontSizeTop60: clamp(2rem, 6vw, 60px);
 $FontSizeTop50: clamp(2rem, 6vw, 50px);
@@ -43,7 +43,7 @@ $GeneralSeparator100:clamp(16px, 7.5vw, 100px);
 $GeneralSeparator80:clamp(16px, 6vw, 80px);
 $GeneralSeparator50:clamp(16px, 5vw, 50px);
 $GeneralSeparator40:clamp(16px, 4vw, 40px);
-$GeneralSeparator20:clamp(16px, 4vw, 20px);
+$GeneralSeparator20:clamp(8px, 1.5vw, 20px);
 //GeneralistClassStyling
 .ThinH1 { font-size: $FontSizeTop80; font-weight: 100; line-height: 138%;}
 .LightH2{ font-size: $FontSizeTop50; font-weight: 300; line-height: 114%;}
@@ -57,9 +57,6 @@ $GeneralSeparator20:clamp(16px, 4vw, 20px);
 .RegH5  { font-size: $FontSizeTop28; font-weight: 400; line-height: 179%;}
 .RegH6  { font-size: $FontSizeTop24; font-weight: 400; line-height: 188%;}
 .RegP   { font-size: $FontSizeTop18; font-weight: 500; line-height: 194%;}
-
-
-
 
 //Color Declaring
 $primaryColor: #D91F30;
@@ -101,9 +98,9 @@ a:hover{
     margin-left: 10px;
 }
 .Underline{
-    height: 1px;
+    height: 3px;
     background-color: $white;
-    padding-top: 2px;
+    margin-top: 2px;
 }
 
 .indexContentWrapper {
@@ -128,6 +125,10 @@ a:hover{
 @import './components/SmallParagraph.scss';
 @import './components/ContactSubmitResume.scss';
 @import './components/NotificationCard.scss';
+@import './components/HeroSectionRemaster.scss';
+.AltHoverableLink{
+    cursor: pointer;
+}
 .AltHoverableLink:hover{
     color: $accentColor;
     text-decoration-color: $accentColor;

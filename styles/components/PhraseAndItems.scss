@@ -12,7 +12,7 @@
 .PhraseContentsGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 //Grid positioning
@@ -69,23 +69,6 @@
             grid-row: 2;
             grid-column: 3;
         }
-
-        .PhraseContents7 {
-            grid-row: 3;
-            grid-column: 1;
-        }
-
-        .PhraseContents8 {
-            grid-row: 3;
-            grid-column: 2;
-        }
-
-        .PhraseContents9 {
-            grid-row: 3;
-            grid-column: 3;
-        }
-
-
     }
 
 }
@@ -93,7 +76,7 @@
     padding-bottom: 8px;
 }
 //mobile breakpoints
-@media (max-width: #{$screen-md-min}) {
+@media (max-width: #{$screen-lg-min}) {
     .PhraseWrapper {
         .PraseGrid {
             display: block;

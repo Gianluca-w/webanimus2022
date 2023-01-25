@@ -35,9 +35,7 @@
      
     
     }
-    button.ContactFormSelector {
-        border-bottom:1px solid $thirdColor ;
-    }
+   
     button.ContactFormSelector:hover {
         background: rgba($color: $white, $alpha: 0.05);
 
@@ -97,14 +95,14 @@
 .ContactFormInputWrapper {
     display: inline-flex;
     width: 100%;
-
+}
     p {
-        font-size: $FontSizeTop16;
+        font-size: $FontSizeTop30;
         padding-bottom: 10px;
     }
 
     input {
-        font-size: $FontSizeTop20;
+        font-size: $FontSizeTop30;
         color: $white;
         background-color: $thirdColor;
         border: 0px;
@@ -128,7 +126,7 @@
         padding: 0px 0px 0px 0px;
         color: $white;
         min-height: 200px;
-        font-size: $FontSizeTop16;
+        font-size: $FontSizeTop24;
         padding: 0,0,0,0;
         font-family: 'Montserrat', sans-serif;
         line-height: 30px;
@@ -139,9 +137,10 @@
         outline: none;
         background-color: rgba($color: $white, $alpha: 0.05);
     }
-}
+
 
 .ContactFormMain {
+    padding-top: $GeneralSeparator160;
     margin-left: auto;
     margin-right: auto;
     width: 100%;

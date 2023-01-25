@@ -1,4 +1,7 @@
 {
+	"PageHome":"Home",
+	"PageAbout":"About",
+	"PageContact":"Contact",
 	"slogan": "We develop software with solidarity bases",
 	"subSlogan": "Somos una empresa cooperativa que diseña y desarrolla software.",
 	"BigParagraphTitle1": "We program customized web platforms and systems, creating robust and scalable digital solutions in vertical areas, such as education, transport and finance, among others.",
@@ -76,6 +79,9 @@
 		"HackaCoopTitle": "Hackacoop",
 		"HackaCoopSubTitle": "Internal training and research",
 		"HackaCoopBody": "In these meetings that we organize for ourselves, we study new technologies and address innovation projects that interest us, but do not have a commercial place. A time for exchange, to teach and learn."
+	},
+	"ContactUs":{
+		"Slogan":"We develop collaboratively."
 	},
 	"TextInColumns": [
 		{

@@ -1,7 +1,5 @@
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-
-import HeroSection from '../components/HeroSection'
 import Footer from '../components/Footer'
 import Rest from '../components/Rest'
 import Grid from '../components/Grid'
@@ -12,6 +10,7 @@ import ImageSection from '../components/ImageSection'
 import TextInColumns from '../components/TextInColumns'
 import LinksComponent from '../components/LinksComponent'
 import SmallParagraph from '../components/SmallParagraph'
+import HeroSectionRemastered from '../components/HeroSectionRemaster'
 
 
 
@@ -19,7 +18,7 @@ export default function Home(props) {
   const { t } = useTranslation('common')
   return (
     <div className='indexContentWrapper'>
-      <HeroSection slogan={t('slogan')} AsteriskVisibility={'hide'} Skybox={"Visible"} BlackFIlter={true} />
+      <HeroSectionRemastered Slogan={t('slogan')}  FullSize={true} Asterisk={'hide'} BackgroundImageSrc={"HeroSectionBackground.jpg"} BlackFilter={true} FirstLinkText={t('PageAbout')} SecondLinkText={t('PageContact')} FirstLinkHref={'/about'} SecondLinkHref={'/contact'} />
       <BigParagraph title={t('BigParagraphTitle1')} Tags={t('BigParagraphTags1', { returnObjects: true })} OptionalImage={'TechLogos.png'} />
       <ImageSection FillingImg={'ImageSection.jpeg'}></ImageSection>
       <SmallParagraph SmallTitle={t('SmallParagraphTitle')} Content={t('SmallParagraphContent')} UnderlinedLinkTitle={t('SmallParagraphLink')}></SmallParagraph>
@@ -32,7 +31,7 @@ export default function Home(props) {
       <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')} />
       <LinksComponent />
     </div>
-  )
+  ) 
 }
 
 

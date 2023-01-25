@@ -13,7 +13,7 @@ const onToggleLanguageClick = (newLocale) => {
   }
 const changeTo = router.locale === 'en' ? 'es' : 'en'
 return <div>
-<button className='ForcedUppercase' onClick={() => onToggleLanguageClick(changeTo)}>{t('Locale',{ changeTo })}</button>
+<button className='ForcedUppercase AltHoverableLink' onClick={() => onToggleLanguageClick(changeTo)}>{t('Locale',{ changeTo })}</button>
 </div>
 };
 export default LanguageChangeButton;

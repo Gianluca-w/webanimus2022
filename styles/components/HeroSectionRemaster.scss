@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.HeroSectionParent {
+  background-color: $secondaryColor;
+  padding-left: $GeneralSeparator300;
+  padding-right: $GeneralSeparator300;
+  padding-top:$GeneralSeparator20;
+  
+}
+.MaxHeight{
+  transition: 1s;
+  height:100vh;
+  
+}
+
+
+.BaseStyle{
+  min-width: 0.00000001vw;
+  .HeroSectionTittleWrapper{
+    width:70%;
+    padding-top: $GeneralSeparator300 ;
+    padding-bottom: $GeneralSeparator160;
+  }
+  .HeroSectionTitle{
+    font-size: $FontSizeTop80; font-weight: 100; line-height: 138%;
+
+  }
+  //padding-top: $GeneralSeparator300;
+}
+.AboutStyle{
+  min-width: 0.00000001vw;
+  //padding-top: $GeneralSeparator100;
+  color:$secondaryColor;
+  .HeroSectionTittleWrapper{
+    padding-top: $GeneralSeparator100;
+    width:100%;
+    padding-bottom: $GeneralSeparator160;
+  }
+  .HeroSectionTitle{
+    font-size: $FontSizeTop80; font-weight: 700; line-height: 112%;
+    padding-top: $GeneralSeparator40;
+  }
+  .HeroSectionSubTitle{
+    font-size: $FontSizeTop34; font-weight: 400; line-height: 176%;
+  }
+  .PointerCursor{
+    filter: brightness(0);
+}
+}
+.NavMainWrapper {
+  display: flex;
+  padding-top: $GeneralSeparator20
+}
+.NavIcon {
+  
+  max-width:120px;
+  min-width:80px;
+  position:relative;
+  display: block;
+  width:15vw;
+}
+.PointerCursor{
+    min-height: 50px;
+}
+.NavMenuLink {
+  padding-left: 40px;
+  float: right;
+}
+.AsteriskWrapperRemaster{
+    display:block;
+    padding-top: $GeneralSeparator50;
+    padding-bottom: $GeneralSeparator50;
+}
+.SkyboxBackground{
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+}
+
+//Usual Scss classes and styles, work here to change styles and s
+@media (max-width: #{$screen-xl-min}) {
+}
+@media (max-width: #{$screen-lg-min}) {
+  .HeroSectionParent{
+    max-height: 640px;
+  }
+}
+@media (max-width: #{$screen-md-min}) {
+  .HeroSectionParent{
+    max-height: 400px;
+  }
+}
+
+
+
+
+
+/*
+Para la imagen
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(marita-kavelashvili-ugnrXk1129g-unsplash.jpg);
+
+//Inside auto layout 
+
+flex: none;
+order: 0;
+flex-grow: 0;*/
+

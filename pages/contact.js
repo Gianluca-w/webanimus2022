@@ -2,7 +2,7 @@
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-import HeroSection from '../components/HeroSection'
+import HeroSectionRemastered from '../components/HeroSectionRemaster'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import LinksComponent from '../components/LinksComponent'
@@ -12,7 +12,7 @@ export default function Home(props) {
 
     return (
       <div className='indexContentWrapper'>
-        <HeroSection slogan={t('slogan')} BasicBackgroundStyle={'BaseContactUs'} AsteriskSize='45px'/>
+        <HeroSectionRemastered Slogan={t('ContactUs.Slogan')} Asterisk={"Hide"} FirstLinkText={t('PageHome')} SecondLinkText={t('PageAbout')} FirstLinkHref={'/'} SecondLinkHref={'/about'}/>
         <ContactForm/>
         <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')}/>
         <DropdownMenu Items={[{Title:"Im Workin", Position:1},{Title:"Im Workin too",Position:2}]}/>
