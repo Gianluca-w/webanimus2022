@@ -19,7 +19,7 @@ export default function Home(props) {
   const { t } = useTranslation('common')
   return (
     <div className='indexContentWrapper'>
-      <HeroSectionRemastered Slogan={t('slogan')}  FullSize={true} Asterisk={'hide'} Skybox={true} Background={"none"} BlackFilter={true} FirstLinkText={t('PageAbout')} SecondLinkText={t('PageContact')} FirstLinkHref={'/about'} SecondLinkHref={'/contact'} FilteringAlhpa={0.5}/>
+      <HeroSectionRemastered Slogan={t('slogan')}  FullSize={true} Asterisk={'hide'} Skybox={true} Background={"none"} BlackFilter={true} FirstLinkText={t('PageAbout')} SecondLinkText={t('PageContact')} FirstLinkHref={'/about'} SecondLinkHref={'/contact'} FilteringAlhpa={0.7}/>
       <BigParagraph title={t('BigParagraphTitle1')} Tags={t('BigParagraphTags1', { returnObjects: true })} OptionalImage={'TechLogos.png'} />
       <ImageSection FillingImg={'ImageSection.jpeg'}></ImageSection>
       <SmallParagraph SmallTitle={t('SmallParagraphTitle')} Content={t('SmallParagraphContent')} UnderlinedLinkTitle={t('SmallParagraphLink')}></SmallParagraph>
@@ -30,7 +30,7 @@ export default function Home(props) {
       <PhraseAndItems Content={t('WhyHireUs', { returnObjects: true })} />
       {/*Still hardcoded */}<Grid Content={[{ Filler: "FillerGridImage2", GridPosition: "1" }, { Image: "FIllerA.svg", Filler: "FillerGridImageCenter", GridPosition: "6" }, { GridPosition: "3", Filler: "FillerGridItem" }, { GridTitle: "Working!", GridPosition: "4" }, { GridPosition: "5", Filler: "FillerGridImage1" }, { GridTitle: "Working EARLY!", GridPosition: "2" }]} />
       <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')} />
-      <DropdownMenu Items={[{Title:"About", Position:1,Href:"/about"},{Title:"Contact",Position:2,Href:"/contact"}]}/>
+      <DropdownMenu Items={[{Title:t('PageAbout'), Position:1,Href:"/about"},{Title:t('PageContact'),Position:2,Href:"/contact"}]}/>
       <LinksComponent />
     </div>
   ) 
