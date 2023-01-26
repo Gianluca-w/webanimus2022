@@ -32,8 +32,10 @@
 @media (max-width: #{$screen-md-min}) {
     .TitleWrapper {
         width: 100%;
+        line-height: normal;
     }
     .SubTitleContentWrapper {
         width: 100%;
+        line-height: normal;
     }
 }

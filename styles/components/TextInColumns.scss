@@ -120,3 +120,19 @@
         border-bottom: 1px solid $secondaryColor;
     }
 }
+@media (max-width: #{$screen-md-min}) {
+    .ColumnContentTitle {
+        line-height: normal;
+    }
+    
+    .ColumnContentText {
+        line-height: normal;
+    }
+    
+    .ColumnSize2 {
+        .ColumnContentText {
+            line-height: normal;
+        }
+    }
+}
+

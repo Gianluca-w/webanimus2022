@@ -28,5 +28,6 @@
 @media (max-width: #{$screen-md-min}) {
     .AboutSmallCardContent{
         width: 100%;
+        line-height: 20px;
     }
 }
