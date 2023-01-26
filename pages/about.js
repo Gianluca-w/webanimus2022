@@ -9,6 +9,7 @@ import TextInColumns from '../components/TextInColumns'
 import AboutInfoCard from '../components/AboutInfoCard'
 import AboutSmallCard from '../components/AboutSmallCard'
 import AboutImage from '../components/AboutImage'
+import DropdownMenu from '../components/DropdownMenu'
 
 export default function Home(props) {
   const { t } = useTranslation('common')
@@ -23,6 +24,7 @@ export default function Home(props) {
       <AboutInfoCard Title={t('AboutUs.HackaCoopTitle')} SubTitle={t('AboutUs.HackaCoopSubTitle')} Body={t('AboutUs.HackaCoopBody')} />
       <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')} />
       <LinksComponent />
+      <DropdownMenu Items={[{Title:"Home", Position:1,Href:"/"},{Title:"Contact",Position:2,Href:"/contact"}]}/>
     </div>
   )
 }

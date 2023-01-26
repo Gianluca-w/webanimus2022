@@ -7,7 +7,7 @@ const DropdownMenu = ({
     Items
 }) => {
     const router = useRouter();
-    const [visible,setVisible] = useState(false);
+    const [visible, setVisible] = useState(false);
 
     const HandleClick = (Href) => {
         setVisible(!visible);
@@ -16,29 +16,25 @@ const DropdownMenu = ({
     return <div>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-        <div className='DropdownButton' onClick={() => {setVisible(!visible); console.log(visible)}}>
 
-            <div className='HowToCenterMiddle'>
-                <div>
-                    <span className="material-symbols-outlined">
-                        menu
-                    </span>
+        <div className={`Dropdown Hideable ${!visible ? 'IsDropdownOpenFalse' : 'IsDropdownOpenTrue'}`}>
+            
+            <div className={'DropdownItem'}
+                onClick={() => setVisible(!visible)}>
+                <div className={`AltHoverableLink HowToCenterMiddle DropdownItemTitle`}>
+                    <div className='HamburgerMenuAnimated'>
+                        <div className={`HamburguerMenuFStripe ${!visible ? '' : 'CrossTheHamburgerPart1'}`}></div>
+                        <div className={`HamburguerMenuSStripe ${!visible ? '' : 'CrossTheHamburgerPart2'}`}></div>
+                        <div className={`HamburguerMenuTStripe ${!visible ? '' : 'CrossTheHamburgerPart3'}`}></div>
+                    </div>
                 </div>
             </div>
-
-
-        </div>
-        <div className={`Dropdown Hideable ${!visible ? 'IsDropdownOpenFalse':'IsDropdownOpenTrue'}`}>
-            <div className={'DropdownItem'}
-            onClick={() =>setVisible(!visible)}>
-            <div className="AltHoverableLink">X Close</div>
-            </div>
             {Items && Items.map((Content) => (
-                <div 
-                className={'DropdownItem'}
-                key={Content.Position} 
-                onClick={() => HandleClick(Content.Href)}>
-                     <div className="AltHoverableLink">{Content.Title}</div>
+                <div
+                    className={'DropdownItem'}
+                    key={Content.Position}
+                    onClick={() => HandleClick(Content.Href)}>
+                    <div className="AltHoverableLink HowToCenterMiddle DropdownItemTitle">{Content.Title}</div>
                 </div>
             ))}
         </div>

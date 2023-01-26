@@ -11,6 +11,7 @@ import TextInColumns from '../components/TextInColumns'
 import LinksComponent from '../components/LinksComponent'
 import SmallParagraph from '../components/SmallParagraph'
 import HeroSectionRemastered from '../components/HeroSectionRemaster'
+import DropdownMenu from '../components/DropdownMenu'
 
 
 
@@ -29,6 +30,7 @@ export default function Home(props) {
       <PhraseAndItems Content={t('WhyHireUs', { returnObjects: true })} />
       {/*Still hardcoded */}<Grid Content={[{ Filler: "FillerGridImage2", GridPosition: "1" }, { Image: "FIllerA.svg", Filler: "FillerGridImageCenter", GridPosition: "6" }, { GridPosition: "3", Filler: "FillerGridItem" }, { GridTitle: "Working!", GridPosition: "4" }, { GridPosition: "5", Filler: "FillerGridImage1" }, { GridTitle: "Working EARLY!", GridPosition: "2" }]} />
       <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')} />
+      <DropdownMenu Items={[{Title:"About", Position:1,Href:"/about"},{Title:"Contact",Position:2,Href:"/contact"}]}/>
       <LinksComponent />
     </div>
   ) 
