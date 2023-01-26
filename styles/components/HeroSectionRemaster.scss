@@ -57,6 +57,7 @@
   
   max-width:120px;
   min-width:80px;
+  min-height: 40px;
   position:relative;
   display: block;
   width:15vw;
@@ -118,7 +119,7 @@
   .HeroSectionParent{
     max-height: 400px;
   }
-  .NavMainWrapper {
+  .NavMenuLink {
     display: none;
   }
   .BaseStyle{
