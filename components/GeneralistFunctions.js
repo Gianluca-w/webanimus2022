@@ -37,7 +37,6 @@ export function SanitizeGeneral(ToSanitize, MaxLength = 580, Desinfectant = /[/[
     ToSanitize.value=ToSanitize.value.slice(0,MaxLength)
     const SanitizedValue = ToSanitize.value.replaceAll(Desinfectant,"")
     ToSanitize.value = SanitizedValue
-    console.log(SanitizedValue)
     return SanitizedValue
     
 }

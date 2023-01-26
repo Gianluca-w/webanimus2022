@@ -5,77 +5,73 @@ import { SendMail, SanitizeGeneral } from './GeneralistFunctions'
 
 
 const ContactFormHireTheCoop = ({ }) => {
-    const [name, setName] = useState("");
-    const [mail, setMail] = useState("");
-    const [phone, setPhone] = useState("");
-    const [message, setMessage] = useState("");
-    function IncompleteField(Field){
-        switch (Field) {
-            case "Name":
-                break;
-            case "Mail":
-                break;
-            case "Phone":
-                break;
-            case "Message":
-                break;
-            case "Resume":
-                break;
-            default:
-                break;
+    const [field, setField] = useState(
+        {
+            name: "",
+            mail: "",
+            phone: "",
+            message: "",
         }
+    );
+    const [errorField, setErrorField] = useState(
+        {
+            name: false,
+            mail: false,
+            phone: false,
+            message: false,
+        }
+    );
+    const HandleFieldChange = (e, maxLength, RegEx = "") => {
+        setField(
+            {
+                ...field,
+                [e.target.name]: SanitizeGeneral(e.target, maxLength, RegEx)
+            }
+        )
     }
-    function CheckHireFormCompletion(){
-       let CheckName = name
-       let CheckMail = mail
-       let CheckPhone = phone
-       let CheckMsg = message
-       if(CheckName.replace(/_/g, "") ==""){
-        return IncompleteField("Name")
-       }
-       if(CheckMail.replace(/_/g, "") ==""){
-        return IncompleteField("Mail")
-       }
-       if(CheckPhone.replace(/_/g, "") ==""){
-        return IncompleteField("Phone")
-       }
-       if(CheckMsg.replace(/_/g, "") ==""){
-        return IncompleteField("Message")
-       }
 
-    
-        return SendMail('hire',name,mail,phone,message)
+    const CheckHireFormCompletion = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        for (const [key, value] of Object.entries(field)) {
+            console.log(`${key} ${value}`);
+            (value!='') ? console.log("Falso") : console.log("Verdadero");
+            (value!='') ? setErrorField({ ...errorField, [key]: false }) : setErrorField({ ...errorField, [key]: true })
+
+
+        }
+
     }
-    return <form action="/api/mailing" method="post">
-    <div className={`ContactFormWrapper`}>
+    return <form>
+        <div className={`ContactFormWrapper`}>
 
             <div className=''>
-                <div className='ContactFormWideInput ContactFormUnderlining'>
+                <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.name ? '' : 'ContactFormRedUnderlining'}`}>
                     <p className="PlaceholderAligner">Name</p>
-                    <input type="text" placeholder='Name' onChange={(event) => setName(SanitizeGeneral(event.target, 30))}></input>
+                    <input type="text" placeholder='Name' name="name" onChange={(e) => HandleFieldChange(e, 30)}></input>
                 </div>
-                <div className='ContactFormWideInput ContactFormUnderlining'>
+                <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.mail ? '' : 'ContactFormRedUnderlining'}`}>
                     <p className="PlaceholderAligner">Email</p>
-                    <input type="text" placeholder='Email' onChange={(event) => setMail(SanitizeGeneral(event.target,35))}></input>
+                    <input type="text" placeholder='Email' name="email" onChange={(e) => HandleFieldChange(e, 35)}></input>
                 </div>
-                <div className='ContactFormPhoneInput ContactFormUnderlining'>
+                <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.phone ? '' : 'ContactFormRedUnderlining'}`}>
                     <p className="PlaceholderAligner">Phone</p>
-                    <input type="text" placeholder='Phone' autoComplete="off" onChange={(event) => setPhone(SanitizeGeneral(event.target,15,/[^0-9+]/g))}></input>
+                    <input type="text" placeholder='Phone' name="phone" autoComplete="off" onChange={(e) => HandleFieldChange(e, 15, /[^0-9+]/g)}></input>
                 </div>
             </div>
 
-        <div className='ContactFormUnderlining'>
-            <div className=''>
-                <div className='ContactFormWideInput TextareaWrapper'>
-                    <p>Message</p>
-                    <textarea type='text' placeholder='Your message' className='' onChange={(event)=>setMessage(SanitizeGeneral(event.target))}>
-                    </textarea>
+            <div className={`ContactFormUnderlining ${!errorField.message ? '' : 'ContactFormRedUnderlining'}`}>
+                <div className=''>
+                    <div className='ContactFormWideInput TextareaWrapper'>
+                        <p>Message</p>
+                        <textarea type='text' placeholder='Your message' name="message" className='' onChange={(e) => HandleFieldChange(e)}>
+                        </textarea>
+                    </div>
                 </div>
             </div>
-        </div>
-            
-        <div className="ContactFormSendWrapper" >
-                <button className='ContactFormSend' type='button' onClick={(e)=>CheckHireFormCompletion()}><div className=''>Send</div>
+
+            <div className="ContactFormSendWrapper" >
+                <button className='ContactFormSend' type='submit' onClick={(e) => CheckHireFormCompletion(e)}><div className=''>Send</div>
                     <div className='ContactFormSendLineContent'>
                         <Image src={Arrow.src}
                             width={'1px'}
@@ -84,8 +80,8 @@ const ContactFormHireTheCoop = ({ }) => {
                             alt='>' />
                     </div>
                 </button>
+            </div>
         </div>
-    </div>
     </form>
 }
 export default ContactFormHireTheCoop
