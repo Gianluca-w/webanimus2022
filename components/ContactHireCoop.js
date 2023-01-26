@@ -34,13 +34,21 @@ const ContactFormHireTheCoop = ({ }) => {
         e.preventDefault();
         e.stopPropagation();
         for (const [key, value] of Object.entries(field)) {
-            console.log(`${key} ${value}`);
-            (value!='') ? console.log("Falso") : console.log("Verdadero");
-            (value!='') ? setErrorField({ ...errorField, [key]: false }) : setErrorField({ ...errorField, [key]: true })
-
-
+            (value != '') ? setErrorField(errorField => ({ ...errorField, [key]: false })) : setErrorField(errorField => ({ ...errorField, [key]: true }))
         }
-
+        if(field.name==''){
+            return console.log("Didnt Send. Was lacking name")
+        }
+        if(field.mail==''){
+            return console.log("Didnt Send. Was lacking mail")
+        }
+        if(field.phone==''){
+            return console.log("Didnt Send. Was lacking phone")
+        }
+        if(field.message==''){
+            return console.log("Didnt Send. Was lacking message")
+        }
+        SendMail("hire", field.name, field.mail, field.phone, field.message)
     }
     return <form>
         <div className={`ContactFormWrapper`}>
@@ -52,7 +60,7 @@ const ContactFormHireTheCoop = ({ }) => {
                 </div>
                 <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.mail ? '' : 'ContactFormRedUnderlining'}`}>
                     <p className="PlaceholderAligner">Email</p>
-                    <input type="text" placeholder='Email' name="email" onChange={(e) => HandleFieldChange(e, 35)}></input>
+                    <input type="text" placeholder='Email' name="mail" onChange={(e) => HandleFieldChange(e, 35)}></input>
                 </div>
                 <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.phone ? '' : 'ContactFormRedUnderlining'}`}>
                     <p className="PlaceholderAligner">Phone</p>
