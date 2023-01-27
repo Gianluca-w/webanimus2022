@@ -147,11 +147,11 @@
 }
 
 .DragAndDropArea {
-    min-height: 200px;
-    width: auto;
+   
+    width: fit-content;
     border: 1px solid $white;
     margin: 10px 10px 10px 10px;
-    padding: 16px;
+    
 }
 .DragAndDropWrapper{
     width: 100%;
@@ -167,6 +167,10 @@
     border: 1px solid $white;
     height: 100%;
 }
+.svgUploadWrapper{
+    width: 150px;
+    height: 150px;
+}
 
 .Visible {
     display: block;
@@ -176,7 +180,33 @@
 .NotVisible {
     display: none;
 }
+.resumeUploaderLabel{
+    padding-left: $GeneralSeparator40;
+    padding-right: $GeneralSeparator40
+}
+.resumeUploaderLabel:hover{
+    background: rgba($color: $secondaryColor, $alpha: 0.2);
+    cursor:pointer;
+}
+.resumeUploaderLabel:active{
+    background: rgba($color: $secondaryColor, $alpha: 0.5);
 
+}
+.uploadResumeButton{
+    font: inherit;
+    color: inherit;
+    text-decoration:none;
+    background: inherit;
+    padding: 10px 10px 10px 10px;
+}
+
+.uploadResumeButton:active{
+    background: rgba($color: $secondaryColor, $alpha: 0.5);
+    cursor:pointer;
+}
+.dropzonePreviewWrapper{
+    padding-bottom: $GeneralSeparator20
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

@@ -127,6 +127,12 @@ a:hover{
 @import './components/NotificationCard.scss';
 @import './components/HeroSectionRemaster.scss';
 @import './components/DropdownMenu.scss';
+.visible{
+    display:block;
+}
+.notVisible{
+    display:none!important; 
+}
 .AltHoverableLink{
     cursor: pointer;
 }
@@ -145,4 +151,13 @@ a:hover{
 .HowToCenterMiddle{
     display:flex;justify-content:center;align-items:center;
     height: 100%;
+}
+.filterWhite{
+    filter:brightness(0) invert(1);
+}
+.noMargin{
+    margin:0px 0px 0px 0px;
+}
+.noPadding{
+    padding:0px 0px 0px 0px;
 }

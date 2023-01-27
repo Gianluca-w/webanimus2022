@@ -3,19 +3,19 @@ import React from "react";
 
 const DropzoneFilePreview = ({ fileData }) => {
   return (
-    <div >
+    <div className="dropzonePreviewWrapper">
       <div >
         {/* loop over the fileData */}
         {fileData.fileList.map((f) => {
           return (
-              <ol key={f.lastModified}>
+              <ul className="noMargin noPadding" key={`${f.lastModified}${f.name}`}>
                 <li>
                   {/* display the filename and type */}
                   <div key={f.name}>
                     {f.name}
                   </div>
                 </li>
-              </ol>
+              </ul>
           );
         })}
       </div>
