@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Image from 'next/image';
 import Arrow from '../public/assets/icons/arrowBlack.svg'
-import { SendMail, SanitizeGeneral } from './GeneralistFunctions'
+import { SendMail} from './GeneralistFunctions'
 
 
 const ContactFormHireTheCoop = ({ }) => {
@@ -50,21 +50,21 @@ const ContactFormHireTheCoop = ({ }) => {
         }
         SendMail("hire", field.name, field.mail, field.phone, field.message)
     }
-    return <form>
+    return <form onSubmit={CheckHireFormCompletion}>
         <div className={`ContactFormWrapper`}>
 
             <div className=''>
                 <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.name ? '' : 'ContactFormRedUnderlining'}`}>
                     <p className="PlaceholderAligner">Name</p>
-                    <input type="text" placeholder='Name' name="name" onChange={(e) => HandleFieldChange(e, 30)}></input>
+                    <input type="text" placeholder='Name' name="name" required maxLength={30} onChange={(e) => HandleFieldChange(e, 30)}></input>
                 </div>
                 <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.mail ? '' : 'ContactFormRedUnderlining'}`}>
                     <p className="PlaceholderAligner">Email</p>
-                    <input type="text" placeholder='Email' name="mail" onChange={(e) => HandleFieldChange(e, 35)}></input>
+                    <input type="email" placeholder='Email' name="email" required maxLength={30} onChange={(e) => HandleFieldChange(e, 35)}></input>
                 </div>
                 <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.phone ? '' : 'ContactFormRedUnderlining'}`}>
                     <p className="PlaceholderAligner">Phone</p>
-                    <input type="text" placeholder='Phone' name="phone" autoComplete="off" onChange={(e) => HandleFieldChange(e, 15, /[^0-9+]/g)}></input>
+                    <input type="phone" placeholder='Phone' maxLength={15} required name="phone" autoComplete="off" onChange={(e) => HandleFieldChange(e, 15, /[^0-9+]/g)}></input>
                 </div>
             </div>
 
@@ -79,7 +79,7 @@ const ContactFormHireTheCoop = ({ }) => {
             </div>
 
             <div className="ContactFormSendWrapper" >
-                <button className='ContactFormSend' type='submit' onClick={(e) => CheckHireFormCompletion(e)}><div className=''>Send</div>
+                <button className='ContactFormSend' type='submit'><div>Send</div>
                     <div className='ContactFormSendLineContent'>
                         <Image src={Arrow.src}
                             width={'1px'}

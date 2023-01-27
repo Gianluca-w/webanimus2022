@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     if(!req.body.Mail){return  res.status(400).json({ Response:"Mail Failed", error:"Empty mail detected"})}
     if(!req.body.Phone){return  res.status(400).json({ Response:"Mail Failed", error:"Empty phone detected"})}
     if(!req.body.Message){return  res.status(400).json({ Response:"Mail Failed", error:"Empty message detected"})}
-    console.log("Clauses Abided, Mail in progress")
+    console.log(process.env.MAILR_USR);
 //Endo of the Security*/
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
@@ -17,11 +17,8 @@ export default async function handler(req, res) {
       port: 465,
       secure: true, 
       auth: {
-        type: "OAuth2",
         user: process.env.MAILR_USR, 
-        clientId:process.env.MAILR_CLIENT_ID,
-        clientSecret:process.env.MAILR_CLIENT_SECRET,
-        refreshToken:"1//04fHtlIblol2lCgYIARAAGAQSNwF-L9IrZTFRuxMfhVNVqi1MrFSCV7iP1_i8dkK_GKfL7EcGn7SXrcETszOZm3mdNS13dvzRFVg"//process.env.MAILR_REFRESH_TOKEN
+        pass:process.env.MAILR_PASS
       },
     });
 
@@ -33,7 +30,7 @@ export default async function handler(req, res) {
         from: `${process.env.MAILR_USR}@gmail.com`, // sender address
         to: 'barreyro.gian@gmail.com', // list of receivers, usually info@animus.com.ar
         subject: "Llamado al trabajo", // Subject line
-        text:"FIller Text",
+        text:"Filler Text",
         html: "<b>Funca</b>", // html body
   /*
         attachments: [

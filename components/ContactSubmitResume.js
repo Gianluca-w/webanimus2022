@@ -71,7 +71,7 @@ const ContactFormDragNDrop = ({ resume, setResume }) => {
         onDragOver={(e) => handleDragOver(e)}
         className="DragAndDropArea HowToCenterMiddle"
       >
-        <label for={"resumeUploader"} className="resumeUploaderLabel ">
+        <label htmlFor={"resumeUploader"} className="resumeUploaderLabel ">
           <div className={`HowToCenterMiddle ${(!resume.fileList[0])? 'visible':'notVisible'}`}>
             <div className="svgUploadWrapper filterWhite ">
               <Image
