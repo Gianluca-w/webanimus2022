@@ -26,7 +26,7 @@ const CameraControls = ({OptionalExternalController}) => {
       args={[camera, OptionalExternalController.current]}
       autoRotate={true}
       enableZoom={false}
-      rotateSpeed={0.7}
+      rotateSpeed={0.5}
     />
   );
 };
@@ -66,6 +66,7 @@ function SkyboxBackground({}) {
         margin: 0,
         padding: 0,
         zIndex:"-1"}} 
+        
         >
       <CameraControls OptionalExternalController={SkyboxController} />
       <SkyBox />

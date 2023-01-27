@@ -12,7 +12,7 @@ export default function Home(props) {
 
     return (
       <div className='indexContentWrapper'>
-        <HeroSectionRemastered Slogan={t('ContactUs.Slogan')} Asterisk={"Hide"} FirstLinkText={t('PageHome')} SecondLinkText={t('PageAbout')} FirstLinkHref={'/'} SecondLinkHref={'/about'} />
+        <HeroSectionRemastered Slogan={t('ContactUs.Slogan')} Asterisk={"Hide"} FirstLinkText={t('PageAbout')} SecondLinkText={t('PageContact')} FirstLinkHref={'/about'} SecondLinkHref={'/contact'} />
         <ContactForm/>
         <Footer FooterTitleTxt={t('FooterTitle')} FooterLinkText={t('FooterLinkTitle')} FooterMailText={t('FooterMail')} FooterAdressText={t('FooterAdress')}/>
         <DropdownMenu Items={[{Title:t('PageAbout'), Position:1,Href:"/about"},{Title:t('PageContact'),Position:2,Href:"/contact"}]}/>
