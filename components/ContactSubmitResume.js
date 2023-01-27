@@ -124,47 +124,87 @@ const ContactSubmitResume = ({}) => {
     }
   };
 
-  const [name, setName] = useState("");
-  const [mail, setMail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
+  const [field, setField] = useState(
+    {
+        name: "",
+        mail: "",
+        phone: "",
+        message: "",
+    }
+);
+const [errorField, setErrorField] = useState(
+    {
+        name: false,
+        mail: false,
+        phone: false,
+        message: false,
+    }
+);
   const [resume, setResume] = useReducer(reducer, {
     inDropZone: false,
     fileList: [],
   });
+  const HandleFieldChange = (e, maxLength, RegEx = "") => {
+    setField(
+        {
+            ...field,
+            [e.target.name]: SanitizeGeneral(e.target, maxLength, RegEx)
+        }
+    )
+}
+  const CheckHireFormCompletion = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    for (const [key, value] of Object.entries(field)) {
+        (value != '') ? setErrorField(errorField => ({ ...errorField, [key]: false })) : setErrorField(errorField => ({ ...errorField, [key]: true }))
+    }
+    if(field.name==''){
+        return console.log("Didnt Send. Was lacking name")
+    }
+    if(field.mail==''){
+        return console.log("Didnt Send. Was lacking mail")
+    }
+    if(field.phone==''){
+        return console.log("Didnt Send. Was lacking phone")
+    }
+    if(field.message==''){
+        return console.log("Didnt Send. Was lacking message")
+    }
+    SendMail("resume", field.name, field.mail, field.phone, field.message, resume)
+}
 
   return (
     <form action="/api/mailing" method="post">
       <div className={`ContactFormWrapper`}>
         <div className="">
           <div className="">
-            <div className="ContactFormWideInput ContactFormUnderlining">
+            <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.name ? '' : 'ContactFormRedUnderlining'}`}>
               <p className="PlaceholderAligner">Name</p>
               <input
                 type="text"
                 placeholder="Name"
                 name="name"
-                onChange={(event) => setName(SanitizeGeneral(event.target, 30))}
+                onChange={(e) => HandleFieldChange(e, 30)}
               ></input>
             </div>
-            <div className="ContactFormWideInput ContactFormUnderlining">
+            <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.mail ? '' : 'ContactFormRedUnderlining'}`}>
               <p className="PlaceholderAligner">Email</p>
               <input
                 type="mail"
                 placeholder="Email"
                 name="mail"
-                onChange={(event) => setMail(SanitizeGeneral(event.target, 35))}
+                onChange={(e) => HandleFieldChange(e, 35)}
               ></input>
             </div>
-            <div className="ContactFormPhoneInput ContactFormUnderlining">
+            <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.phone ? '' : 'ContactFormRedUnderlining'}`}>
               <p className="PlaceholderAligner">Phone</p>
               <input
                 type="text"
                 placeholder="Phone"
                 autoComplete="off"
                 name="phone"
-                onChange={(event) =>
-                  setPhone(SanitizeGeneral(event.target, 15, /[^0-9+]/g))
+                onChange={
+                    (e) => HandleFieldChange(e, 15, /[^0-9+]/g)
                 }
               ></input>
             </div>
@@ -173,14 +213,14 @@ const ContactSubmitResume = ({}) => {
 
         <div className="">
           <div className="ContactFormWideInput">
-            <div className="ContactFormUnderlining">
+            <div className={`ContactFormUnderlining ${!errorField.phone ? '' : 'ContactFormRedUnderlining'}`}>
               <p>Message</p>
               <textarea
                 type="text"
                 placeholder="Your message"
                 name="message"
                 className=""
-                onChange={(event) => setMessage(SanitizeGeneral(event.target))}
+                onChange={(e) => HandleFieldChange(e)}
               ></textarea>
             </div>
           </div>
@@ -199,7 +239,7 @@ const ContactSubmitResume = ({}) => {
             className="ContactFormSend"
             type="button"
             onClick={(e) =>
-              SendMail("resume", name, mail, phone, message, resume)
+                CheckHireFormCompletion(e)
             }
           >
             <div className="">Send</div>
