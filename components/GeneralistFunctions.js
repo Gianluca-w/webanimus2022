@@ -4,7 +4,7 @@
    * type "resume" requires ContentName, TargetMail, ContentPhone, ContentMessage & ContentResume        
    * currently does not yield any response
    */
-export async function SendMail(type, ContentName, TargetMail, ContentPhone, ContentMessage, ContentResume) {
+export const SendMail= async (type, ContentName, TargetMail, ContentPhone, ContentMessage, ContentResume) => {
 
     switch (type) {
         case "hire":

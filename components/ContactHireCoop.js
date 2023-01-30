@@ -25,10 +25,10 @@ const ContactFormHireTheCoop = ({ }) => {
     const CheckHireFormCompletion = (e) => {
         e.preventDefault();
         e.stopPropagation();
-        console.log(field.email)
         SendMail("hire", field.name, field.email, field.phone, field.message)
     }
-    return <form onSubmit={CheckHireFormCompletion}>
+    return <form
+        onSubmit={CheckHireFormCompletion}>
         <div className={`ContactFormWrapper`}>
 
             <div className=''>
@@ -86,7 +86,7 @@ const ContactFormHireTheCoop = ({ }) => {
             <div className="ContactFormSendWrapper" >
                 <button className='ContactFormSend' type='submit'><div>Send</div>
                     <div className='ContactFormSendLineContent'>
-                        <Image 
+                        <Image
                             src={Arrow.src}
                             width={'1px'}
                             height={'1px'}

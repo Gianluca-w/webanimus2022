@@ -2,35 +2,50 @@ import Image from "next/image";
 const BigParagraph = ({
   title,
   body,
-  Tags,
   LinkTitle,
   LinkHref,
   OptionalImage,
 }) => (
   <BigParagraphParent>
-    <BigParagraphTitle Content={title}></BigParagraphTitle>
-    <BigParagraphSubTitle Content={body}></BigParagraphSubTitle>
-    <BigParagraphImg ImgSrc={OptionalImage}></BigParagraphImg>
-    <BigParagraphLink Title={LinkTitle} Href={LinkHref}></BigParagraphLink>
+    <BigParagraphTitle
+      Content={title} />
+    <BigParagraphSubTitle
+      Content={body} />
+    <BigParagraphImg
+      ImgSrc={OptionalImage} />
+    <BigParagraphLink
+      Title={LinkTitle}
+      Href={LinkHref} />
   </BigParagraphParent>
 );
-const BigParagraphTitle = ({ Content }) => {
-  return <div className="BigParagraphTitleWrapper">{Content}</div>;
+const BigParagraphTitle = ({
+  Content }) => {
+  return <div className="BigParagraphTitleWrapper">
+    {Content}
+  </div>;
 };
 
 
 
-const BigParagraphSubTitle = ({ Content }) => {
-  return <div className="BigParagraphBodyWrapper">{Content}</div>;
+const BigParagraphSubTitle = ({
+  Content }) => {
+  return <div className="BigParagraphBodyWrapper">
+    {Content}
+  </div>;
 };
-const BigParagraphLink = ({ Title, Href }) => {
+const BigParagraphLink = ({
+  Title,
+  Href }) => {
   return (
     <div className="BigParagraphLinkWrapper">
-      <a href={Href}>{Title}</a>
+      <a href={Href}>
+        {Title}
+      </a>
     </div>
   );
 };
-const BigParagraphImg = ({ ImgSrc }) => {
+const BigParagraphImg = ({
+  ImgSrc }) => {
   return (
     <div>
       {ImgSrc && (
@@ -47,10 +62,13 @@ const BigParagraphImg = ({ ImgSrc }) => {
     </div>
   );
 };
-const BigParagraphParent = ({ children }) => {
+const BigParagraphParent = ({
+  children }) => {
   return (
     <div className="BigParagraphWrapper">
-      <div className="BigParagraphGrid">{children}</div>
+      <div className="BigParagraphGrid">
+        {children}
+      </div>
     </div>
   );
 };

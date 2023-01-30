@@ -9,7 +9,6 @@ export default async function handler(req, res) {
     if(!req.body.Mail){return  res.status(400).json({ Response:"Mail Failed", error:"Empty mail detected"})}
     if(!req.body.Phone){return  res.status(400).json({ Response:"Mail Failed", error:"Empty phone detected"})}
     if(!req.body.Message){return  res.status(400).json({ Response:"Mail Failed", error:"Empty message detected"})}
-    console.log(process.env.MAILR_USR);
 //Endo of the Security*/
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
@@ -31,7 +30,11 @@ export default async function handler(req, res) {
         to: 'barreyro.gian@gmail.com', // list of receivers, usually info@animus.com.ar
         subject: "Llamado al trabajo", // Subject line
         text:"Filler Text",
-        html: "<b>Funca</b>", // html body
+        html: `<h1>Se Recibio Una Oferta laboral</h1></br>
+              <p>De: ${req.body.Name}</p>
+              <p>Mail: ${req.body.Mail}</p>
+              <p>Telefono: ${req.body.Phone}</p> </br>
+              <p>${req.body.Message}</p>`, // html body
   /*
         attachments: [
           {
@@ -40,7 +43,7 @@ export default async function handler(req, res) {
               contentType: 'application/pdf'
           }],
   */
-        replyTo:"barreyro.gian@gmail.com" //Substitute for req.mail
+        replyTo:"barreyro.gian@gmail.com" 
       });
       console.log("Message sent: %s", WorkMail.messageId);
         

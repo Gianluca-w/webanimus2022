@@ -6,19 +6,20 @@ const Footer = ({ FooterTitleTxt, FooterLinkText, FooterMailText, FooterAdressTe
     <div className="FooterWrapper">
         <div className="FooterGrid">
             <div className="FooterTitleWrapper">
-                <div className="FooterTitle"><strong >{FooterTitleTxt}</strong></div>
-
+                <div className="FooterTitle">
+                    <strong >
+                        {FooterTitleTxt}
+                    </strong>
+                </div>
                 <div className="FooterLink">
-                    
-                        <Link className='' href="/contact">
+                    <Link className='' href="/contact">
                         <div className='LinkWrapper AltHoverableLink'>
-                        {FooterLinkText}
-                        <div className='FooterArrowWrapper'>
-                        <Image layout='responsive' width={'18px'} height={'18px'} src={whitearrowsvg.src} alt='->'/>
+                            {FooterLinkText}
+                            <div className='FooterArrowWrapper'>
+                                <Image layout='responsive' width={'18px'} height={'18px'} src={whitearrowsvg.src} alt='->' />
+                            </div>
                         </div>
-                        </div>
-                        </Link>
-                    
+                    </Link>
                 </div>
             </div>
             <div className="ContactWrapper">
@@ -31,12 +32,17 @@ const Footer = ({ FooterTitleTxt, FooterLinkText, FooterMailText, FooterAdressTe
                             {FooterAdressText}
                         </div>
                         <div className="ContactSocials">
-                            <strong> <a href="https://mobile.twitter.com/animuscoop" target="self">TW </a> <a href="https://www.instagram.com/animuscoop/" target="self">IG</a> <a href="https://animus-coop.medium.com/" target="self">Medium</a> <a href="https://www.linkedin.com/company/animus-argentina" target="self">LinkedIn</a> <a href="https://github.com/animus-coop/" target="self">GIT </a> </strong>
+                            <strong>
+                                <a href="https://mobile.twitter.com/animuscoop" target="self">TW </a>
+                                <a href="https://www.instagram.com/animuscoop/" target="self">IG</a>
+                                <a href="https://animus-coop.medium.com/" target="self">Medium</a>
+                                <a href="https://www.linkedin.com/company/animus-argentina" target="self">LinkedIn</a>
+                                <a href="https://github.com/animus-coop/" target="self">GIT </a>
+                            </strong>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 );

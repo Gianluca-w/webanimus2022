@@ -4,16 +4,10 @@ import ContactSubmitResume from './ContactSubmitResume';
 
 const ContactForm = ({ }) => {
     return <div className={`FormWrapper`}>
-        <ContactFormButtons />
         <ContactFormForm />
     </div>
 }
-const ContactFormButtons = ({ }) => {
 
-    return <div>
-
-    </div>
-}
 const ContactFormForm = ({ }) => {
     const [visible, Visibility] = useState(false);
     const HandleClickToFalsify = event => {
@@ -24,19 +18,21 @@ const ContactFormForm = ({ }) => {
     };
     return <div className='ContactFormMain'>
         <div className='ContactFormInputWrapper'>
-            <div className='ButtonRestricter'><button className='ContactFormSelector'onClick={HandleClickToFalsify}>Want To Hire the Coop?</button> <div className={visible ? 'Underline NotUnderlinedButton' : 'Underline UnderlinedButton'}></div></div>
+            <div className='ButtonRestricter'>
+                <button className='ContactFormSelector' onClick={HandleClickToFalsify}>Want To Hire the Coop?</button>
+                <div className={visible ? 'Underline NotUnderlinedButton' : 'Underline UnderlinedButton'}></div>
+            </div>
             <div className='Spacer5'></div>
-            <div className='ButtonRestricter'><button className='ContactFormSelector'onClick={HandleClickToVerify}>Be part of ANIMUS</button> <div className={visible ? 'Underline UnderlinedButton' : 'Underline NotUnderlinedButton'}></div> </div>
+            <div className='ButtonRestricter'>
+                <button className='ContactFormSelector' onClick={HandleClickToVerify}>Be part of ANIMUS</button>
+                <div className={visible ? 'Underline UnderlinedButton' : 'Underline NotUnderlinedButton'}></div>
+            </div>
         </div>
         <div className={visible ? 'NotVisible' : 'Visible'}>
-
             <ContactFormHireTheCoop />
-
         </div>
         <div className={visible ? 'Visible' : 'NotVisible'}>
-
             <ContactSubmitResume />
-
         </div>
 
     </div>
