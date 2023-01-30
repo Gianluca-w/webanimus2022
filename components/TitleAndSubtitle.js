@@ -1,4 +1,6 @@
-const TitleAndSubtitle = ({ title, Subtitle }) => (
+const TitleAndSubtitle = ({ 
+    title, 
+    Subtitle }) => (
 
     <TitleAndSubititleParent>
         <Title Content={title}></Title>

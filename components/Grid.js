@@ -4,10 +4,12 @@ import Image from "next/image";
 // If left blank it won't display anything to improve performance, if there is at least 1 filler and everything else is blmk it will fill itself with filler images
 const Grid = ({ Content }) => (
     <GridSectionParent>
-        <GridContent Props={Content} />
+        <GridContent
+            Props={Content} />
     </GridSectionParent>
 );
-const GridSectionParent = ({ children }) => {
+const GridSectionParent = ({
+    children }) => {
     return <div className="GridParentWrapper">
         <div >
             {children}
@@ -15,7 +17,8 @@ const GridSectionParent = ({ children }) => {
     </div>
 
 }
-const GridContent = ({ Props }) => (
+const GridContent = ({
+    Props }) => (
     <div className="GridSquared">
 
         {Props && Props.map((content) => {
@@ -36,9 +39,7 @@ const GridContent = ({ Props }) => (
                             layout="responsive"
                             alt=""
                         />
-
                     </div>
-
                     }
                 </div>
             )

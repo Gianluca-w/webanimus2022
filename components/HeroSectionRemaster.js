@@ -30,23 +30,27 @@ const Asterisk = ({ hide, Size }) => (
     )}
   </>
 );
- /**
-   * Nav only admits 2 links, give the link a title using LinkText1 and a Href1 to give the route               
-   * For the second link is the same                                                          
-   * 
-   * TODO: Change it for a Array so it can have any amount of links
-   */
- const Nav = ({ LinkText1, Href1 = 'about', LinkText2, Href2 = 'contact' }) => (
+/**
+  * Nav only admits 2 links, give the link a title using LinkText1 and a Href1 to give the route               
+  * For the second link is the same                                                          
+  * 
+  * TODO: Change it for a Array so it can have any amount of links
+  */
+const Nav = ({
+  LinkText1,
+  Href1 = 'about',
+  LinkText2,
+  Href2 = 'contact' }) => (
   <div className="NavMainWrapper">
     <Link href="/">
-    <div className="NavIcon">
+      <div className="NavIcon">
         <Image
           className="PointerCursor"
           src={animus.src}
           layout={'fill'}
           alt="ANIMUS"
         />
-    </div>
+      </div>
     </Link>
     <div className="NavMenuSeparator"></div>
     <div className="NavMenuLink AltHoverableLink">
@@ -86,7 +90,7 @@ const HeroSectionParent = ({
   if (BackgroundStyle.endsWith(',')) {
     BackgroundStyle = BackgroundStyle.substring(4, (BackgroundStyle.length - 1))
   }
-  
+
   if (FullHeight != false) {
     AdditiveClasses += "MaxHeight "
   }
@@ -101,22 +105,36 @@ const HeroSectionParent = ({
   }
   return (
     <div className={`HeroSectionParent ${AdditiveClasses}`} style={{ background: BackgroundStyle }}>
-      <Nav LinkText1={Link1} LinkText2={Link2} Href1={Link1Href} Href2={Link2Href} />
-      <div>{children}</div>
-      <Asterisk Size={AsteriskSize} hide={AsteriskVisibility} />
-      
+      <Nav
+        LinkText1={Link1}
+        LinkText2={Link2}
+        Href1={Link1Href}
+        Href2={Link2Href} />
+      <div>
+        {children}
+      </div>
+      <Asterisk
+        Size={AsteriskSize}
+        hide={AsteriskVisibility} />
+
     </div>
   );
 };
-const HeroSectionTitle = ({ Title, SubTitle }) => {
+const HeroSectionTitle = ({
+  Title,
+  SubTitle }) => {
   return (
     <div className="HeroSectionTittleWrapper">
-      <div className="HeroSectionSubTitle">{SubTitle}</div>
-      <div className="HeroSectionTitle">{Title}</div>
+      <div className="HeroSectionSubTitle">
+        {SubTitle}
+      </div>
+      <div className="HeroSectionTitle">
+        {Title}
+      </div>
     </div>
   );
 };
-const HeroSkyboxBackground = ({ Visibility}) => {
+const HeroSkyboxBackground = ({ Visibility }) => {
   if (Visibility != false) {
     return <SkyboxBackground className="SkyboxBackground" />;
   }
@@ -153,9 +171,12 @@ const HeroSectionRemastered = ({
     Link1Href={FirstLinkHref}
     Link2Href={SecondLinkHref}
     NoBackground={Background}  >
-    <HeroSectionTitle Title={Slogan} SubTitle={SubSlogan} />
+    <HeroSectionTitle
+      Title={Slogan}
+      SubTitle={SubSlogan} />
   </HeroSectionParent>
-  <HeroSkyboxBackground Visibility={Skybox} />
-  </>
+  <HeroSkyboxBackground
+    Visibility={Skybox} />
+</>
 );
 export default HeroSectionRemastered;

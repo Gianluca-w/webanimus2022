@@ -1,10 +1,15 @@
 import Image from 'next/image';
 import asterisc from '../public/assets/icons/asterisc.svg'
 
-const PhraseAndItems = ({ Content }) => (
+const PhraseAndItems = ({ 
+    Content }) => (
     <div className="PhraseWrapper">
         <div className="PraseGrid">
-            <div className="PhraseTitle"><h1>{Content.TitleText}</h1></div>
+            <div className="PhraseTitle">
+                <h1>
+                    {Content.TitleText}
+                </h1>
+            </div>
             <div className="PraseContentWrapper">
                 <div className="PhraseContentsGrid">
                     {Content.GridBody && Content.GridBody.map((contents) => {
