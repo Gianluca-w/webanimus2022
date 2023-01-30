@@ -81,6 +81,8 @@
 
 .ContactFormWideInput {
     width: 100%;
+    font-size: $FontSizeTop20;
+   
 }
 
 .ContactFormRestricted40Input {
@@ -97,18 +99,14 @@
     display: inline-flex;
     width: 100%;
 }
-    p {
-        font-size: $FontSizeTop30;
-        padding-bottom: 10px;
-    }
 
     input {
-        font-size: $FontSizeTop30;
+        font-size: $FontSizeTop20;
         color: $white;
         background-color: $thirdColor;
         border: 0px;
         width: 100%;
-        padding-bottom: 10px;
+        padding: 0px 0px 0px 0px;
         min-height: 30px;
         font-family: 'Montserrat', sans-serif;
     }
@@ -126,8 +124,8 @@
         border: 0px;
         padding: 0px 0px 0px 0px;
         color: $white;
-        min-height: 200px;
-        font-size: $FontSizeTop24;
+        min-height: 100px;
+        font-size: $FontSizeTop20;
         padding: 0,0,0,0;
         font-family: 'Montserrat', sans-serif;
         line-height: 30px;
@@ -159,9 +157,7 @@
 }
 .ContactFormUnderlining {
     border-bottom: 1px solid $white;
-    
-    
-    margin-bottom: $GeneralSeparator40;
+    margin-bottom: 24px;
 }
 
 .DragAndDropBorder {
@@ -172,7 +168,10 @@
     width: 150px;
     height: 150px;
 }
-
+.PlaceholderAligner{
+    margin: 0px 0px 0px 0px;
+    padding-bottom: 5px;
+}
 .Visible {
     display: block;
     padding-bottom: 40px;

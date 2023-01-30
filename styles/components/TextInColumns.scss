@@ -123,6 +123,7 @@
 @media (max-width: #{$screen-md-min}) {
     .ColumnContentTitle {
         line-height: normal;
+        font-size: 1rem;
     }
     
     .ColumnContentText {
@@ -131,7 +132,8 @@
     
     .ColumnSize2 {
         .ColumnContentText {
-            line-height: 20px;
+            line-height: 25px;
+            font-size: 1rem;
         }
     }
 }

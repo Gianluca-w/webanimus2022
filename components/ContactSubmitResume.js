@@ -12,7 +12,6 @@ const ContactFormDragNDrop = ({ resume, setResume }) => {
   const handleDrop =  async (e) => {
     e.preventDefault();
     e.stopPropagation();
-
     let files = [...e.dataTransfer.files];
     console.log(files);
     if (files && files.length > 0) {
@@ -28,7 +27,7 @@ const ContactFormDragNDrop = ({ resume, setResume }) => {
       setResume({ type: "SET_IN_DROP_ZONE", inDropZone: false });
     }
     const body = new FormData();
-    body.append("file", e.target.files[0]);
+    body.append("file", e.dataTransfer.files[0]);
     const response = await fetch("/api/FileUploader", {
       method: "POST",
       body,
@@ -77,27 +76,13 @@ const ContactFormDragNDrop = ({ resume, setResume }) => {
         className="DragAndDropArea HowToCenterMiddle"
       >
         <label htmlFor={"resumeUploader"} className="resumeUploaderLabel ">
-          <div className={`HowToCenterMiddle ${(!resume.fileList[0])? 'visible':'notVisible'}`}>
-            <div className="svgUploadWrapper filterWhite ">
-              <Image
-                src={uploadSvg.src}
-                layout="responsive"
-                alt=""
-                height="1px"
-                width="1px"
-              />
-            </div>
-          </div>
-          <div className="HowToCenterMiddle">
-            <p className="RegP">Drag And Drop Here or</p>
-          </div>
           <div className="HowToCenterMiddle">
             <button
               type="button"
               className="uploadResumeButton"
               onClick={(e) => handleInputClick(e)}
             >
-              Upload a File
+              Upload your Resume
             </button>
           </div>
 

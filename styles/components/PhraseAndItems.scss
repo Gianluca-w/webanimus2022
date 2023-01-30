@@ -84,17 +84,20 @@
         .PhraseContentsGrid {
             display: block;
             min-width: 0.00000001vw;
-            padding-right: $paddingRight;
+            padding-right: 0;
 
             .PhraseContents {
                 padding-top: $GeneralSeparator50;
                 width: 100%;
+                padding-left: 0;
                 border-bottom: 1px rgba($color: $white, $alpha: 0.3) solid;
                 font-size: 18px;
             }
         }
+        .PhraseTitle h1 {
+            font-size: 2rem;
+        }
     }
-    .AsteriscWrapper{
-        display: none;
-    }
+
+    
 }
