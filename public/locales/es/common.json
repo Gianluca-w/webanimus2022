@@ -74,7 +74,16 @@
 		"HackaCoopBody": "El Hackacoop es nuestro marco para estudiar nuevas tecnologías y abordar proyectos de innovación que nos interesan, pero no tienen un lugar comercial. Un tiempo de intercambio para enseñar y aprender. "
 	},
 	"ContactUs":{
-		"Slogan":"Desarrollamos colaborativamente."
+		"Slogan":"Desarrollamos colaborativamente.",
+		"joinAnimus":"Se parte de ANIMUS",
+		"hireAnimus":"¿Quieres contratar a la COOP?",
+		"inputName":"Nombre",
+		"inputMail":"Mail",
+		"inputPhone":"Telefono",
+		"inputMessage":"Mensaje",
+		"inputResume": "Curriculum",
+		"inputContent":"Sube Tu curriculum",
+		"inputSend":"Enviar"
 	},
 	"TextInColumns": [
 		{

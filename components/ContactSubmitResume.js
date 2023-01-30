@@ -6,7 +6,7 @@ import { SendMail } from "./GeneralistFunctions";
 
 import DropzoneFilePreview from "./DropzoneFilePreview";
 
-const ContactFormDragNDrop = ({ resume, setResume }) => {
+const ContactFormDragNDrop = ({ resume, setResume, title }) => {
   const inputSubmitElement = useRef();
 
   const handleDrop =  async (e) => {
@@ -82,7 +82,7 @@ const ContactFormDragNDrop = ({ resume, setResume }) => {
               className="uploadResumeButton"
               onClick={(e) => handleInputClick(e)}
             >
-              Upload your Resume
+              {title}
             </button>
           </div>
 
@@ -101,7 +101,7 @@ const ContactFormDragNDrop = ({ resume, setResume }) => {
   );
 };
 
-const ContactSubmitResume = ({}) => {
+const ContactSubmitResume = ({content}) => {
   // reducer function to handle state changes
   const reducer = (state, action) => {
     switch (action.type) {
@@ -151,10 +151,10 @@ const ContactSubmitResume = ({}) => {
         <div className="">
           <div className="">
             <div className="ContactFormWideInput ContactFormUnderlining">
-              <p className="PlaceholderAligner">Name</p>
+              <p className="PlaceholderAligner">{content.inputName}</p>
               <input
                 type="text"
-                placeholder="Name"
+                placeholder={content.inputName}
                 name="name"
                 maxLength={30}
                 required
@@ -162,10 +162,10 @@ const ContactSubmitResume = ({}) => {
               ></input>
             </div>
             <div className="ContactFormWideInput ContactFormUnderlining">
-              <p className="PlaceholderAligner">Email</p>
+              <p className="PlaceholderAligner">{content.inputMail}</p>
               <input
                 type="email"
-                placeholder="Email"
+                placeholder={content.inputMail}
                 name="email"
                 maxLength={35}
                 required
@@ -173,10 +173,10 @@ const ContactSubmitResume = ({}) => {
               ></input>
             </div>
             <div className="ContactFormWideInput ContactFormUnderlining">
-              <p className="PlaceholderAligner">Phone</p>
+              <p className="PlaceholderAligner">{content.inputPhone}</p>
               <input
                 type="tel"
-                placeholder="Phone"
+                placeholder={content.inputPhone}
                 autoComplete="off"
                 name="phone"
                 maxLength={15}
@@ -192,10 +192,10 @@ const ContactSubmitResume = ({}) => {
         <div className="">
           <div className="ContactFormWideInput">
             <div className="ContactFormUnderlining">
-              <p>Message</p>
+              <p>{content.inputMessage}</p>
               <textarea
                 type="text"
-                placeholder="Your message"
+                placeholder={content.inputMessage}
                 name="message"
                 required
                 className=""
@@ -205,11 +205,11 @@ const ContactSubmitResume = ({}) => {
           </div>
           <div className="ContactFormWideInput">
             <div>
-              <p>Resume</p>
+              <p>{content.inputResume}</p>
             </div>
             <div className="DragAndDropWrapper">
               {" "}
-              <ContactFormDragNDrop resume={resume} setResume={setResume} />
+              <ContactFormDragNDrop resume={resume} setResume={setResume} title={content.inputContent}/>
             </div>
           </div>
         </div>
@@ -218,7 +218,7 @@ const ContactSubmitResume = ({}) => {
             className="ContactFormSend"
             type="submit"
           >
-            <div className="">Send</div>
+            <div className="">{content.inputSend}</div>
             <div className="ContactFormSendLineContent">
               <Image
                 src={Arrow.src}

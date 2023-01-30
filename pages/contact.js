@@ -19,7 +19,7 @@ export default function Home(props) {
         SecondLinkText={t('PageContact')}
         FirstLinkHref={'/about'}
         SecondLinkHref={'/contact'} />
-      <ContactForm />
+      <ContactForm contentTranslation={t('ContactUs', { returnObjects: true })}/>
       <Footer
         FooterTitleTxt={t('FooterTitle')}
         FooterLinkText={t('FooterLinkTitle')}

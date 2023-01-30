@@ -4,7 +4,7 @@ import Arrow from '../public/assets/icons/arrowBlack.svg'
 import { SendMail } from './GeneralistFunctions'
 
 
-const ContactFormHireTheCoop = ({ }) => {
+const ContactFormHireTheCoop = ({ content }) => {
     const [field, setField] = useState(
         {
             name: "",
@@ -33,10 +33,10 @@ const ContactFormHireTheCoop = ({ }) => {
 
             <div className=''>
                 <div className={`ContactFormWideInput ContactFormUnderlining`}>
-                    <p className="PlaceholderAligner">Name</p>
+                    <p className="PlaceholderAligner">{content.inputName}</p>
                     <input
                         type="text"
-                        placeholder='Name'
+                        placeholder={content.inputName}
                         name="name"
                         required
                         maxLength={30}
@@ -44,10 +44,10 @@ const ContactFormHireTheCoop = ({ }) => {
                     </input>
                 </div>
                 <div className={`ContactFormWideInput ContactFormUnderlining`}>
-                    <p className="PlaceholderAligner">Email</p>
+                    <p className="PlaceholderAligner">{content.inputMail}</p>
                     <input
                         type="email"
-                        placeholder='Email'
+                        placeholder={content.inputMail}
                         name="email"
                         required
                         maxLength={30}
@@ -55,10 +55,10 @@ const ContactFormHireTheCoop = ({ }) => {
                     </input>
                 </div>
                 <div className={`ContactFormWideInput ContactFormUnderlining `}>
-                    <p className="PlaceholderAligner">Phone</p>
+                    <p className="PlaceholderAligner">{content.inputPhone}</p>
                     <input
                         type="tel"
-                        placeholder='Phone'
+                        placeholder={content.inputPhone}
                         maxLength={15}
                         required
                         name="phone"
@@ -71,10 +71,10 @@ const ContactFormHireTheCoop = ({ }) => {
             <div className={`ContactFormUnderlining `}>
                 <div className=''>
                     <div className='ContactFormWideInput TextareaWrapper'>
-                        <p>Message</p>
+                        <p>{content.inputMessage}</p>
                         <textarea
                             type='text'
-                            placeholder='Your message'
+                            placeholder={content.inputMessage}
                             required
                             name="message"
                             onChange={(e) => HandleFieldChange(e)}>
@@ -84,7 +84,7 @@ const ContactFormHireTheCoop = ({ }) => {
             </div>
 
             <div className="ContactFormSendWrapper" >
-                <button className='ContactFormSend' type='submit'><div>Send</div>
+                <button className='ContactFormSend' type='submit'><div>{content.inputSend}</div>
                     <div className='ContactFormSendLineContent'>
                         <Image
                             src={Arrow.src}
