@@ -25,7 +25,7 @@ export default function Home(props) {
         FooterLinkText={t('FooterLinkTitle')}
         FooterMailText={t('FooterMail')}
         FooterAdressText={t('FooterAdress')} />
-      <DropdownMenu Items={[{ Title: t('PageAbout'), Position: 1, Href: "/about" }, { Title: t('PageContact'), Position: 2, Href: "/contact" }]} />
+      {/*<DropdownMenu Items={[{ Title: t('PageAbout'), Position: 1, Href: "/about" }, { Title: t('PageContact'), Position: 2, Href: "/contact" }]} */}
       <LinksComponent />
     </div>
   )
