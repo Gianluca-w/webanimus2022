@@ -1,31 +1,23 @@
 import { useState } from "react"
 import Image from 'next/image';
 import Arrow from '../public/assets/icons/arrowBlack.svg'
-import { SendMail} from './GeneralistFunctions'
+import { SendMail } from './GeneralistFunctions'
 
 
 const ContactFormHireTheCoop = ({ }) => {
     const [field, setField] = useState(
         {
             name: "",
-            mail: "",
+            email: "",
             phone: "",
             message: "",
         }
     );
-    const [errorField, setErrorField] = useState(
-        {
-            name: false,
-            mail: false,
-            phone: false,
-            message: false,
-        }
-    );
-    const HandleFieldChange = (e, maxLength, RegEx = "") => {
+    const HandleFieldChange = (e) => {
         setField(
             {
                 ...field,
-                [e.target.name]: SanitizeGeneral(e.target, maxLength, RegEx)
+                [e.target.name]: e.target.value
             }
         )
     }
@@ -33,46 +25,59 @@ const ContactFormHireTheCoop = ({ }) => {
     const CheckHireFormCompletion = (e) => {
         e.preventDefault();
         e.stopPropagation();
-        for (const [key, value] of Object.entries(field)) {
-            (value != '') ? setErrorField(errorField => ({ ...errorField, [key]: false })) : setErrorField(errorField => ({ ...errorField, [key]: true }))
-        }
-        if(field.name==''){
-            return console.log("Didnt Send. Was lacking name")
-        }
-        if(field.mail==''){
-            return console.log("Didnt Send. Was lacking mail")
-        }
-        if(field.phone==''){
-            return console.log("Didnt Send. Was lacking phone")
-        }
-        if(field.message==''){
-            return console.log("Didnt Send. Was lacking message")
-        }
-        SendMail("hire", field.name, field.mail, field.phone, field.message)
+        console.log(field.email)
+        SendMail("hire", field.name, field.email, field.phone, field.message)
     }
     return <form onSubmit={CheckHireFormCompletion}>
         <div className={`ContactFormWrapper`}>
 
             <div className=''>
-                <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.name ? '' : 'ContactFormRedUnderlining'}`}>
+                <div className={`ContactFormWideInput ContactFormUnderlining`}>
                     <p className="PlaceholderAligner">Name</p>
-                    <input type="text" placeholder='Name' name="name" required maxLength={30} onChange={(e) => HandleFieldChange(e, 30)}></input>
+                    <input
+                        type="text"
+                        placeholder='Name'
+                        name="name"
+                        required
+                        maxLength={30}
+                        onChange={(e) => HandleFieldChange(e)}>
+                    </input>
                 </div>
-                <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.mail ? '' : 'ContactFormRedUnderlining'}`}>
+                <div className={`ContactFormWideInput ContactFormUnderlining`}>
                     <p className="PlaceholderAligner">Email</p>
-                    <input type="email" placeholder='Email' name="email" required maxLength={30} onChange={(e) => HandleFieldChange(e, 35)}></input>
+                    <input
+                        type="email"
+                        placeholder='Email'
+                        name="email"
+                        required
+                        maxLength={30}
+                        onChange={(e) => HandleFieldChange(e)}>
+                    </input>
                 </div>
-                <div className={`ContactFormWideInput ContactFormUnderlining ${!errorField.phone ? '' : 'ContactFormRedUnderlining'}`}>
+                <div className={`ContactFormWideInput ContactFormUnderlining `}>
                     <p className="PlaceholderAligner">Phone</p>
-                    <input type="phone" placeholder='Phone' maxLength={15} required name="phone" autoComplete="off" onChange={(e) => HandleFieldChange(e, 15, /[^0-9+]/g)}></input>
+                    <input
+                        type="tel"
+                        placeholder='Phone'
+                        maxLength={15}
+                        required
+                        name="phone"
+                        autoComplete="off"
+                        onChange={(e) => HandleFieldChange(e)}>
+                    </input>
                 </div>
             </div>
 
-            <div className={`ContactFormUnderlining ${!errorField.message ? '' : 'ContactFormRedUnderlining'}`}>
+            <div className={`ContactFormUnderlining `}>
                 <div className=''>
                     <div className='ContactFormWideInput TextareaWrapper'>
                         <p>Message</p>
-                        <textarea type='text' placeholder='Your message' name="message" className='' onChange={(e) => HandleFieldChange(e)}>
+                        <textarea
+                            type='text'
+                            placeholder='Your message'
+                            required
+                            name="message"
+                            onChange={(e) => HandleFieldChange(e)}>
                         </textarea>
                     </div>
                 </div>
@@ -81,7 +86,8 @@ const ContactFormHireTheCoop = ({ }) => {
             <div className="ContactFormSendWrapper" >
                 <button className='ContactFormSend' type='submit'><div>Send</div>
                     <div className='ContactFormSendLineContent'>
-                        <Image src={Arrow.src}
+                        <Image 
+                            src={Arrow.src}
                             width={'1px'}
                             height={'1px'}
                             layout='responsive'

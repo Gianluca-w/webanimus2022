@@ -36,18 +36,18 @@ const Asterisk = ({ hide, Size }) => (
    * 
    * TODO: Change it for a Array so it can have any amount of links
    */
-const Nav = ({ LinkText1, Href1 = 'about', LinkText2, Href2 = 'contact' }) => (
+ const Nav = ({ LinkText1, Href1 = 'about', LinkText2, Href2 = 'contact' }) => (
   <div className="NavMainWrapper">
+    <Link href="/">
     <div className="NavIcon">
-      <Link href="/">
         <Image
           className="PointerCursor"
           src={animus.src}
           layout={'fill'}
           alt="ANIMUS"
         />
-      </Link>
     </div>
+    </Link>
     <div className="NavMenuSeparator"></div>
     <div className="NavMenuLink AltHoverableLink">
       <Link href={Href1}>{LinkText1}</Link>
@@ -65,7 +65,7 @@ const HeroSectionParent = ({
   AsteriskSize = "74px",
   backgroundImageToUse = "none",
   AsteriskVisibility = false,
-  BackgroundStyle = "",
+  BackgroundStyle = "null",
   Filtered = false,
   FilterAlpha = 0.8,
   FullHeight = false,
@@ -84,8 +84,9 @@ const HeroSectionParent = ({
     BackgroundStyle = BackgroundStyle += `url('${backgroundImageToUse}'),`
   }
   if (BackgroundStyle.endsWith(',')) {
-    BackgroundStyle = BackgroundStyle.substring(0, (BackgroundStyle.length - 1))
+    BackgroundStyle = BackgroundStyle.substring(4, (BackgroundStyle.length - 1))
   }
+  
   if (FullHeight != false) {
     AdditiveClasses += "MaxHeight "
   }
