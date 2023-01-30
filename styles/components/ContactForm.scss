@@ -225,7 +225,7 @@ input[type=number] {
 .ContactFormSendLineContent{
     width: $FontSizeTop24;
     height: $FontSizeTop24;
-    margin-left: $GeneralSeparator80;
+    margin-left: clamp(30px, 5vw, 50px);;
 }
 
 @media (max-width: #{$screen-md-min}) {
