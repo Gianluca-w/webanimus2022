@@ -9,7 +9,7 @@ import DropzoneFilePreview from "./DropzoneFilePreview";
 const ContactFormDragNDrop = ({ resume, setResume }) => {
   const inputSubmitElement = useRef();
 
-  const handleDrop = (e) => {
+  const handleDrop =  async (e) => {
     e.preventDefault();
     e.stopPropagation();
 
@@ -27,6 +27,12 @@ const ContactFormDragNDrop = ({ resume, setResume }) => {
       // reset inDropZone to false
       setResume({ type: "SET_IN_DROP_ZONE", inDropZone: false });
     }
+    const body = new FormData();
+    body.append("file", e.target.files[0]);
+    const response = await fetch("/api/FileUploader", {
+      method: "POST",
+      body,
+    });
   };
   const handleDragOver = (e) => {
     e.preventDefault();
@@ -60,7 +66,6 @@ const ContactFormDragNDrop = ({ resume, setResume }) => {
   const handleInputClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    console.log("Working");
     inputSubmitElement.current.click();
   };
 

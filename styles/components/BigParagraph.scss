@@ -44,7 +44,7 @@
 }
 @media (max-width: #{$screen-md-min}) {
     .BigParagraphTitleWrapper {
-        line-height: normal;
+        line-height: 25px;
         width: 100%;
     }
     .BigParagraphTagsWrapper{
