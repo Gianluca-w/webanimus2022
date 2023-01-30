@@ -53,9 +53,9 @@
         font-size: $FontSizeTop18;
         background-color: $white;
         color: $secondaryColor;
-        padding: 16px 16px 16px 16px;
+        padding: 16px 20px 16px 20px;
         border-radius: 100px;
-        font-weight: 600;
+        font-weight: 400;
        
     }
 
@@ -181,8 +181,7 @@
     display: none;
 }
 .resumeUploaderLabel{
-    padding-left: $GeneralSeparator40;
-    padding-right: $GeneralSeparator40
+    padding: $GeneralSeparator20 $GeneralSeparator40 
 }
 .resumeUploaderLabel:hover{
     background: rgba($color: $secondaryColor, $alpha: 0.2);
@@ -197,16 +196,14 @@
     color: inherit;
     text-decoration:none;
     background: inherit;
-    padding: 10px 10px 10px 10px;
+    padding: 0px 0px 0px 0px;
 }
 
 .uploadResumeButton:active{
     background: rgba($color: $secondaryColor, $alpha: 0.5);
     cursor:pointer;
 }
-.dropzonePreviewWrapper{
-    padding-bottom: $GeneralSeparator20
-}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -228,7 +225,7 @@ input[type=number] {
 .ContactFormSendLineContent{
     width: $FontSizeTop24;
     height: $FontSizeTop24;
-    margin-left: $GeneralSeparator20;
+    margin-left: $GeneralSeparator80;
 }
 
 @media (max-width: #{$screen-md-min}) {
