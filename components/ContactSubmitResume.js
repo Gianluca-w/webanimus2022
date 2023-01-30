@@ -132,14 +132,6 @@ const ContactSubmitResume = ({}) => {
         message: "",
     }
 );
-const [errorField, setErrorField] = useState(
-    {
-        name: false,
-        email: false,
-        phone: false,
-        message: false,
-    }
-);
   const [resume, setResume] = useReducer(reducer, {
     inDropZone: false,
     fileList: [],
@@ -155,7 +147,7 @@ const [errorField, setErrorField] = useState(
   const CheckHireFormCompletion = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    SendMail("resume", field.name, field.email, field.phone, field.message, resume)
+        SendMail("resume", field.name, field.email, field.phone, field.message, resume.fileList.slice(-1)[0].name)
 }
 
   return (
@@ -184,7 +176,7 @@ const [errorField, setErrorField] = useState(
               <input
                 type="email"
                 placeholder="Email"
-                name="mail"
+                name="email"
                 maxLength={35}
                 required
                 onChange={(e) => HandleFieldChange(e)}

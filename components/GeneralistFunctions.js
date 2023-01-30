@@ -23,6 +23,16 @@ export const SendMail= async (type, ContentName, TargetMail, ContentPhone, Conte
         case "resume":
             let ResumeUpload = { Name: ContentName, Mail: TargetMail, Phone: ContentPhone, Message: ContentMessage, Resume: ContentResume, HandlerType: type };
             console.log(ResumeUpload)
+            let responseResume = await fetch('/api/mailing', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(ResumeUpload)
+            });
+            let resultResume = await responseResume.json()
+
+            console.log(resultResume)
             break;
     }
 }
