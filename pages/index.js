@@ -23,8 +23,7 @@ export default function Home(props) {
       Slogan={t('slogan')}  
       FullSize={true} 
       Asterisk={'hide'} 
-      Skybox={true} 
-      Background={"none"} 
+      BackgroundImageSrc='HeroSectionBackground.jpg'
       BlackFilter={true} 
       FirstLinkText={t('PageAbout')} 
       SecondLinkText={t('PageContact')} 

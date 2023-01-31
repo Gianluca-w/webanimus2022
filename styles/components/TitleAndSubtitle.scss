@@ -9,23 +9,23 @@
     padding-top: $GeneralSeparator100;
     padding-left: $paddingLeft;
     padding-right: $paddingRight;
-    padding-bottom: 30px;
+    padding-bottom: $GeneralSeparator50;
     font-weight: 600;
 }
 
 .TitleWrapper {
     min-width: 0.00000001vw;
-    font-size: $FontSizeTop50;
-    padding-bottom: 30px;
-    width: 50%;
-    line-height: 60px;
+    font-size: $FontSizeTop80;
+    padding-bottom: $GeneralSeparator40;
+    width: 65%;
+    line-height: 97px;
 }
 
 .SubTitleContentWrapper {
     width: 50%;
     min-width: 0.00000001vw;
-    font-size: $FontSizeTop24;
-    line-height: 42px;
+    font-size: $FontSizeTop28;
+    line-height: 50px;
     font-weight: 400;
 }
 

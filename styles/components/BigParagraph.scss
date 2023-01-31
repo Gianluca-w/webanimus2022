@@ -6,14 +6,17 @@
     padding-left: $paddingLeft;
     padding-right: $paddingRight;
     padding-bottom: $GeneralSeparator160;
+    
 }
-
+ .BigParagraphGrid{
+    width: 70%;
+ }
 .BigParagraphTitleWrapper {
     padding-top: $GeneralSeparator160;
     font-size: $FontSizeTop30;
-    line-height: 50px;
-    width: 60%;
-    font-weight: 400;
+    line-height: 60px;
+    
+    font-weight: 700;
 }
 
 .BigParagraphBodyWrapper {

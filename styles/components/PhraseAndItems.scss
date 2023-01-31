@@ -1,104 +1,101 @@
 //Imports  ¯\_(ツ)_/¯
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 
 //Grid Layouts
 .PraseGrid {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    column-gap: 10px;
-
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 100px;
 }
 
 .PhraseContentsGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 50px;
+  row-gap: 80px;
+  padding-left: $GeneralSeparator50
 }
 
 //Grid positioning
 //Normal Css styles
 .PhraseWrapper {
-    padding-left: $paddingLeft;
-    padding-right: $paddingRight;
-    background: $secondaryColor;
-    padding-top: $GeneralSeparator100;
-    padding-bottom: 20px;
+  padding-left: $paddingLeft;
+  padding-right: $paddingRight;
+  background: $secondaryColor;
+  padding-top: $GeneralSeparator100;
+  padding-bottom: 20px;
 
-    .PhraseTitle h1 {
-        min-width: 0.00000001vw;
-        font-weight: 600;
-        grid-column: 1;
-        font-size: $FontSizeTop42;
+  .PhraseTitle h1 {
+    min-width: 0.00000001vw;
+    font-weight: 600;
+    grid-column: 1;
+    font-size: $FontSizeTop42;
+  }
+
+  .PhraseContentsGrid {
+    .PhraseContents {
+      min-width: 0.00000001vw;
+      font-size: $FontSizeTop18;
+      line-height: 32px;
     }
 
-    .PhraseContentsGrid {
-        .PhraseContents {
-            min-width: 0.00000001vw;
-            padding-bottom: 80px;
-            padding-left: clamp(18px, 4vw, 50px);
-            font-size: $FontSizeTop18;
-            line-height: 32px;
-        }
-
-        .PhraseContents1 {
-            grid-row: 1;
-            grid-column: 1;
-        }
-
-        .PhraseContents2 {
-            grid-row: 1;
-            grid-column: 2;
-        }
-
-        .PhraseContents3 {
-            grid-row: 1;
-            grid-column: 3;
-        }
-
-        .PhraseContents4 {
-            grid-row: 2;
-            grid-column: 1;
-        }
-
-        .PhraseContents5 {
-            grid-row: 2;
-            grid-column: 2;
-        }
-
-        .PhraseContents6 {
-            grid-row: 2;
-            grid-column: 3;
-        }
+    .PhraseContents1 {
+      grid-row: 1;
+      grid-column: 1;
     }
 
+    .PhraseContents2 {
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    .PhraseContents3 {
+      grid-row: 1;
+      grid-column: 3;
+    }
+
+    .PhraseContents4 {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
+    .PhraseContents5 {
+      grid-row: 2;
+      grid-column: 2;
+    }
+
+    .PhraseContents6 {
+      grid-row: 2;
+      grid-column: 3;
+    }
+  }
 }
-.AsteriscWrapper{
-    padding-bottom: 8px;
+.AsteriscWrapper {
+  padding-bottom: 8px;
 }
 //mobile breakpoints
 @media (max-width: #{$screen-lg-min}) {
-    .PhraseWrapper {
-        .PraseGrid {
-            display: block;
-        }
-        .PhraseContentsGrid {
-            display: block;
-            min-width: 0.00000001vw;
-            padding-right: 0;
-
-            .PhraseContents {
-                padding-top: $GeneralSeparator50;
-                width: 100%;
-                padding-left: 0;
-                border-bottom: 1px rgba($color: $white, $alpha: 0.3) solid;
-                font-size: 18px;
-                line-height: 25px;
-            }
-        }
-        .PhraseTitle h1 {
-            font-size: 2rem;
-        }
+  .PhraseWrapper {
+    .PraseGrid {
+      display: block;
     }
+    .PhraseContentsGrid {
+      display: block;
+      min-width: 0.00000001vw;
+      padding-right: 0;
 
-    
+      .PhraseContents {
+        padding-top: $GeneralSeparator50;
+        width: 100%;
+        padding-left: 0;
+        border-bottom: 1px rgba($color: $white, $alpha: 0.3) solid;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+    .PhraseTitle h1 {
+      font-size: 2rem;
+    }
+  }
 }

@@ -11,6 +11,7 @@ const BigParagraph = ({
       Content={title} />
     <BigParagraphSubTitle
       Content={body} />
+      {/*<BigParagraphTagsContent={Tags} />*/}
     <BigParagraphImg
       ImgSrc={OptionalImage} />
     <BigParagraphLink
@@ -41,6 +42,19 @@ const BigParagraphLink = ({
       <a href={Href}>
         {Title}
       </a>
+    </div>
+  );
+};
+const BigParagraphTags = ({ Content }) => {
+
+  return (
+    <div className="BigParagraphTagsWrapper">
+      {Content &&
+        Content.map((Tag) => (
+          <div className="Tag" key={Tag.TagName}>
+            {Tag.TagName}
+          </div>
+        ))}
     </div>
   );
 };

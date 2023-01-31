@@ -31,7 +31,7 @@
 			},
 			{
 				"body": "We make a direct deal. You save the cost of the recruitment process and keep an open channel for future searches.",
-				"GridPosition": "5"
+				"GridPosition": "2"
 			},
 			{
 				"body": "The history of our cooperative stands behind and is responsible for the person you hire.",
@@ -42,17 +42,13 @@
 				"GridPosition": "4"
 			},
 			{
-				"body": "Garantizamos estabilidad y seriedad. Pertenecemos a FACTTIC, la Federación Argentina de Cooperativas de Trabajo de Tecnología Innovación y Conocimiento.",
-				"GridPosition": "2"
+				"body": "We are part of the federation of technology cooperatives, FACTTIC. We can escalate teams and tasks, thanks to the collaboration of other member companies.",
+				"GridPosition": "5"
 				
 			},
 			{
-				"body": "We are part of the federation of technology cooperatives, FACTTIC. We can escalate teams and tasks, thanks to our operational capacity and the collaboration of other member companies.",
-				"GridPosition": "6"
-			},
-			{
 				"body": "We perform in a constant-learning work field, and this pushes us to be at the top of technology.",
-				"GridPosition": "7"
+				"GridPosition": "6"
 			}
 		]
 	},

@@ -15,9 +15,7 @@ const TextInColumns = ({
 const TextInColumnsTitleText = ({ Content }) => {
     return <div>
         {Content && <div className="ColumnsTextTitle">
-            <strong>
                 {Content}
-            </strong>
         </div>}
 
     </div>

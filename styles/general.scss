@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
 //Mobile Breakpoints
 
 // Small tablets and large smartphones (landscape view)
@@ -46,7 +47,7 @@ $GeneralSeparator40:clamp(16px, 4vw, 40px);
 $GeneralSeparator20:clamp(8px, 1.5vw, 20px);
 //GeneralistClassStyling
 .ThinH1 { font-size: $FontSizeTop80; font-weight: 100; line-height: 138%;}
-.LightH2{ font-size: $FontSizeTop50; font-weight: 300; line-height: 114%;}
+.LightH2{ font-size: $FontSizeTop70; font-weight: 300; line-height: 114%;}
 .LightH3{ font-size: $FontSizeTop50; font-weight: 300; line-height: 160%;}
 .SemiH1 { font-size: $FontSizeTop80; font-weight: 600; line-height: auto;}
 .SemiH3 { font-size: $FontSizeTop50; font-weight: 600; line-height: auto;}

@@ -6,7 +6,7 @@
     padding-right: $paddingRight;
     background: $secondaryColor;
     padding-top: $GeneralSeparator100;
-    padding-bottom: $GeneralSeparator100;
+    padding-bottom: $GeneralSeparator80;
 
 }
 
@@ -64,7 +64,8 @@
 //Css styling
 .ColumnsTextTitle {
     font-size: $FontSizeTop50;
-    padding-bottom: 16px;
+    padding-bottom: $GeneralSeparator50;
+    font-weight: 600;
 
 }
 
@@ -79,17 +80,19 @@
     font-size: $FontSizeTop18;
     font-weight: 400;
     line-height: 30px;
-    padding-bottom: $GeneralSeparator100
+    padding-top:8px
 }
 
 .ColumnSize2 {
+    width: 75%;
     .ColumnContentText {
         font-style: normal;
-        font-weight: 400;
-        font-size: $FontSizeTop20;
-        line-height: 40px;
+        font-weight: 500;
+        font-size: $FontSizeTop24;
+        line-height: 45px;
     }
 }
+
 
 .MainStyleWhite {
     background-color: $white;

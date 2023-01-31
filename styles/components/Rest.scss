@@ -6,8 +6,8 @@
 
 // Common Css Styles
 .restWrapper {
-    padding-top: $GeneralSeparator300;
-    padding-bottom: $GeneralSeparator300;
+    padding-top: 300px;
+    padding-bottom: 300px;
     padding-left: $GeneralSeparator160;
     padding-right: $GeneralSeparator160;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../public/assets/img/RestComponentBackground.jpeg');
@@ -27,9 +27,9 @@
     min-width: 0.00000001vw;
     padding-left: $paddingLeft;
     padding-right: $paddingRight;
-    width: 60%;
+    width: 55%; 
     height: auto;
-    line-height: 70px;
+    line-height: 90px;
 }
 @media (max-width: #{$screen-md-min}) {
 .restContent{
@@ -37,5 +37,10 @@
     line-height:normal;
     padding-left: 0px;
     padding-right: 0px;
+    
+}
+.restWrapper {
+    padding-top: $GeneralSeparator300;
+    padding-bottom: $GeneralSeparator300;
 }
 }
