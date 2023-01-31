@@ -59,7 +59,7 @@ const Nav = ({
     <div className="NavMenuLink AltHoverableLink">
       <Link href={Href2}>{LinkText2}</Link>
     </div>
-    <div className="NavMenuLink">
+    <div className="NavMenuLink AltHoverableLink">
       <LanguageChangeButton />
     </div>
   </div>

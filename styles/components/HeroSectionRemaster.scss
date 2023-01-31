@@ -66,8 +66,10 @@
     min-height: 50px;
 }
 .NavMenuLink {
-  padding-left: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   float: right;
+  cursor: pointer;
 }
 .AsteriskWrapperRemaster{
     display:block;
@@ -118,6 +120,11 @@
 @media (max-width: #{$screen-md-min}) {
   .HeroSectionParent{
     max-height: 440px;
+  }
+  .NavMenuLink {
+    padding-left: 10px;
+    padding-right: 10px;
+
   }
 
   .BaseStyle{
