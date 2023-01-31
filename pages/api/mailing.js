@@ -29,7 +29,7 @@ export default async function handler(req, res) {
         to: 'barreyro.gian@gmail.com', // list of receivers, usually info@animus.com.ar
         subject: "Llamado al trabajo", // Subject line
         text:"Filler Text",
-        html: `<h1>Se Recibio Una Oferta laboral</h1></br>
+        html: `<h1>Se recibio un pedido de trabajo</h1></br>
               <p>De: ${req.body.Name}</p>
               <p>Mail: ${req.body.Mail}</p>
               <p>Telefono: ${req.body.Phone}</p> </br>
@@ -42,7 +42,7 @@ export default async function handler(req, res) {
               contentType: 'application/pdf'
           }],
   */
-        replyTo:"barreyro.gian@gmail.com" 
+        replyTo:req.body.Mail 
       });
       console.log("Message sent: %s", WorkMail.messageId);
         
@@ -53,8 +53,8 @@ export default async function handler(req, res) {
           from: `${process.env.MAILR_USR}@gmail.com`, // sender address
           to: 'barreyro.gian@gmail.com', // list of receivers, usually info@animus.com.ar
           subject: "Llamado al trabajo", // Subject line
-          text:"FIller Text",
-          html: `<h1>Se Recibio Una Oferta laboral</h1></br>
+          text:"Filler Text",
+          html: `<h1>Se recibio un curriculum</h1></br>
               <p>De: ${req.body.Name}</p>
               <p>Mail: ${req.body.Mail}</p>
               <p>Telefono: ${req.body.Phone}</p> </br>
