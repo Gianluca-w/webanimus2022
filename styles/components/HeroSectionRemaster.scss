@@ -117,7 +117,7 @@
 }
 @media (max-width: #{$screen-md-min}) {
   .HeroSectionParent{
-    max-height: 400px;
+    max-height: 440px;
   }
 
   .BaseStyle{
@@ -128,7 +128,11 @@
     }
   }
 }
-
+@media (max-width: #{$screen-sm-min}) {
+  .HeroSectionParent{
+    max-height: 360px;
+  }
+}
 
 
 

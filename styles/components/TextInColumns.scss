@@ -136,5 +136,17 @@
             font-size: 1rem;
         }
     }
+    .ColumnSize3 {
+        .ColumnContentWrapper {
+            .ColumnContentTitle{
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+            .ColumnContentText {
+                
+                padding-bottom: 16px;
+            }
+        }
+    }
 }
 

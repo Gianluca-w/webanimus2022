@@ -33,6 +33,9 @@
     .SmallParagraphContentWrapper{
         width: auto;
         float: left;
+        .SmallParagraphContentText{
+            line-height: 25px;
+        }
         
     }
     }
