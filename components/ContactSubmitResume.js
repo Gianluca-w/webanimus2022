@@ -1,7 +1,7 @@
 import { useState, useReducer, useRef } from "react";
-import Image from "next/image";
-import Arrow from "../public/assets/icons/arrowBlack.svg";
-import uploadSvg from "../public/assets/icons/uploadFileIcon.svg";
+
+import ArrowIcon from "./icons/ArrowIcon";
+
 import { SendMail } from "./GeneralistFunctions";
 
 import DropzoneFilePreview from "./DropzoneFilePreview";
@@ -220,13 +220,10 @@ const ContactSubmitResume = ({content}) => {
           >
             <div className="">{content.inputSend}</div>
             <div className="ContactFormSendLineContent">
-              <Image
-                src={Arrow.src}
-                width={"1px"}
-                height={"1px"}
-                layout="responsive"
-                alt=">"
-              />
+              <ArrowIcon 
+              fill="1px"
+              stroke="black"
+              size="100%"/>
             </div>
           </button>
         </div>

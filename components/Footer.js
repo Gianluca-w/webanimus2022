@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import whitearrowsvg from '../public/assets/icons/arrow.svg'
+
+import ArrowIcon from './icons/ArrowIcon';
+
 const Footer = ({ FooterTitleTxt, FooterLinkText, FooterMailText, FooterAdressText }) => (
 
     <div className="FooterWrapper">
@@ -13,10 +14,10 @@ const Footer = ({ FooterTitleTxt, FooterLinkText, FooterMailText, FooterAdressTe
                 </div>
                 <div className="FooterLink">
                     <Link className='' href="/contact">
-                        <div className='LinkWrapper AltHoverableLink'>
+                        <div className='LinkWrapper AltHoverableLink HowToCenterMiddle'>
                             {FooterLinkText}
-                            <div className='FooterArrowWrapper'>
-                                <Image layout='responsive' width={'18px'} height={'18px'} src={whitearrowsvg.src} alt='->' />
+                            <div className='FooterArrowWrapper HowToCenterMiddle'>
+                                <ArrowIcon fill={'1px'}/>
                             </div>
                         </div>
                     </Link>

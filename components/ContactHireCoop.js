@@ -1,6 +1,7 @@
 import { useState } from "react"
-import Image from 'next/image';
-import Arrow from '../public/assets/icons/arrowBlack.svg'
+
+import ArrowIcon from "./icons/ArrowIcon";
+
 import { SendMail } from './GeneralistFunctions'
 
 
@@ -86,12 +87,10 @@ const ContactFormHireTheCoop = ({ content }) => {
             <div className="ContactFormSendWrapper" >
                 <button className='ContactFormSend' type='submit'><div>{content.inputSend}</div>
                     <div className='ContactFormSendLineContent'>
-                        <Image
-                            src={Arrow.src}
-                            width={'1px'}
-                            height={'1px'}
-                            layout='responsive'
-                            alt='>' />
+                        <ArrowIcon
+                            fill="1px"
+                            stroke="black"
+                            size="100%" />
                     </div>
                 </button>
             </div>

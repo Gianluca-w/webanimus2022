@@ -161,3 +161,8 @@ a:hover{
 .noPadding{
     padding:0px 0px 0px 0px;
 }
+.mobileHide{
+    @media (max-width: #{$screen-md-min}) {
+        display: none;
+    }
+}

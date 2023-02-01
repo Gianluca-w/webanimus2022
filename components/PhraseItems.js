@@ -23,7 +23,7 @@ const PhraseAndItems = ({
                                         alt='*'
                                     />
                                 </div>
-                                <div >
+                                <div className='phraseContentTextWrapper'>
                                     {contents.body}
                                 </div>
                             </div>

@@ -3,6 +3,10 @@ import Image from "next/image";
 
 import asterisk from "../public/assets/icons/asterisc.svg";
 import animus from "../public/assets/icons/logoanimus-w.svg";
+
+import AnimusIcon from "./icons/AnimusIcon";
+import AsteriskIcon from "./icons/AsteriskIcon";
+
 import LanguageChangeButton from "./LanguageButton";
 import SkyboxBackground from "./SkyboxBackground";
 
@@ -18,14 +22,8 @@ const Asterisk = ({ hide, Size }) => (
         className="AsteriskWrapperRemaster"
         style={{ width: `${Size}`, height: `${Size}` }}
       >
-        <Image
-          className="AsteriskSvg"
-          src={asterisk.src}
-          width={Size}
-          height={Size}
-          layout="responsive"
-          alt="*"
-        />
+        <AsteriskIcon
+        size={Size}/>
       </div>
     )}
   </>
@@ -43,13 +41,8 @@ const Nav = ({
   Href2 = 'contact' }) => (
   <div className="NavMainWrapper">
     <Link href="/">
-      <div className="NavIcon">
-        <Image
-          className="PointerCursor"
-          src={animus.src}
-          layout={'fill'}
-          alt="ANIMUS"
-        />
+      <div className=" PointerCursor HowToCenterMiddle">
+        <AnimusIcon/>
       </div>
     </Link>
     <div className="NavMenuSeparator"></div>
