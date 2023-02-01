@@ -127,18 +127,20 @@
         width: 100%;
         background-color: $thirdColor;
         border: 0px;
-        padding: 0px 0px 0px 0px;
+        padding: 10px 12px;
         color: $white;
         min-height: 100px;
         font-size: $FontSizeTop20;
         font-family: 'Montserrat', sans-serif;
         line-height: 30px;
         border-bottom: 1px solid $white;
+        box-sizing: border-box;
 
     }
 
     textarea:focus-visible {
         outline: none;
+        border-radius: 6px 6px 0px 0px;
         background-color: rgba($color: $white, $alpha: 0.05);
     }
 
