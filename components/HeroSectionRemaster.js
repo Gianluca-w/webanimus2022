@@ -23,7 +23,7 @@ const Asterisk = ({ hide, Size }) => (
         style={{ width: `${Size}`, height: `${Size}` }}
       >
         <AsteriskIcon
-        size={Size}/>
+          size={Size} />
       </div>
     )}
   </>
@@ -42,7 +42,7 @@ const Nav = ({
   <div className="NavMainWrapper">
     <Link href="/">
       <div className=" PointerCursor HowToCenterMiddle">
-        <AnimusIcon/>
+        <AnimusIcon />
       </div>
     </Link>
     <div className="NavMenuSeparator"></div>
@@ -52,7 +52,7 @@ const Nav = ({
     <div className="NavMenuLink AltHoverableLink">
       <Link href={Href2}>{LinkText2}</Link>
     </div>
-    <div className="NavMenuLink AltHoverableLink">
+    <div className="NavMenuLink AltHoverableLink mediaNoPaddingMd">
       <LanguageChangeButton />
     </div>
   </div>
@@ -103,12 +103,13 @@ const HeroSectionParent = ({
         LinkText2={Link2}
         Href1={Link1Href}
         Href2={Link2Href} />
-      <div>
+      <div className="baseStyleCenterer">
         {children}
-      </div>
-      <Asterisk
+        <Asterisk
         Size={AsteriskSize}
         hide={AsteriskVisibility} />
+      </div>
+      
 
     </div>
   );
@@ -164,6 +165,7 @@ const HeroSectionRemastered = ({
     Link1Href={FirstLinkHref}
     Link2Href={SecondLinkHref}
     NoBackground={Background}  >
+
     <HeroSectionTitle
       Title={Slogan}
       SubTitle={SubSlogan} />

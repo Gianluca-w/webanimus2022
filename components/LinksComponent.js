@@ -5,8 +5,6 @@ function LinksComponent({ }) {
             <div className="LinksComponentInliner">
                 <div className="LinksComponentColumn">
                     <div className="LinksComponentLinkwrapper">
-                        <a className="AltHoverableLink" href="https://animus-coop.medium.com/" target="self">Find us on Medium</a></div>
-                    <div className="LinksComponentLinkwrapper">
                         <a className="AltHoverableLink" href="https://facttic.org.ar/" target="self">
                             FACTTIC
                         </a>
