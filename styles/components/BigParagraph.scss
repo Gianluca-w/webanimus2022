@@ -46,6 +46,12 @@
     width: 60%;
 }
 @media (max-width: #{$screen-md-min}) {
+    .BigParagraphImgWrapper{
+        width: 100%;
+    }
+    .BigParagraphGrid{
+        width: 100%;
+     }
     .BigParagraphTitleWrapper {
         line-height: 25px;
         width: 100%;
