@@ -37,7 +37,6 @@ const ContactFormHireTheCoop = ({ content }) => {
                     <p className="PlaceholderAligner">{content.inputName}</p>
                     <input
                         type="text"
-                        placeholder={content.inputName}
                         name="name"
                         required
                         maxLength={30}
@@ -48,7 +47,6 @@ const ContactFormHireTheCoop = ({ content }) => {
                     <p className="PlaceholderAligner">{content.inputMail}</p>
                     <input
                         type="email"
-                        placeholder={content.inputMail}
                         name="email"
                         required
                         maxLength={30}
@@ -59,7 +57,6 @@ const ContactFormHireTheCoop = ({ content }) => {
                     <p className="PlaceholderAligner">{content.inputPhone}</p>
                     <input
                         type="tel"
-                        placeholder={content.inputPhone}
                         maxLength={15}
                         required
                         name="phone"
@@ -75,7 +72,6 @@ const ContactFormHireTheCoop = ({ content }) => {
                         <p>{content.inputMessage}</p>
                         <textarea
                             type='text'
-                            placeholder={content.inputMessage}
                             required
                             name="message"
                             onChange={(e) => HandleFieldChange(e)}>

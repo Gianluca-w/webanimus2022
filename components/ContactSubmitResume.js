@@ -9,7 +9,7 @@ import DropzoneFilePreview from "./DropzoneFilePreview";
 const ContactFormDragNDrop = ({ resume, setResume, title }) => {
   const inputSubmitElement = useRef();
 
-  const handleDrop =  async (e) => {
+  const handleDrop = async (e) => {
     e.preventDefault();
     e.stopPropagation();
     let files = [...e.dataTransfer.files];
@@ -101,7 +101,7 @@ const ContactFormDragNDrop = ({ resume, setResume, title }) => {
   );
 };
 
-const ContactSubmitResume = ({content}) => {
+const ContactSubmitResume = ({ content }) => {
   // reducer function to handle state changes
   const reducer = (state, action) => {
     switch (action.type) {
@@ -116,101 +116,90 @@ const ContactSubmitResume = ({content}) => {
 
   const [field, setField] = useState(
     {
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
     }
-);
+  );
   const [resume, setResume] = useReducer(reducer, {
     inDropZone: false,
     fileList: [],
   });
   const HandleFieldChange = (e) => {
     setField(
-        {
-            ...field,
-            [e.target.name]: e.target.value
-        }
+      {
+        ...field,
+        [e.target.name]: e.target.value
+      }
     )
-}
+  }
   const CheckHireFormCompletion = (e) => {
     e.preventDefault();
     e.stopPropagation();
-        SendMail("resume", field.name, field.email, field.phone, field.message, resume.fileList.slice(-1)[0].name)
-}
+    SendMail("resume", field.name, field.email, field.phone, field.message, resume.fileList.slice(-1)[0].name)
+  }
 
   return (
-    <form 
-    action="/api/mailing" 
-    method="post"
-    onSubmit={(e) =>
-      CheckHireFormCompletion(e)
-  }>
+    <form
+      action="/api/mailing"
+      method="post"
+      onSubmit={(e) =>
+        CheckHireFormCompletion(e)
+      }>
       <div className="ContactFormWrapper">
-        <div className="">
-          <div className="">
-            <div className="ContactFormWideInput ContactFormUnderlining">
-              <p className="PlaceholderAligner">{content.inputName}</p>
-              <input
-                type="text"
-                placeholder={content.inputName}
-                name="name"
-                maxLength={30}
-                required
-                onChange={(e) => HandleFieldChange(e)}
-              ></input>
-            </div>
-            <div className="ContactFormWideInput ContactFormUnderlining">
-              <p className="PlaceholderAligner">{content.inputMail}</p>
-              <input
-                type="email"
-                placeholder={content.inputMail}
-                name="email"
-                maxLength={35}
-                required
-                onChange={(e) => HandleFieldChange(e)}
-              ></input>
-            </div>
-            <div className="ContactFormWideInput ContactFormUnderlining">
-              <p className="PlaceholderAligner">{content.inputPhone}</p>
-              <input
-                type="tel"
-                placeholder={content.inputPhone}
-                autoComplete="off"
-                name="phone"
-                maxLength={15}
-                required
-                onChange={
-                    (e) => HandleFieldChange(e)
-                }
-              ></input>
-            </div>
+        <div className="ContactFormWideInput ContactFormUnderlining">
+          <p className="PlaceholderAligner">{content.inputName}</p>
+          <input
+            type="text"
+            name="name"
+            maxLength={30}
+            required
+            onChange={(e) => HandleFieldChange(e)}
+          ></input>
+        </div>
+        <div className="ContactFormWideInput ContactFormUnderlining">
+          <p className="PlaceholderAligner">{content.inputMail}</p>
+          <input
+            type="email"
+            name="email"
+            maxLength={35}
+            required
+            onChange={(e) => HandleFieldChange(e)}
+          ></input>
+        </div>
+        <div className="ContactFormWideInput ContactFormUnderlining">
+          <p className="PlaceholderAligner">{content.inputPhone}</p>
+          <input
+            type="tel"
+            autoComplete="off"
+            name="phone"
+            maxLength={15}
+            required
+            onChange={
+              (e) => HandleFieldChange(e)
+            }
+          ></input>
+        </div>
+        <div className="ContactFormWideInput">
+          <div className="ContactFormUnderlining">
+            <p>{content.inputMessage}</p>
+            <textarea
+              type="text"
+              name="message"
+              required
+              className=""
+              onChange={(e) => HandleFieldChange(e)}
+            ></textarea>
           </div>
         </div>
-
-        <div className="">
-          <div className="ContactFormWideInput">
-            <div className="ContactFormUnderlining">
-              <p>{content.inputMessage}</p>
-              <textarea
-                type="text"
-                placeholder={content.inputMessage}
-                name="message"
-                required
-                className=""
-                onChange={(e) => HandleFieldChange(e)}
-              ></textarea>
-            </div>
+        <div className="ContactFormWideInput">
+          <div>
+            <p>{content.inputResume}</p>
           </div>
-          <div className="ContactFormWideInput">
-            <div>
-              <p>{content.inputResume}</p>
-            </div>
-            <div className="DragAndDropWrapper">
-              {" "}
-              <ContactFormDragNDrop resume={resume} setResume={setResume} title={content.inputContent}/>
-            </div>
+          <div className="DragAndDropWrapper">
+            {" "}
+            <ContactFormDragNDrop resume={resume} setResume={setResume} title={content.inputContent} />
           </div>
         </div>
         <div className="ContactFormSendWrapper">
@@ -220,10 +209,10 @@ const ContactSubmitResume = ({content}) => {
           >
             <div className="">{content.inputSend}</div>
             <div className="ContactFormSendLineContent">
-              <ArrowIcon 
-              fill="1px"
-              stroke="black"
-              size="100%"/>
+              <ArrowIcon
+                fill="1px"
+                stroke="black"
+                size="100%" />
             </div>
           </button>
         </div>
