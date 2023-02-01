@@ -194,7 +194,7 @@ const ContactSubmitResume = ({ content }) => {
           </div>
         </div>
         <div className="ContactFormWideInput">
-          <div>
+          <div className="marginBot10">
             <p>{content.inputResume}</p>
           </div>
           <div className="DragAndDropWrapper">

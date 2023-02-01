@@ -22,8 +22,8 @@
     display:flex;justify-content:center;align-items:center;
       height: 100%;
     width:70%;
-
-    padding-bottom: $GeneralSeparator160;
+    padding-top: $GeneralSeparator100;
+    padding-bottom: $GeneralSeparator100;
   }
   .HeroSectionTitle{
     font-size: $FontSizeTop80; font-weight: 100; line-height: 138%;
@@ -147,7 +147,7 @@ flex-flow: column;
   .BaseStyle{
 
     .HeroSectionTittleWrapper{
-      padding-top: 0px;
+      padding-top: $GeneralSeparator50;
       width:100%;
 
     }
