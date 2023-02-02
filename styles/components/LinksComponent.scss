@@ -3,12 +3,13 @@
     color: $white;
     padding-left: $padding;
     padding-right: $padding;
-    padding-top: $GeneralSeparator50;
-    padding-bottom: $GeneralSeparator50;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
+    transition: 0.5s;
 }
 .LinksComponentLinkwrapper{
-    padding-bottom: $GeneralSeparator20;
+    padding-bottom: 20px;
     padding-top: 0px;
 }
 
@@ -33,8 +34,30 @@
 .linkResideRight{
     text-align: right;
 }
+@media (max-width: #{$screen-xl-min}) {
+    .LinksComponentWrapper{
+        padding-left: $paddingXl;
+        padding-right: $paddingXl;
+    }
+}
+@media (max-width: #{$screen-lg-min}) {
+    .LinksComponentWrapper{
+        padding-left: $paddingLg;
+        padding-right: $paddingLg;
+    }
+}
 @media (max-width: #{$screen-md-min}) {
+    .LinksComponentWrapper{
+        padding-left: $paddingMd;
+        padding-right: $paddingMd;
+    }
     .LinksComponentColumn{
         line-height: normal;
+    }
+}
+@media (max-width: #{$screen-sm-min}) {
+    .LinksComponentWrapper{
+        padding-left: $paddingSm;
+        padding-right: $paddingSm;
     }
 }

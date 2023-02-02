@@ -14,7 +14,7 @@
   grid-template-rows: repeat(2, 1fr);
   column-gap: 50px;
   row-gap: 80px;
-  padding-left: $GeneralSeparator50
+  padding-left: 50px;
 }
 
 //Grid positioning
@@ -23,20 +23,21 @@
   padding-left: $padding;
   padding-right: $padding;
   background: $secondaryColor;
-  padding-top: $GeneralSeparator100;
+  padding-top: 100px;
   padding-bottom: 20px;
+  transition: 0.5s;
 
   .PhraseTitle h1 {
     min-width: 0.00000001vw;
     font-weight: 600;
     grid-column: 1;
-    font-size: $FontSizeTop42;
+    font-size: 42px;
   }
 
   .PhraseContentsGrid {
     .PhraseContents {
       min-width: 0.00000001vw;
-      font-size: $FontSizeTop18;
+      font-size: 18px;
       line-height: 32px;
     }
 
@@ -71,25 +72,38 @@
     }
   }
 }
-.phraseContentTextWrapper{
-  padding-bottom:12px;
+
+.phraseContentTextWrapper {
+  padding-bottom: 12px;
 }
+
 .AsteriscWrapper {
   padding-bottom: 8px;
 }
+
 //mobile breakpoints
+@media (max-width: #{$screen-xl-min}) {
+  .PhraseWrapper {
+    padding-left: $paddingXl;
+    padding-right: $paddingXl;
+  }
+}
+
 @media (max-width: #{$screen-lg-min}) {
   .PhraseWrapper {
+    padding-left: $paddingLg;
+    padding-right: $paddingLg;
     .PraseGrid {
       display: block;
     }
+
     .PhraseContentsGrid {
       display: block;
       min-width: 0.00000001vw;
       padding-left: 0;
 
       .PhraseContents {
-        padding-top: $GeneralSeparator50;
+        padding-top: 50px;
         width: 100%;
         padding-left: 0;
         border-bottom: 1px rgba($color: $white, $alpha: 0.3) solid;
@@ -97,8 +111,23 @@
         line-height: 25px;
       }
     }
+
     .PhraseTitle h1 {
       font-size: 2rem;
     }
+  }
+}
+
+@media (max-width: #{$screen-md-min}) {
+  .PhraseWrapper {
+    padding-left: $paddingMd;
+    padding-right: $paddingMd;
+  }
+}
+
+@media (max-width: #{$screen-sm-min}) {
+  .PhraseWrapper {
+    padding-left: $paddingSm;
+    padding-right: $paddingSm;
   }
 }

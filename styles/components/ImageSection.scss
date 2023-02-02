@@ -7,9 +7,9 @@
     width: 75vw;
     min-width: 0.00000001vw;
     height: 540px;
-    transition: 1s;
+    transition: 0.5s;
     .ImageSectionImgWrapper{
-        transition: 1s;
+        transition: 0.5s;
         display: block;
         background-position: center; 
         background-size: cover;
@@ -17,7 +17,7 @@
     }
 }
 .ImageSectionEmptyMargin{
-    transition: 1s;
+    transition: 0.5s;
 }
 
 @media (max-width: #{$screen-lg-min}) {

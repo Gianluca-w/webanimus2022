@@ -94,9 +94,10 @@
     color: $white;
     padding-left: $padding;
     padding-right: $padding;
-    padding-top: $GeneralSeparator50;
-    
+    padding-top: 50px;
+    transition: 0.5s;
 }
+
 
 .ContactFlexWrapper {
     float: right;
@@ -113,8 +114,17 @@
 
 
 //Mobile Scss
-
 @media (max-width: #{$screen-lg-min}) {
+    .FooterWrapper {
+        padding-left: $paddingXl;
+        padding-right: $paddingXl;
+    }
+}
+@media (max-width: #{$screen-lg-min}) {
+    .FooterWrapper {
+        padding-left: $paddingLg;
+        padding-right: $paddingLg;
+    }
     .ContactFlexWrapper {
         float: none;
     }
@@ -148,5 +158,17 @@
             }
 
         }
+    }
+}
+@media (max-width: #{$screen-md-min}) {
+    .FooterWrapper {
+        padding-left: $paddingMd;
+        padding-right: $paddingMd;
+    }
+}
+@media (max-width: #{$screen-sm-min}) {
+    .FooterWrapper {
+        padding-left: $paddingSm;
+        padding-right: $paddingSm;
     }
 }

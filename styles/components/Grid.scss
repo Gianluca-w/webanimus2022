@@ -7,6 +7,7 @@
     column-gap: 0px;
     margin-left: $padding;
     margin-right:$padding;
+    transition: 0.5s;
 }
 
 //Grid placements
@@ -127,9 +128,22 @@
 
 
 //Mobile Breakpoints
-
+@media (max-width: #{$screen-xl-min}) {
+    .GridSquared {
+        margin-left: $paddingXl;
+        margin-right: $paddingXl;
+    }
+}
+@media (max-width: #{$screen-lg-min}) {
+    .GridSquared {
+        margin-left: $paddingLg;
+        margin-right: $paddingLg;
+    }
+}
 @media (max-width: #{$screen-md-min}) {
     .GridSquared {
+        margin-left: $paddingMd;
+        margin-right: $paddingMd;
         display: block;
         row-gap: 0px;
 
@@ -161,4 +175,10 @@
        display: none;
     }
 
+}
+@media (max-width: #{$screen-sm-min}) {
+    .GridSquared {
+        margin-left: $paddingSm;
+        margin-right: $paddingSm;
+    }
 }

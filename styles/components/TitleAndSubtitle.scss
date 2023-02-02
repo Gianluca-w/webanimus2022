@@ -6,37 +6,89 @@
 .TitleAndSubtitleParentWrapper {
     background: $secondaryColor;
     min-width: 0.00000001vw;
-    padding-top: $GeneralSeparator100;
+    padding-top: 100px;
     padding-left: $padding;
     padding-right: $padding;
-    padding-bottom: $GeneralSeparator50;
+    padding-bottom: 50px;
     font-weight: 600;
+    transition: 0.5s;
 }
 
 .TitleWrapper {
+    transition: 0.5s;
     min-width: 0.00000001vw;
-    font-size: $FontSizeTop80;
-    padding-bottom: $GeneralSeparator40;
-    width: 65%;
+    font-size: 80px;
+    padding-bottom: 40px;
+    width: 85%;
     line-height: 97px;
 }
 
 .SubTitleContentWrapper {
-    width: 50%;
+    transition: 0.5s;
+    width: 75%;
     min-width: 0.00000001vw;
-    font-size: $FontSizeTop28;
+    font-size: 28px;
     line-height: 50px;
     font-weight: 400;
 }
 
+@media (max-width: #{$screen-xl-min}) {
+    .TitleAndSubtitleParentWrapper {
+        padding-left: $paddingXl;
+        padding-right: $paddingXl;
+    }
+    .TitleWrapper {
+        font-size: $fontResponsiveTitlesLg;
+        line-height: 60px;
+        
+    }
+}
+
+@media (max-width: #{$screen-lg-min}) {
+    .TitleAndSubtitleParentWrapper {
+        padding-left: $paddingLg;
+        padding-right: $paddingLg;
+    }
+
+    .TitleWrapper {
+        padding-bottom: 40px;
+        
+    }
+}
+
 @media (max-width: #{$screen-md-min}) {
+    .TitleAndSubtitleParentWrapper {
+        padding-left: $paddingMd;
+        padding-right: $paddingMd;
+    }
+
     .TitleWrapper {
         width: 100%;
-        line-height: normal;
+        font-size: $fontResponsiveTitlesMd;
+        line-height: 50px;
     }
     .SubTitleContentWrapper {
         width: 100%;
+        line-height: 35px;
+        font-size: $fontResponsiveSubTitlesMd;
+    }
+    
+}
+
+
+
+@media (max-width: #{$screen-sm-min}) {
+    .TitleAndSubtitleParentWrapper {
+        padding-left: $paddingSm;
+        padding-right: $paddingSm;
+    }
+    .TitleWrapper {
+        font-size: $fontResponsiveTitlesSm;
+        line-height: 35px;
+    }
+
+    .SubTitleContentWrapper {
         line-height: 25px;
-        font-size: 1rem;
+        font-size: $fontResponsiveSubTitlesSm;
     }
 }

@@ -6,15 +6,15 @@
 
 // Common Css Styles
 .restWrapper {
-    padding-top: 300px;
-    padding-bottom: 300px;
-    padding-left: $GeneralSeparator160;
-    padding-right: $GeneralSeparator160;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    padding-left: $padding;
+    padding-right: $padding;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../public/assets/img/RestComponentBackground.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 1s;
+    transition: 0.5s;
 
 }
 
@@ -34,8 +34,8 @@
 
 @media (max-width: #{$screen-xl-min}) {
     .restWrapper {
-        padding-top: 190px;
-        padding-bottom: 190px;
+        padding-top: 130px;
+        padding-bottom: 130px;
         padding-left: $paddingXl;
         padding-right: $paddingXl;
     }

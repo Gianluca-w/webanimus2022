@@ -5,8 +5,9 @@
     padding-left: $padding;
     padding-right: $padding;
     background: $secondaryColor;
-    padding-top: $GeneralSeparator100;
-    padding-bottom: $GeneralSeparator80;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    transition: 0.5s;
 
 }
 
@@ -63,8 +64,8 @@
 
 //Css styling
 .ColumnsTextTitle {
-    font-size: $FontSizeTop50;
-    padding-bottom: $GeneralSeparator50;
+    font-size: 50px;
+    padding-bottom: 30px;
     font-weight: 600;
 
 }
@@ -80,16 +81,17 @@
     font-size: $FontSizeTop18;
     font-weight: 400;
     line-height: 30px;
-    padding-top:8px;
+    padding-top: 8px;
     padding-bottom: 12px;
 }
 
 .ColumnSize2 {
-    width: 75%;
+    width: 80%;
+
     .ColumnContentText {
         font-style: normal;
         font-weight: 500;
-        font-size: $FontSizeTop24;
+        font-size: 24px;
         line-height: 45px;
     }
 }
@@ -114,45 +116,84 @@
     background-color: $secondaryColor;
     color: $white;
 }
-
+@media (max-width: #{$screen-xl-min}) {
+    .ColumnTextWrapper {
+        padding-left: $paddingXl;
+        padding-right: $paddingXl;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+}
 @media (max-width: #{$screen-lg-min}) {
     .ColumnContentGrid {
         display: block;
-       
+
     }
-    .ColumnContentText{
+    .ColumnsTextTitle {
+        font-size: $fontResponsiveTitlesLg;
+    }
+    .ColumnSize2{
+        width: 100%;
+    }
+    .ColumnContentText {
         border-bottom: 1px solid $secondaryColor;
     }
+
+    .ColumnTextWrapper {
+        padding-left: $paddingLg;
+        padding-right: $paddingLg;
+        
+    }
 }
+
 @media (max-width: #{$screen-md-min}) {
+    .ColumnTextWrapper {
+        padding: $paddingMd;
+    }
+    .ColumnsTextTitle {
+        font-size: $fontResponsiveTitlesMd;
+    }
     .ColumnContentTitle {
         line-height: normal;
         font-size: 1rem;
     }
-    
     .ColumnContentText {
         line-height: 20px;
     }
-    
     .ColumnSize2 {
-        width: 100%;
         .ColumnContentText {
-            line-height: 25px;
-            font-size: 1rem;
-            
+            line-height: 35px;
+            font-size: $fontResponsiveSubTitlesMd;
+            font-weight: 400;
         }
     }
+
     .ColumnSize3 {
         .ColumnContentWrapper {
-            .ColumnContentTitle{
+            .ColumnContentTitle {
                 padding-top: 8px;
                 padding-bottom: 8px;
             }
+
             .ColumnContentText {
-                
                 padding-bottom: 16px;
             }
         }
     }
 }
 
+@media (max-width: #{$screen-sm-min}) {
+    .ColumnsTextTitle {
+        font-size: $fontResponsiveTitlesSm;
+    }
+    .ColumnTextWrapper {
+        padding: $paddingSm;
+    }
+    .ColumnSize2 {
+        .ColumnContentText {
+            line-height: 25px;
+            font-size: $fontResponsiveSubTitlesSm;
+            
+        }
+    }
+}
