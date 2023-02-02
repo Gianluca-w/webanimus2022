@@ -1,93 +1,141 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 .HeroSectionParent {
   background-color: $secondaryColor;
-  padding-left: $GeneralSeparator300;
-  padding-right: $GeneralSeparator300;
-  
-  
+  padding-left: $padding;
+  padding-right: $padding;
 }
-.MaxHeight{
+
+.MaxHeight {
   transition: 1s;
-  height:100vh;
-  
+  height: 100vh;
 }
 
 
-.BaseStyle{
+.BaseStyle {
   min-width: 0.00000001vw;
   display: flex;
   flex-flow: column;
-  .HeroSectionTittleWrapper{
-    display:flex;justify-content:center;align-items:center;
-      height: 100%;
-    width:70%;
 
-    padding-bottom: $GeneralSeparator160;
+  .HeroSectionTittleWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
-  .HeroSectionTitle{
-    font-size: $FontSizeTop80; font-weight: 100; line-height: 138%;
+  .HeroSectionTitle {
+    transition: 1s;
+    font-size: 80px;
+    font-weight: 100;
+    line-height: 138%;
 
   }
+
   //padding-top: $GeneralSeparator300;
 }
-.baseStyleCenterer{
+
+.baseStyleCenterer {
   display: flex;
-height: 100%;
-flex-flow: column;
+  height: 100%;
+  flex-flow: column;
 
 }
-.AboutStyle{
+
+.AboutStyle {
   min-width: 0.00000001vw;
-  //padding-top: $GeneralSeparator100;
-  color:$secondaryColor;
-  .HeroSectionTittleWrapper{
-    padding-top: $GeneralSeparator100;
-    width:100%;
-    padding-bottom: $GeneralSeparator160;
+  color: $secondaryColor;
+  .HeroSectionTittleWrapper {
+    padding-top: 50px;
+    width: 100%;
   }
-  .HeroSectionTitle{
-    font-size: $FontSizeTop80; font-weight: 700; line-height: 112%;
-    padding-top: $GeneralSeparator40;
+
+  .HeroSectionTitle {
+    transition: 1s;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 112%;
+    padding-top: 40px;
   }
-  .HeroSectionSubTitle{
-    font-size: $FontSizeTop34; font-weight: 400; line-height: 176%;
+
+  .HeroSectionSubTitle {
+    transition: 1s;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 176%;
   }
-  .PointerCursor{
+
+  .PointerCursor {
     filter: brightness(0);
+  }
 }
-}
+
 .NavMainWrapper {
   display: flex;
   position: relative;
-  padding-top: $GeneralSeparator40;
+  padding-top: 40px;
   z-index: 2;
+  transition: 1s;
 }
+
 .NavIcon {
-  
-  max-width:120px;
-  min-width:80px;
+  max-width: 120px;
+  min-width: 80px;
   min-height: 40px;
-  position:relative;
+  position: relative;
   display: block;
-  width:15vw;
-}
-.PointerCursor{
-    min-height: 50px;
+  width: 15vw;
 }
 .NavMenuSeparator{
+  width: 100%;
+}
+
+.NavMenuLink{
+  a{
+    text-decoration: none;
+    color: inherit;
+}
+  button{
+      color: inherit;
+      border: none;
+      background: none;
+      font-size: inherit;
+      font-family: inherit;
+  }
+  font-weight: 500;
+  button:hover{
+      cursor: pointer;
+      color: $accentColor;
+  }
+}
+
+.PointerCursor {
+  min-height: 50px;
+}
+
+.NavMenuSeparator {
   min-width: 15px;
 }
+
 .NavMenuLink {
   padding-left: 20px;
   padding-right: 20px;
+  transition: 1s;
   float: right;
   cursor: pointer;
+  
 }
-.AsteriskWrapperRemaster{
-    display:block;
+
+.AsteriskWrapperRemaster {
+  transition: 1s;
+  padding-top: 40px;
+  display: block;
 }
-.SkyboxBackground{
+
+.SkyboxBackground {
   height: 100vh;
   position: absolute;
   z-index: -1;
@@ -95,7 +143,8 @@ flex-flow: column;
   top: 0;
   left: 0;
 }
-.SkyboxControls{
+
+.SkyboxControls {
   height: 100vh;
   position: absolute;
   z-index: 1;
@@ -103,58 +152,145 @@ flex-flow: column;
   top: 0;
   left: 0;
 }
-.NoBackground{
+
+.NoBackground {
   background: none;
 }
 
 //Usual Scss classes and styles, work here to change styles and s
 @media (max-width: #{$screen-xl-min}) {
+  .HeroSectionParent {
+    padding-left: $paddingXl;
+    padding-right: $paddingXl;
+  }
+  .BaseStyle {
+    .HeroSectionTitle {
+      font-size: 60px;
+    }
+  }
+  .AboutStyle {
+    .HeroSectionTittleWrapper {
+      padding-top: 60px;
+    }
+    .HeroSectionTitle {
+      font-size: 60px;
+    }
+
+  }
+
 }
+
 @media (max-width: #{$screen-lg-min}) {
-  .SkyboxBackground{
-   display: none;
+  .NavMainWrapper {
+    padding-top: 30px;
   }
-  .SkyboxControls{
-    display: none;
-   }
-  .canvas{
+
+  .HeroSectionParent {
+    max-height: 440px;
+    padding-left: $paddingLg;
+    padding-right: $paddingLg;
+  }
+  .AboutStyle {
+    .HeroSectionTittleWrapper {
+      padding-top: 40px;
+    }
+    .HeroSectionTitle {
+      font-size: 50px;
+    }
+    .HeroSectionSubTitle {
+      font-size: 24px;
+    }
+  }
+  .BaseStyle {
+    .HeroSectionTitle {
+      font-size: 50px;
+    }
+  }
+
+  .SkyboxBackground {
     display: none;
   }
-  .NoBackground{
+
+  .SkyboxControls {
+    display: none;
+  }
+
+  .canvas {
+    display: none;
+  }
+
+  .NoBackground {
     background: $secondaryColor;
   }
-  .HeroSectionParent{
+
+  .HeroSectionParent {
     max-height: 640px;
     background: $secondaryColor;
   }
 }
+
 @media (max-width: #{$screen-md-min}) {
-  .HeroSectionParent{
+  .AsteriskWrapperRemaster {
+    padding-top: 20px;
+  }
+  .HeroSectionParent {
     max-height: 440px;
+    padding-left: $paddingMd;
+    padding-right:$paddingMd;
   }
+
   .NavMenuLink {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 8px;
+    font-size: 0.7rem;
     
-    button{
-      padding: 0px 0px 0px px;
-      
+    button {
+      padding: 0px 0px 0px 0px;
     }
-
   }
-
-
-  .BaseStyle{
-
-    .HeroSectionTittleWrapper{
+  
+  .BaseStyle {
+    .HeroSectionTittleWrapper {
       padding-top: 0px;
-      width:100%;
-
+      width: 100%;
+    }
+    .HeroSectionTitle {
+      font-size: 2rem;
+    }
+  }
+  .AboutStyle {
+    .HeroSectionTittleWrapper {
+      padding-top: 40px;
+    }
+    .HeroSectionTitle {
+      font-size: 2rem;
+    }
+    .HeroSectionSubTitle {
+      font-size: 1rem;
     }
   }
 }
+
 @media (max-width: #{$screen-sm-min}) {
-  .HeroSectionParent{
+  .NavMenuLink {
+    font-size: 0.7rem;
+  }
+  .NavMainWrapper {
+    padding-top: 20px;
+  }
+
+  .HeroSectionParent {
+    padding-left: $paddingSm;
+    padding-right: $paddingSm;
+  }
+
+  .BaseStyle {
+    .HeroSectionTitle {
+      font-size: 2rem;
+    }
+  }
+
+  .HeroSectionParent {
     max-height: 360px;
   }
 }
@@ -171,4 +307,3 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(m
 flex: none;
 order: 0;
 flex-grow: 0;*/
-

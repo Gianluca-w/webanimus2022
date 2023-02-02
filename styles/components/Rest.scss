@@ -14,34 +14,61 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 1s;
 
 }
 
 .restTittle {
     font-size: 18px;
     min-width: 0.00000001vw;
-
 }
 
 .restContent {
     min-width: 0.00000001vw;
-    padding-left: $paddingLeft;
-    padding-right: $paddingRight;
-    width: 60%; 
+    transition: 1s;
+    width: 60%;
     height: auto;
     line-height: 80px;
 
 }
+
+@media (max-width: #{$screen-xl-min}) {
+    .restWrapper {
+        padding-top: 190px;
+        padding-bottom: 190px;
+        padding-left: $paddingXl;
+        padding-right: $paddingXl;
+    }
+}
+
+@media (max-width: #{$screen-lg-min}) {
+    .restWrapper {
+        padding: $paddingXl $paddingLg;
+    }
+    .restContent {
+       font-size: $fontResponsiveTitlesLg;
+       line-height: 55px;
+    }
+}
+
 @media (max-width: #{$screen-md-min}) {
-.restContent{
-    width: auto;
-    line-height:normal;
-    padding-left: 0px;
-    padding-right: 0px;
-    
+    .restWrapper {
+        padding: $paddingXl $paddingMd ;
+    }
+
+    .restContent {
+        width: 100%;
+        font-size: $fontResponsiveTitlesMd;
+        line-height: 50px;
+    }
 }
-.restWrapper {
-    padding-top: $GeneralSeparator300;
-    padding-bottom: $GeneralSeparator300;
-}
+
+@media (max-width: #{$screen-sm-min}) {
+    .restWrapper {
+        padding: $paddingLg $paddingSm ;
+    }
+    .restContent {
+        font-size: $fontResponsiveTitlesSm;
+        line-height: 40px;
+    }
 }

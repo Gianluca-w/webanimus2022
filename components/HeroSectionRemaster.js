@@ -20,7 +20,6 @@ const Asterisk = ({ hide, Size }) => (
     {!hide && (
       <div
         className="AsteriskWrapperRemaster"
-        style={{ width: `${Size}`, height: `${Size}` }}
       >
         <AsteriskIcon
           size={Size} />
@@ -46,13 +45,13 @@ const Nav = ({
       </div>
     </Link>
     <div className="NavMenuSeparator"></div>
-    <div className="NavMenuLink AltHoverableLink">
+    <div className="NavMenuLink AltHoverableLink HowToCenterMiddle">
       <Link href={Href1}>{LinkText1}</Link>
     </div>
-    <div className="NavMenuLink AltHoverableLink">
+    <div className="NavMenuLink AltHoverableLink HowToCenterMiddle">
       <Link href={Href2}>{LinkText2}</Link>
     </div>
-    <div className="NavMenuLink AltHoverableLink mediaNoPaddingMd">
+    <div className="NavMenuLink AltHoverableLink mediaNoPaddingMd HowToCenterMiddle">
       <LanguageChangeButton />
     </div>
   </div>

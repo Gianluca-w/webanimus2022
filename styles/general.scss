@@ -17,7 +17,7 @@ $screen-xl-min: 1200px;
 //End of mobile Breakpoints
 
 
-//General Font Sizes
+//Clamp Font Sizes
 $FontSizeTop90: clamp(2rem, 6vw, 90px);   
 $FontSizeTop80: clamp(2rem, 6vw, 80px);                                             
 $FontSizeTop70: clamp(2rem, 6vw, 70px);
@@ -35,9 +35,9 @@ $FontSizeTop20: clamp(0.7rem, 2vw, 20px);
 $FontSizeTop18: clamp(0.7rem, 2vw, 18px);
 $FontSizeTop16: clamp(0.7rem, 2vw, 16px);
 $FontSizeTop14: clamp(0.7rem, 2vw, 14px);                                          
-//General Spacings
-$paddingLeft:clamp(36px, 8.5vw, 160px);
-$paddingRight:clamp(36px, 8.5vw, 160px);
+//Clamp Spacings
+$paddingLeftClamp:clamp(36px, 8.5vw, 160px);
+$paddingRightClamp:clamp(36px, 8.5vw, 160px);
 $GeneralSeparator300:clamp(16px, 10vw, 300px);
 $GeneralSeparator160:clamp(16px, 8.5vw, 160px);
 $GeneralSeparator100:clamp(16px, 7.5vw, 100px);
@@ -45,6 +45,23 @@ $GeneralSeparator80:clamp(16px, 6vw, 80px);
 $GeneralSeparator50:clamp(16px, 5vw, 50px);
 $GeneralSeparator40:clamp(16px, 4vw, 40px);
 $GeneralSeparator20:clamp(8px, 1.5vw, 20px);
+//Static Spacings
+$padding:160px;
+$paddingXl:120px;
+$paddingLg:80px;
+$paddingMd:60px;
+$paddingSm:40px;
+//Responsive Font Sizes
+$fontResponsiveTitlesLg:3rem;
+$fontResponsiveTitlesMd:2.5rem;
+$fontResponsiveTitlesSm:2rem;
+$fontResponsiveSubTitlesLg:2rem;
+$fontResponsiveSubTitlesMd:1.5rem;
+$fontResponsiveSubTitlesSm:1rem;
+$fontResponsiveDetailsLg:1.2rem;
+$fontResponsiveDetailsSm:0.9rem;
+$fontResponsiveDetailsSm:0.7rem;
+
 //GeneralistClassStyling
 .ThinH1 { font-size: $FontSizeTop80; font-weight: 100; line-height: 138%;}
 .LightH2{ font-size: $FontSizeTop70; font-weight: 300; line-height: 114%;}
@@ -109,7 +126,7 @@ a:hover{
 
 }
 
-@import './components/HeroSection.scss';
+
 @import './components/Footer.scss';
 @import './components/Rest.scss';
 @import './components/Grid.scss';

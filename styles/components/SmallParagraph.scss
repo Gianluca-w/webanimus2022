@@ -1,11 +1,11 @@
 .SmallParagraphWrapper{
-    padding-left: $paddingLeft;
-    padding-right: $paddingRight;
-    padding-top: $GeneralSeparator100;
-    padding-bottom: $GeneralSeparator100;
+    padding-left: $padding;
+    padding-right: $padding;
+    padding-top: 100px;
+    padding-bottom: 100px;
     color: $secondaryColor;
     overflow: auto;
-    
+    transition: 1s;
 }
 .SmallParagraphTitle{
     display: block;
@@ -14,7 +14,7 @@
 .SmallParagraphContentText{
     display: block;
     font-weight: 300;
-    font-size: $FontSizeTop50;
+    font-size: 50px;
     line-height: 160%;
     a{
         text-decoration: none;
@@ -22,24 +22,57 @@
         color: inherit;
         border-bottom: 6px solid $accentColor;
     }
-
 }
 .SmallParagraphContentWrapper{
     width: 60%;
     transition: 1s;
     float: right;
 }
-@media (max-width: #{$screen-lg-min}) {
+@media (max-width: #{$screen-xl-min}) {
+    .SmallParagraphWrapper{
+        padding-left: $paddingXl;
+        padding-right: $paddingXl;
+    }
     .SmallParagraphContentWrapper{
-        width: auto;
-        float: left;
-        .SmallParagraphContentText{
-            line-height: 25px;
-            font-size:1rem;
-            a{
-                border-bottom: 1px solid $accentColor;
-            }
+        width: 80%;
+        transition: 1s;
+        float: right;
+    }
+    
+}
+@media (max-width: #{$screen-lg-min}) {
+    .SmallParagraphWrapper{
+        padding: $paddingLg;
+    }
+    .SmallParagraphContentWrapper{
+        width: 100%; 
+    }
+    .SmallParagraphContentText{
+        line-height: 35px;
+        font-size: $fontResponsiveSubTitlesLg;
+        a{
+            border-bottom: 3px solid $accentColor;
         }
-        
     }
+}
+@media (max-width: #{$screen-md-min}) {
+    .SmallParagraphWrapper{
+        padding: $paddingMd;
     }
+    .SmallParagraphContentText{
+        line-height: 30px;
+        font-size: $fontResponsiveSubTitlesMd;
+        a{
+            border-bottom: 1px solid $accentColor;
+        }
+    }
+}
+@media (max-width: #{$screen-sm-min}) {
+    .SmallParagraphWrapper{
+        padding: $paddingSm;
+    }
+    .SmallParagraphContentText{
+        line-height: 25px;
+        font-size: $fontResponsiveSubTitlesSm;
+    }
+}

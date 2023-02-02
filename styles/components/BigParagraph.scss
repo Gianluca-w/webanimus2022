@@ -3,20 +3,18 @@
     min-width: 0.00000001vw;
     background: $white;
     color: $secondaryColor;
-    padding-left: $paddingLeft;
-    padding-right: $paddingRight;
-    padding-bottom: $GeneralSeparator160;
-    
+    padding: $padding;
+    transition: 1s;
 }
  .BigParagraphGrid{
+    transition: 1s;
     width: 70%;
  }
 .BigParagraphTitleWrapper {
-    padding-top: $GeneralSeparator160;
     font-size: $FontSizeTop30;
     line-height: 60px;
-    
     font-weight: 700;
+    transition: 1s;
 }
 
 .BigParagraphBodyWrapper {
@@ -25,12 +23,12 @@
 
 
 .BigParagraphTagsWrapper {
-    padding-top: $GeneralSeparator80;
+    padding-top: 80px;
     display: inline-block;
     width: 60%;
 
     .Tag {
-        font-size: $FontSizeTop14;
+        font-size: 14px;
         display: inline-flex;
         padding: 5px 5px 5px 5px;
         margin-right: 10px;
@@ -42,10 +40,32 @@
     }
 }
 .BigParagraphImgWrapper{
+    transition: 1s;
     padding-top: $GeneralSeparator80;
     width: 60%;
 }
+
+
+
+@media (max-width: #{$screen-xl-min}) {
+    .BigParagraphWrapper {
+        padding: $paddingXl;
+    }
+}
+@media (max-width: #{$screen-lg-min}) {
+    .BigParagraphWrapper {
+        padding: $paddingLg;
+        
+    }
+    .BigParagraphTitleWrapper {
+        font-size: $fontResponsiveSubTitlesLg;
+    }
+}
 @media (max-width: #{$screen-md-min}) {
+    .BigParagraphWrapper {
+        padding: $paddingMd;
+        
+    }
     .BigParagraphImgWrapper{
         width: 100%;
     }
@@ -53,9 +73,10 @@
         width: 100%;
      }
     .BigParagraphTitleWrapper {
-        line-height: 25px;
+        line-height: 35px;
         width: 100%;
         font-weight: 400;
+        font-size: $fontResponsiveSubTitlesMd;
     }
     .BigParagraphTagsWrapper{
         width: 100%;
@@ -63,4 +84,14 @@
     .BigParagraphImgWrapper{
         width: 100%;
     }
+}
+@media (max-width: #{$screen-sm-min}) {
+    .BigParagraphWrapper {
+        padding: $paddingSm;
+    }
+    .BigParagraphTitleWrapper {
+        line-height: 25px;
+        font-size: $fontResponsiveSubTitlesSm;
+    }
+
 }

@@ -2,10 +2,11 @@
     min-width: 0.00000001vw;
     background-color: #19181A;
     color: $white;
-    padding-left: $paddingLeft;
-    padding-right: $paddingRight;
+    padding-left: $padding;
+    padding-right: $padding;
     padding-top: 0px;
     padding-bottom: 0px;
+    transition: 1s;
 }
 
 .AboutImageStandalone {
@@ -33,13 +34,34 @@
     display: flex;
     width: 100%;
 }
-
+@media (max-width: #{$screen-xl-min}) {
+    .AboutImageWrapper {
+        padding-left: $paddingXl;
+        padding-right: $paddingXl;
+    }
+}
+@media (max-width: #{$screen-lg-min}) {
+    .AboutImageWrapper {
+        padding-left: $paddingLg;
+        padding-right: $paddingLg;
+    }
+}
 @media (max-width: #{$screen-md-min}) {
+    .AboutImageWrapper {
+        padding-left: $paddingMd;
+        padding-right: $paddingMd;
+    }
     .AboutImageStandalone {
         padding-bottom: 100%;
     }
 
     .AboutImageSecond {
         display: none;
+    }
+}
+@media (max-width: #{$screen-sm-min}) {
+    .AboutImageWrapper {
+        padding-left: $paddingSm;
+        padding-right: $paddingSm;
     }
 }
