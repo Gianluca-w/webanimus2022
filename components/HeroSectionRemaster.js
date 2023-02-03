@@ -132,12 +132,6 @@ const HeroSectionTitle = ({
     </div>
   );
 };
-const HeroSkyboxBackground = ({ Visibility }) => {
-  if (Visibility != false) {
-    return <SkyboxBackground className="SkyboxBackground" />;
-  }
-
-};
 
 const HeroSectionRemastered = ({
   Slogan,
@@ -145,7 +139,6 @@ const HeroSectionRemastered = ({
   Asterisk,
   BackgroundImageSrc,
   OptionalAsteriskSize,
-  Skybox = false,
   BlackFilter,
   FilteringAlhpa,
   FullSize,
@@ -174,8 +167,6 @@ const HeroSectionRemastered = ({
       Title={Slogan}
       SubTitle={SubSlogan} />
   </HeroSectionParent>
-  <HeroSkyboxBackground
-    Visibility={Skybox} />
 </>
 );
 export default HeroSectionRemastered;
