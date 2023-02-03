@@ -1,8 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-
-import asterisk from "../public/assets/icons/asterisc.svg";
-import animus from "../public/assets/icons/logoanimus-w.svg";
 
 import AnimusIcon from "./icons/AnimusIcon";
 import AsteriskIcon from "./icons/AsteriskIcon";
