@@ -12,9 +12,9 @@ const LanguageChangeButton = ({ }) => {
     router.push({ pathname, query }, asPath, { locale: newLocale })
   }
   const changeTo = router.locale === 'en' ? 'es' : 'en'
-  return <div>
+  return <div className='HowToCenterMiddle'>
     <button
-      className='ForcedUppercase AltHoverableLink'
+      className='ForcedUppercase NavMenuLink AltHoverableLink mediaNoPaddingMd maximize'
       onClick={() => onToggleLanguageClick(changeTo)}>
       {t('Locale', { changeTo })}
     </button>

@@ -13,7 +13,11 @@
   
 }
 
-
+ button {
+  background: inherit;
+  border: none;
+  color: inherit;
+  }
 .BaseStyle{
   min-width: 0.00000001vw;
   display: flex;
@@ -84,6 +88,7 @@ flex-flow: column;
   float: right;
   cursor: pointer;
 }
+
 .AsteriskWrapperRemaster{
     display:block;
 }

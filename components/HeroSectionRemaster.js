@@ -4,7 +4,7 @@ import AnimusIcon from "./icons/AnimusIcon";
 import AsteriskIcon from "./icons/AsteriskIcon";
 
 import LanguageChangeButton from "./LanguageButton";
-import SkyboxBackground from "./SkyboxBackground";
+// import SkyboxBackground from "./SkyboxBackground";
 
 /**
    * Basic Asterisk. Sending anything in hide will prevent the asterisk from showing         
@@ -42,13 +42,21 @@ const Nav = ({
       </div>
     </Link>
     <div className="NavMenuSeparator"></div>
-    <div className="NavMenuLink AltHoverableLink">
-      <Link href={Href1}>{LinkText1}</Link>
-    </div>
-    <div className="NavMenuLink AltHoverableLink">
-      <Link href={Href2}>{LinkText2}</Link>
-    </div>
-    <div className="NavMenuLink AltHoverableLink mediaNoPaddingMd">
+
+    <Link href={Href1}>
+      <div className="NavMenuLink AltHoverableLink">
+        {LinkText1}
+      </div>
+    </Link>
+
+
+    <Link href={Href2}>
+      <div className="NavMenuLink AltHoverableLink">
+        {LinkText2}
+      </div>
+    </Link>
+
+    <div >
       <LanguageChangeButton />
     </div>
   </div>
@@ -102,10 +110,10 @@ const HeroSectionParent = ({
       <div className="baseStyleCenterer">
         {children}
         <Asterisk
-        Size={AsteriskSize}
-        hide={AsteriskVisibility} />
+          Size={AsteriskSize}
+          hide={AsteriskVisibility} />
       </div>
-      
+
 
     </div>
   );
