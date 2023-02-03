@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
 //Mobile Breakpoints
 
 // Small tablets and large smartphones (landscape view)
@@ -174,4 +174,7 @@ a:hover{
         padding: 0px 0px 0px 0px;
     }
 
+}
+.loaded{
+    opacity: 0;
 }
