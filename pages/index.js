@@ -55,7 +55,7 @@ export default function Home(props) {
       Subtitle={t('TitleAndSubtitleBody1')} />
       <PhraseAndItems 
       Content={t('WhyHireUs', { returnObjects: true })} />
-      {/*Still hardcoded */}<Grid Content={[{ Filler: "FillerGridImage2", GridPosition: "1" }, { Image: "FIllerA.svg", Filler: "FillerGridImageCenter", GridPosition: "6" }, { GridPosition: "3", Filler: "FillerGridItem" }, { GridTitle: "Working!", GridPosition: "4" }, { GridPosition: "5", Filler: "FillerGridImage1" }, { GridTitle: "Working EARLY!", GridPosition: "2" }]} />
+      {/*Still hardcoded */}<Grid Content={[{ Filler: "FillerGridImage2", GridPosition: "1" }, { Image: "FIllerA.svg", Filler: "FillerGridImageCenter", GridPosition: "6" }, { GridPosition: "3", Filler: "FillerGridItem" }, { GridTitle: t('infoBark1'), GridPosition: "4" }, { GridPosition: "5", Filler: "FillerGridImage1" }, { GridTitle: t('infoBark2'), GridPosition: "2" }]} />
       <Footer 
       FooterTitleTxt={t('FooterTitle')} 
       FooterLinkText={t('FooterLinkTitle')} 
