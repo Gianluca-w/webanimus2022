@@ -4,7 +4,7 @@
     padding-left: $paddingLeft;
     padding-right: $paddingRight;
     padding-top: $GeneralSeparator100;
-    padding-bottom: $GeneralSeparator50;
+    padding-bottom: $GeneralSeparator100;
     text-align: center;
 }
 .AboutInfoCardTitle{
@@ -13,7 +13,7 @@
     font-weight: 200;
     text-align: left;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: $GeneralSeparator300;
     
 }
 .AboutInfoCardSubTitle{
@@ -22,7 +22,7 @@
     line-height: 43.88px;
     text-align: left;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: $GeneralSeparator300;
 }
 .AboutInfoCardContent{
 font-size: $FontSizeTop20;

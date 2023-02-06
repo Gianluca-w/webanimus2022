@@ -25,7 +25,8 @@
 
 .ColumnSize3 {
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 150px;
+    column-gap: 90px;
+    row-gap: 50px;
 }
 
 .RowSize2 {
@@ -80,7 +81,7 @@
     font-size: $FontSizeTop18;
     font-weight: 400;
     line-height: 30px;
-    padding-top:8px;
+    padding-top:12px;
     padding-bottom: 12px;
 }
 

@@ -20,7 +20,6 @@ export default function Home(props) {
         OptionalAsteriskSize={'45px'}
         MainStyle={'About'}
         BackgroundImageSrc='AboutUsBackground.jpg'
-        FullSize={true}
         FirstLinkText={t('PageAbout')}
         SecondLinkText={t('PageContact')}
         FirstLinkHref={'/about'}
