@@ -41,15 +41,13 @@ const Nav = ({
         <AnimusIcon />
       </div>
     </Link>
-    <div className="NavMenuSeparator"></div>
-
+    
+    <div className="rightLinksWrapper">
     <Link href={Href1}>
       <div className="NavMenuLink AltHoverableLink">
         {LinkText1}
       </div>
     </Link>
-
-
     <Link href={Href2}>
       <div className="NavMenuLink AltHoverableLink">
         {LinkText2}
@@ -58,6 +56,7 @@ const Nav = ({
 
     <div >
       <LanguageChangeButton />
+    </div>
     </div>
   </div>
 );
