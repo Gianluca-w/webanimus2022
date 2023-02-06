@@ -23,7 +23,7 @@
 		}
 	],
 	"WhyHireUs": {
-		"TitleText": "¿Porqué contratarnos?",
+		"TitleText": "¿Por qué contratarnos?",
 		"GridBody": [
 			{
 				"body": "Te asistimos en tus necesidades de desarrollo y crecimiento sin que arriesgues en empleados a tu cargo.",
@@ -42,7 +42,7 @@
 				"GridPosition": "4"
 			},
 			{
-				"body": "Las dudas o dificultades técnicas pueden ser filtradas y no escalar inmediatamente, porque las personas contratadas tienen el sostén de la cooperativa. Pertenecemos a la federación de cooperativas de tecnología: FACTTIC. Podemos escalar equipos y trabajos, porque contamos con la colaboración de otras empresas miembro.",
+				"body": "Pertenecemos a la federación de cooperativas de tecnología: FACTTIC. Podemos escalar equipos y trabajos, porque contamos con la colaboración de otras empresas miembro.",
 				"GridPosition": "5"
 				
 			},
