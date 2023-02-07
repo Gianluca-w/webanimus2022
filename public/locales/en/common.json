@@ -62,8 +62,8 @@
 	"SmallParagraphLink":"We are a cooperative technology company",
 	"SmallParagraphContent": " democratically run by its own workers.",
 	"AboutUs": {
-		"slogan":"In an individualistic world, we think collectively.",
-		"SubSlogan":"We are a cooperative company",
+		"slogan":"We are a cooperative company",
+		"SubSlogan":"We think colectively",
 		"BuddiesTitle": "Coop Buddies",
 		"BuddiesBody": "We are a bit of a nerd, nature lovers and, above all, buddies. Since 2018 we have been operating as a cooperative, but had worked in systems similar to Animus since 2007. We are located in Bariloche, Argentine Patagonia.",
 		
@@ -88,6 +88,10 @@
 		"inputMessage":"Message",
 		"inputResume": "Resume",
 		"inputContent":"Upload your Resume",
+		"placeholderName":"Write your name and last name",
+		"placeholderMail":"Add a email adress",
+		"placeholderPhone":"Add a phone number",
+		"placeholderMessage":"Tell us why you contacted us",
 		"inputSend":"Send"
 	},
 	"TextInColumns": [

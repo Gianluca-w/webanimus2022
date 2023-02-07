@@ -39,6 +39,7 @@ const ContactFormHireTheCoop = ({ content }) => {
                         type="text"
                         name="name"
                         required
+                        placeholder={content.placeholderName}
                         maxLength={30}
                         onChange={(e) => HandleFieldChange(e)}>
                     </input>
@@ -48,6 +49,7 @@ const ContactFormHireTheCoop = ({ content }) => {
                     <input
                         type="email"
                         name="email"
+                        placeholder={content.placeholderMail}
                         required
                         maxLength={30}
                         onChange={(e) => HandleFieldChange(e)}>
@@ -59,6 +61,7 @@ const ContactFormHireTheCoop = ({ content }) => {
                         type="tel"
                         maxLength={15}
                         required
+                        placeholder={content.placeholderPhone}
                         name="phone"
                         autoComplete="off"
                         onChange={(e) => HandleFieldChange(e)}>
@@ -73,6 +76,7 @@ const ContactFormHireTheCoop = ({ content }) => {
                         <textarea
                             type='text'
                             required
+                            placeholder={content.placeholderMessage}
                             name="message"
                             onChange={(e) => HandleFieldChange(e)}>
                         </textarea>

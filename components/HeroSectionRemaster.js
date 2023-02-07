@@ -99,6 +99,9 @@ const HeroSectionParent = ({
   if (Style == 'About') {
     AdditiveClasses += "AboutStyle "
   }
+  if (Style == 'Contact') {
+    AdditiveClasses += "ContactStyle "
+  }
   return (
     <div className={`HeroSectionParent ${AdditiveClasses}`} style={{ background: BackgroundStyle }}>
       <Nav

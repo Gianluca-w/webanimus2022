@@ -2,8 +2,6 @@
   background-color: $secondaryColor;
   padding-left: $GeneralSeparator300;
   padding-right: $GeneralSeparator300;
-  
-  
 }
 .MaxHeight{
   transition: 1s;
@@ -67,6 +65,26 @@ flex-flow: column;
     filter: brightness(0);
 }
 }
+.ContactStyle{
+  min-width: 0.00000001vw;
+  //padding-top: $GeneralSeparator100;
+  .HeroSectionTittleWrapper{
+    padding-top: $GeneralSeparator100;
+    width:70%;
+    padding-bottom: $GeneralSeparator80;
+  }
+  
+  .HeroSectionTitle{
+    font-size: $FontSizeTop80; font-weight: 100; line-height: 138%;
+    
+  }
+  
+}
+.HeroSectionParent.ContactStyle {
+  padding-left: $GeneralSeparator160;
+  padding-right: $GeneralSeparator160;
+}
+
 .NavMainWrapper {
   display: flex;
   position: relative;

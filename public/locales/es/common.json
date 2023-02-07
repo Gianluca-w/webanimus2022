@@ -62,8 +62,8 @@
 	"SmallParagraphLink":"Somos una empresa cooperativa de tecnología,",
 	"SmallParagraphContent":" gobernada democráticamente por sus propios trabajadores.",
 	"AboutUs": {
-		"slogan":"En un mundo individualista, pensamos en colectivo.",
-		"SubSlogan":"Somos una empresa cooperativa",
+		"slogan":"Somos una empresa cooperativa",
+		"SubSlogan":"Pensamos en colectivo",
 		"BuddiesTitle": "Coop Buddies",
 		"BuddiesBody": "Somos un poco nerds. Amantes de la naturaleza y sobre todas las cosas compañeres. Desde el 2018 funcionamos como cooperativa. Pero trabajamos en sistemas como Animus desde el 2007. Estamos en Bariloche, Patagonia argentina.",
 		"NetworkTitle": "Red de Redes",
@@ -76,14 +76,19 @@
 		"HackaCoopBody": "El Hackacoop es nuestro marco para estudiar nuevas tecnologías y abordar proyectos de innovación que nos interesan, pero no tienen un lugar comercial. Un tiempo de intercambio para enseñar y aprender. "
 	},
 	"ContactUs":{
-		"Slogan":"Desarrollamos colaborativamente.",
+		"Slogan":"Desarrollamos colaborativamente",
 		"joinAnimus":"Se parte de ANIMUS",
-		"hireAnimus":"¿Quieres contratar a la COOP?",
+		"hireAnimus":"¿Querés contratar a la COOP?",
 		"inputName":"Nombre",
 		"inputMail":"Mail",
 		"inputPhone":"Telefono",
 		"inputMessage":"Mensaje",
 		"inputResume": "Curriculum",
+		"placeholderName":"Escribi tu nombre y apellido",
+		"placeholderMail":"Agrega tu direccion de correo electrónico",
+		"placeholderPhone":"Escribí tu celular",
+		"placeholderMessage":"Dejanos el motivo de tu contacto",
+		"placeholderResume": "Curriculum",
 		"inputContent":"Sube Tu curriculum",
 		"inputSend":"Enviar"
 	},

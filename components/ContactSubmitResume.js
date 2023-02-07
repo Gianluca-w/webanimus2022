@@ -154,6 +154,7 @@ const ContactSubmitResume = ({ content }) => {
             type="text"
             name="name"
             maxLength={30}
+            placeholder={content.placeholderName}
             required
             onChange={(e) => HandleFieldChange(e)}
           ></input>
@@ -163,6 +164,7 @@ const ContactSubmitResume = ({ content }) => {
           <input
             type="email"
             name="email"
+            placeholder={content.placeholderMail}
             maxLength={35}
             required
             onChange={(e) => HandleFieldChange(e)}
@@ -174,6 +176,7 @@ const ContactSubmitResume = ({ content }) => {
             type="tel"
             autoComplete="off"
             name="phone"
+            placeholder={content.placeholderPhone}
             maxLength={15}
             required
             onChange={
@@ -189,6 +192,7 @@ const ContactSubmitResume = ({ content }) => {
               name="message"
               required
               className=""
+              placeholder={content.placeholderMessage}
               onChange={(e) => HandleFieldChange(e)}
             ></textarea>
           </div>
