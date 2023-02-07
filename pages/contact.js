@@ -15,7 +15,6 @@ export default function Home(props) {
       <HeroSectionRemastered
         Slogan={t('ContactUs.Slogan')}
         Asterisk={"Hide"}
-        MainStyle={'Contact'}
         FirstLinkText={t('PageAbout')}
         SecondLinkText={t('PageContact')}
         FirstLinkHref={'/about'}
