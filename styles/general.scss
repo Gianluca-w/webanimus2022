@@ -38,6 +38,7 @@ $FontSizeTop14: clamp(0.7rem, 2vw, 14px);
 //General Spacings
 $paddingLeft:clamp(36px, 8.5vw, 160px);
 $paddingRight:clamp(36px, 8.5vw, 160px);
+$GeneralSeparatorAgresive350:clamp(16px, 17vw, 350px);
 $GeneralSeparator300:clamp(16px, 10vw, 300px);
 $GeneralSeparator160:clamp(16px, 8.5vw, 160px);
 $GeneralSeparator100:clamp(16px, 7.5vw, 100px);
@@ -79,6 +80,9 @@ a{
     font-family: inherit;
     text-decoration: underline;
     text-decoration-color: $white;
+}
+.strongAccentFilter:hover{
+    filter: brightness(0) saturate(100%) invert(44%) sepia(78%) saturate(901%) hue-rotate(188deg) brightness(96%) contrast(91%);
 }
 a:hover{
     color:#3C8BEA;

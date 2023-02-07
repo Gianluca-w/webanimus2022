@@ -65,8 +65,10 @@
 
     .GridTitle {
         min-width: 0.00000001vw;
-        font-size: $FontSizeTop32;
+        font-size: $FontSizeTop30;
+        font-weight: 400;
         margin-left: 16px;
+        margin-top: $GeneralSeparatorAgresive350;
 
         background: $secondaryColor;
 
@@ -80,7 +82,12 @@
         padding-right: 16px;
     }
 }
-
+.FillerGridImageCenter .gridContentWrapper .GridTitle{
+    margin-top: 0px;
+}
+.FillerGridImageCoop .GridImageWrapperCenter{
+        margin-right: 20px;
+}
 .GridElement2 {
 
     border-left: 0px;
@@ -143,6 +150,9 @@
             height: auto;
             padding-bottom: 0px;    
             background: $secondaryColor;
+            .GridTitle {
+                margin-top:16px;
+            }
         }
         .TexturedBackground{
             display: none;
@@ -160,5 +170,7 @@
     .FillerGridImageCenter{
        display: none;
     }
-
+    .FillerGridImageCoop{
+        display: none;  
+    }
 }

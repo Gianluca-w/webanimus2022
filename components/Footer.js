@@ -12,11 +12,11 @@ const Footer = ({ FooterTitleTxt, FooterLinkText, FooterMailText, FooterAdressTe
                         {FooterTitleTxt}
                     </strong>
                 </div>
-                <div className="FooterLink">
+                <div className="FooterLink ">
                     <Link className='' href="/contact">
-                        <div className='LinkWrapper AltHoverableLink HowToCenterMiddle'>
+                        <div className='LinkWrapper AltHoverableLink HowToCenterMiddle strongAccentFilter'>
                             {FooterLinkText}
-                            <div className='FooterArrowWrapper HowToCenterMiddle'>
+                            <div className='FooterArrowWrapper HowToCenterMiddle '>
                                 <ArrowIcon fill={'1px'}/>
                             </div>
                         </div>

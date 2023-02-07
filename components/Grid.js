@@ -25,17 +25,19 @@ const GridContent = ({
             //  !content.filler &&  When filling system is online, create the logic to make it work properly
             return (
                 <div className={`GridElement${content.GridPosition} GridElement ${content.Filler}`} key={content.GridPosition}>
-                    <h1 className="GridTitle">
-                        {content.GridTitle}
-                    </h1>
-                    <p className="GridContent">
-                        {content.GridBody}
-                    </p>
+                    <div className="gridContentWrapper">
+                        <h1 className="GridTitle">
+                            {content.GridTitle}
+                        </h1>
+                        <p className="GridContent">
+                            {content.GridBody}
+                        </p>
+                    </div>
                     {content.Image && <div className="GridImageWrapperCenter">
                         <Image
                             src={`/assets/img/${content.Image}`}
-                            width={"1px"}
-                            height={"1px"}
+                            width={content.ratioX}
+                            height={content.ratioY}
                             layout="responsive"
                             alt=""
                         />
