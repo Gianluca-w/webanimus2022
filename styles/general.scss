@@ -146,6 +146,7 @@ a:hover{
 .AltHoverableLink:hover{
     color: $accentColor;
     text-decoration-color: $accentColor;
+    height:100%;
 }
 .ForcedUppercase{
     text-transform: uppercase;
