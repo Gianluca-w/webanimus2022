@@ -32,7 +32,7 @@ export default function Home(props) {
       <BigParagraph 
       title={t('BigParagraphTitle1')} 
       Tags={t('BigParagraphTags1', { returnObjects: true })} 
-      OptionalImage={'TechLogos.png'} />
+      multipleImages={true}/>
       <ImageSection 
       FillingImg={'ImageSection.jpeg'}/>
       <SmallParagraph 

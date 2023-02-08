@@ -4,7 +4,7 @@ const BigParagraph = ({
   body,
   LinkTitle,
   LinkHref,
-  multipleImages = "placehodlding",
+  multipleImages,
   OptionalImage,
 }) => (
   <BigParagraphParent>
