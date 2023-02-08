@@ -17,6 +17,7 @@ export default function Home(props) {
         Asterisk={"Hide"}
         FirstLinkText={t('PageAbout')}
         SecondLinkText={t('PageContact')}
+        MainStyle={'Contact'}
         FirstLinkHref={'/about'}
         SecondLinkHref={'/contact'} />
       <ContactForm contentTranslation={t('ContactUs', { returnObjects: true })}/>
