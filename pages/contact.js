@@ -6,7 +6,6 @@ import HeroSectionRemastered from '../components/HeroSectionRemaster'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import LinksComponent from '../components/LinksComponent'
-import DropdownMenu from '../components/DropdownMenu'
 export default function Home(props) {
   const { t } = useTranslation('common')
 
