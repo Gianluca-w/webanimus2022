@@ -40,7 +40,7 @@ export default function Home(props) {
       Content={t('SmallParagraphContent')} 
       UnderlinedLinkTitle={t('SmallParagraphLink')}/>
       <Rest 
-      TitleText={t('RestSectionTitle')} 
+      TitleText={''} 
       Body={t('RestSectionBody')}/>
       <BigParagraph 
       title={t('BigParagraphTitle2')} 
