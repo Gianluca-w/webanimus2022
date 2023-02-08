@@ -8,7 +8,6 @@ import TextInColumns from '../components/TextInColumns'
 import AboutInfoCard from '../components/AboutInfoCard'
 import AboutSmallCard from '../components/AboutSmallCard'
 import AboutImage from '../components/AboutImage'
-import DropdownMenu from '../components/DropdownMenu'
 
 export default function Home(props) {
   const { t } = useTranslation('common')
