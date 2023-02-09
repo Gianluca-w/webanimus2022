@@ -10,7 +10,7 @@ const AboutSmallCardRight = ({
             <div className="aboutSmallCardSideImgContainer">
         <Image
                     src={`/assets/img/RedDeRedes.jpg`}
-                    width={'600%'}
+                    width={'700%'}
                     height={'400%'}
                     layout ='intrinsic'
                     alt='' />
