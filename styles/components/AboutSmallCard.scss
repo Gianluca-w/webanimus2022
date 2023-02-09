@@ -6,6 +6,21 @@
     padding-right: $paddingRight;
     padding-top: $GeneralSeparator100;
     padding-bottom: $GeneralSeparator100;
+    .aboutSmallCardContentWrapper{
+        .AboutSmallCardContent{
+            width: 100%;
+        }
+    }
+}
+.flex{
+    display: flex;
+}
+.aboutSmallCardContentWrapper{
+    width: 100%;
+    display: block;
+}
+.aboutSmallCardAlongImgWrapper{
+    width: 100%;
 }
 .AboutSmallCardTitle{
     font-size: $FontSizeTop50;
@@ -21,13 +36,20 @@
         margin-bottom: 0px;
     }
 }
+.aboutSmallCardSideImgContainer{
+    margin-right: $GeneralSeparator50;
+}
 .AboutSmallCardImg{
     padding-top: $GeneralSeparator50 ;
 
 }
+
 @media (max-width: #{$screen-md-min}) {
     .AboutSmallCardContent{
         width: 100%;
         line-height: 20px;
+    }
+    .aboutSmallCardAlongImgWrapper{
+        display: none;
     }
 }

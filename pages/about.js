@@ -7,6 +7,7 @@ import LinksComponent from '../components/LinksComponent'
 import TextInColumns from '../components/TextInColumns'
 import AboutInfoCard from '../components/AboutInfoCard'
 import AboutSmallCard from '../components/AboutSmallCard'
+import AboutSmallCardRight from '../components/AboutSmallCardRight'
 import AboutImage from '../components/AboutImage'
 
 export default function Home(props) {
@@ -30,7 +31,7 @@ export default function Home(props) {
         Title={t('AboutUs.BuddiesTitle')}
         Body={t('AboutUs.BuddiesBody')} />
       <AboutImage />
-      <AboutSmallCard
+      <AboutSmallCardRight
         Title={t('AboutUs.NetworkTitle')}
         Body={t('AboutUs.NetworkBody')}
         OptionalImage={`FACTICCLogo.png`}
