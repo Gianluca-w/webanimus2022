@@ -54,7 +54,7 @@ const Nav = ({
       </div>
     </Link>
 
-    <div >
+    <div className="NavMenuLink" >
       <LanguageChangeButton />
     </div>
     </div>

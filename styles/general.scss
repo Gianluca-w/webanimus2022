@@ -130,7 +130,6 @@ a:hover{
 @import './components/SmallParagraph.scss';
 @import './components/NotificationCard.scss';
 @import './components/HeroSectionRemaster.scss';
-@import './components/DropdownMenu.scss';
 .visible{
     display:block;
 }
@@ -147,6 +146,7 @@ a:hover{
 .AltHoverableLink:hover{
     color: $accentColor;
     text-decoration-color: $accentColor;
+    height:100%;
 }
 .ForcedUppercase{
     text-transform: uppercase;

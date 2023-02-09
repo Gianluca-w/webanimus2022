@@ -6,7 +6,6 @@ import HeroSectionRemastered from '../components/HeroSectionRemaster'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import LinksComponent from '../components/LinksComponent'
-import DropdownMenu from '../components/DropdownMenu'
 export default function Home(props) {
   const { t } = useTranslation('common')
 
@@ -17,6 +16,7 @@ export default function Home(props) {
         Asterisk={"Hide"}
         FirstLinkText={t('PageAbout')}
         SecondLinkText={t('PageContact')}
+        MainStyle={'Contact'}
         FirstLinkHref={'/about'}
         SecondLinkHref={'/contact'} />
       <ContactForm contentTranslation={t('ContactUs', { returnObjects: true })}/>

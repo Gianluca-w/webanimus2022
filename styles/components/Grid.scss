@@ -51,7 +51,6 @@
     background: $secondaryColor;
     padding-top: $GeneralSeparator100;
     padding-bottom: $GeneralSeparator160;
-
 }
 
 .GridElement {
@@ -136,6 +135,10 @@
 //Mobile Breakpoints
 
 @media (max-width: #{$screen-md-min}) {
+    .GridParentWrapper {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
     .GridSquared {
         display: block;
         row-gap: 0px;
@@ -157,6 +160,9 @@
         .TexturedBackground{
             display: none;
         }
+    }
+    .hidingGridItem{
+        display:none;
     }
     .FillerGridItem{
         display: none;

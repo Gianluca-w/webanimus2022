@@ -3,16 +3,12 @@
 	"PageAbout":"About",
 	"PageContact":"Contact",
 	"slogan": "We develop software with solidarity bases",
-	"subSlogan": "Somos una empresa cooperativa que diseña y desarrolla software.",
 	"BigParagraphTitle1": "We program customized web platforms and systems, creating robust and scalable digital solutions in vertical areas, such as education, transport and finance, among others.",
 	"infoBark1":"Cutting edge tecnology",
-	"infoBark2":"Horizontality",
-	"RestSectionTitle": "",
 	"RestSectionBody": "Intelligent and innovative software and design, from empathy to knowledge.",
 	"TitleAndSubtitleTitle1": "Enhance your technology capacity",
 	"TitleAndSubtitleBody1": "We provide services as contractors, in Staff Augmentation or Managed Service (project teams) schemes, in programing, design or hybrid profiles, both in English and Spanish.",
 	"BigParagraphTitle2": "We design both products and services that are functional, aesthetically pleasing and easy  to use, with the focus on making digital experiences comprehensive, inclusive and people- centered. In addition, we are aligned in compliance with the Web Content Accessibility Guidelines standards (WCAG).",
-	"BigParagraphLinkTitle": "Si queres conocer más",
 	"MetodologyTitle": "Metodology",
 	"MetodologyContent": [
 		{
@@ -70,8 +66,8 @@
 		"NetworkTitle": "Network of networks",
 		"NetworkBody": "We are members of the Argentine Federation of Technology, Innovation and Knowledge Work Cooperatives (Federación Argentina de Cooperativas de Trabajo de Tecnología, Innovación y Conocimiento, FACTTIC). The space is shared with other coops of the sector, with the same interest in generating fair labor relations, a supportive",
 		
-		"SchoolLabsTitle": "School labs Collective learning space",
-		"SchoolLabsSubTitle": "",
+		"SchoolLabsTitle": "School labs ",
+		"SchoolLabsSubTitle": "Collective learning space",
 		"SchoolLabsBody": "We promote an informal training environment with a group of students and self-taught students from our city who are interested in expanding their knowledge and sharing the process of co-creating projects. We think this experience can help them in their job placement and professional practice.",
 		
 		"HackaCoopTitle": "Hackacoop",
@@ -91,7 +87,7 @@
 		"placeholderName":"Write your name and last name",
 		"placeholderMail":"Add a email adress",
 		"placeholderPhone":"Add a phone number",
-		"placeholderMessage":"Tell us why you contacted us",
+		"placeholderMessage":"Tell us why you are contacting us",
 		"inputSend":"Send"
 	},
 	"TextInColumns": [
@@ -126,21 +122,5 @@
 			"TextPosition": "6"
 		}
 	],
-	"StaticExample": "Example",
-	"template": {
-		"title": "Template",
-		"body": {
-			"paragraph1": "shorterTemplate",
-			"paragraph2": "For tax purposes"
-		}
-	},
-	"Locale":"{{changeTo}}",
-	"example": "\"{{changeTo}}\"",
-	"nested": {
-		"1stNest": {
-			"1stNestContent": "ejemplo de contenido nesteado",
-			"1stNestMoreContent": "ejemplo de contenido nesteado.",
-			"1stNestThirdContent": "ejemplo de contenido nesteado"
-		}
-	}
+	"Locale":"{{changeTo}}"
 }
