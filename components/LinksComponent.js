@@ -21,11 +21,6 @@ function LinksComponent({ }) {
                     </div>
                 </div>
                 <div className="LinksComponentColumn linkResideRight">
-                    <div className="LinksComponentLinkwrapper">
-                        <a className="AltHoverableLink" href="https://www.a11yproject.com/accessibility-statement/" target="self">
-                            A11i statements
-                        </a>
-                    </div>
                 </div>
                 <div className="LinksComponentColumn mobileHide">
                 </div>

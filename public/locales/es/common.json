@@ -62,7 +62,7 @@
 		"SubSlogan":"Pensamos en colectivo",
 		"BuddiesTitle": "Coop Buddies",
 		"BuddiesBody": "Somos un poco nerds. Amantes de la naturaleza y sobre todas las cosas compañeres. Desde el 2018 funcionamos como cooperativa. Pero trabajamos en sistemas como Animus desde el 2007. Estamos en Bariloche, Patagonia argentina.",
-		"NetworkTitle": "Red de Redes",
+		"NetworkTitle": "Red de redes",
 		"NetworkBody": "Pertenecemos a la Federación Argentina de Cooperativas de Trabajo de Tecnología, Innovación y Conocimiento (FACTTIC). Compartimos el espacio con otras coopes del sector, con quienes tenemos el mismo interés en generar relaciones laborales justas, un entorno solidario y la gestión de proyectos de acuerdo a intereses propios y soberanos.",
 		"SchoolLabsTitle": "School Labs.",
 		"SchoolLabsSubTitle": "Espacio de aprendizaje colectivo",
@@ -73,7 +73,7 @@
 	},
 	"ContactUs":{
 		"Slogan":"Desarrollamos colaborativamente",
-		"joinAnimus":"Se parte de ANIMUS",
+		"joinAnimus":"Sé parte de ANIMUS",
 		"hireAnimus":"¿Querés contratar a la COOP?",
 		"inputName":"Nombre",
 		"inputMail":"Mail",
