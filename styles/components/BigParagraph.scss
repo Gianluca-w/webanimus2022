@@ -9,13 +9,13 @@
     
 }
  .BigParagraphGrid{
-    width: 70%;
+   
  }
 .BigParagraphTitleWrapper {
     padding-top: $GeneralSeparator160;
     font-size: $FontSizeTop30;
     line-height: 60px;
-    
+    width: 70%;
     font-weight: 700;
 }
 
@@ -43,11 +43,12 @@
 }
 .BigParagraphImgWrapper{
     padding-top: $GeneralSeparator80;
+    width:80%;
 }
 .inlineRower{
     display: inline-block;
     min-height: 80px;
-    width: 150px;
+    width: 130px;
     filter:grayscale(1);
     padding:10px;
 }
