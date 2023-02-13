@@ -27,7 +27,8 @@ const Footer = ({ FooterTitleTxt, FooterLinkText, FooterMailText, FooterAdressTe
                 <div className="FooterContactGrid">
                     <div className='ContactFlexWrapper'>
                         <div className="ContactMail">
-                            {FooterMailText}
+                            <a href={'mailto:info@animus.com.ar'}>{FooterMailText}</a>
+                            
                         </div>
                         <div className="ContactDirection">
                             {FooterAdressText}

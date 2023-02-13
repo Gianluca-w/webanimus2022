@@ -78,6 +78,12 @@
   padding-bottom: 8px;
 }
 //mobile breakpoints
+@media (max-width: #{$screen-xl-min}) {
+.PraseGrid {
+  column-gap: 0px;
+}
+}
+
 @media (max-width: #{$screen-lg-min}) {
   .PhraseWrapper {
     .PraseGrid {
